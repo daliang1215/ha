@@ -2,8 +2,9 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: JimmyHome
   # Location required to calculate the time the sun rises and sets
-  latitude: 34.7835405653
-  longitude: 113.5966962576
+  # 34.7832120008,113.5896400503
+  latitude: 34.7832120008
+  longitude: 113.5896400503
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 116
   # metric for Metric, imperial for Imperial
@@ -262,7 +263,11 @@ panel_iframe:
     #    new_device_defaults:
     #      track_new_devices: True
     #      hide_if_away: True
-
+panel_custom:
+  - name: inkwavemap
+    sidebar_title: '墨澜地图'
+    sidebar_icon: mdi:map
+    url_path: inkwavemap
 twilio:
   account_sid: ACc5a95806884fc02d2be2c59b3f23c0d8
   auth_token: 4c5e2c4e6721c220e1fb4335e1c691ba
