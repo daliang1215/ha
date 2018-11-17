@@ -1,0 +1,317 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: JimmyHome
+  # Location required to calculate the time the sun rises and sets
+  latitude: 34.7835405653
+  longitude: 113.5966962576
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 116
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Asia/Shanghai
+  # Customization file
+  customize: !include_dir_merge_named customize
+  #packages: !include_dir_named packages
+  customize_domain:
+    automation:
+      initial_state: on
+
+  customize_glob:
+    "switch.*":
+      hidden: true
+      homebridge_hidden: false
+
+    "sensor.*":
+      homebridge_hidden: true
+
+    "sensor.illumination_*":
+      hidden: true
+      homebridge_hidden: true
+
+    "binary_sensor.motion_sensor_*":
+      hidden: true
+      homebridge_hidden: true
+
+    "binary_sensor.switch_*":
+      hidden: true
+      homebridge_hidden: true
+
+    "group.*":
+      homebridge_hidden: true
+
+    "automation.*":
+      homebridge_hidden: true
+
+    "device_tracker.*":
+      hidden: true
+      homebridge_hidden: true
+
+    "sensor.hiwifi_router_*":
+      hidden: true
+      homebridge_hidden: true
+
+    "sensor.openwrt_router_*":
+      hidden: true
+      homebridge_hidden: true
+
+    "script.*":
+      hidden: true
+      homebridge_hidden: true
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+http:
+  api_password: 1qaz2wsx
+  base_url: 192.168.88.140:8123
+  cors_allowed_origins:
+    - http://reformedreality.com
+discovery:
+  enable:
+    - homekit
+homekit:
+  #auto_start: false
+  exclude_entities:
+    - automation.keting_xiaomi_ap_get_led
+    - automation.keting_xiaomi_ap_get_mode
+    - automation.keting_xiaomi_ap_set_led
+    - automation.keting_xiaomi_ap_set_mode
+    - automation.woshi_xiaomi_ap_get_led
+    - automation.woshi_xiaomi_ap_get_mode
+    - automation.woshi_xiaomi_ap_set_led
+    - automation.woshi_xiaomi_ap_set_mode
+    - device_tracker.androidef354cffcb55a9b3
+    - device_tracker.huawei_nova_2s5163314069
+    - device_tracker.xiaomibedroom
+    - device_tracker.xiaomilivingroom
+    - fan.kekting
+    - fan.woshi
+  #  - input_select.keting_xiaomi_ap_led
+  #  - input_select.keting_xiaomi_ap_mode
+  #  - input_select.woshi_xiaomi_ap_led
+  #  - input_select.woshi_xiaomi_ap_mode
+  #  - switch.keting_xiaomi_ap_buzzer
+  #  - switch.keting_xiaomi_ap_childlock
+  #  - switch.woshi_xiaomi_ap_buzzer
+  #  - switch.woshi_xiaomi_ap_childlock
+# Enables configuration UI
+config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  include_used_components: true
+
+# Discover some devices automatically
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Sensors
+#sensor:
+#  - platform: HeWeather
+#    city: zhengzhou
+#    aqi_city: zhengzhou
+#    appkey: d7c331e73816479f847ee321a4e619fb
+#    options:
+#      - fl
+#      - tmp
+#      - cond_txt
+#      - wind_spd
+#      - hum
+#      - pcpn
+#      - pres
+#      - vis
+#      - wind_sc
+#      - aqi
+#      - main
+#      - qlty
+#      - pm10
+#      - pm25
+#      - comf
+#      - cw
+#      - drsg
+#      - flu
+#      - sport
+#      - trav
+#      - uv
+#      - wind_dir
+#      - tmp_max
+#      - tmp_min
+#      - pop
+#  # GaoDe Map API
+#  - platform: gaode_travel_time
+#    name: driving_to_company
+#    api_key: 9d1f337261ff34e672c3b75d5fe7058c
+#    friendly_name: 从家去公司
+#    homebridge_hidden: false
+#    travel_mode: driving
+#    strategy: 0       #optional, 0-9, default 0 速度最快
+#    origin:
+#      longitude_latitude: 113.596374,34.7827
+#      #city: 郑州
+#      #address: 正商百合里
+#    destination:
+#      longitude_latitude: 113.805421,34.795648
+#      #city: 郑州
+#      #address: 专利局审协河南中心
+#
+#  - platform: gaode_travel_time
+#    name: driving_to_home
+#    api_key: 9d1f337261ff34e672c3b75d5fe7058c
+#    friendly_name: 从公司回家
+#    homebridge_hidden: false
+#    travel_mode: driving
+#    strategy: 0       #optional, 0-9, default 0 速度最快
+#    origin:
+#      longitude_latitude: 113.805421,34.795648
+#      #city: 郑州
+#      #address: 专利局审协河南中心
+#    destination:
+#      longitude_latitude: 113.596374,34.7827
+#      #city: 郑州
+#      #address: 正商百合里
+
+        #fan:
+        #  - platform: xiaomi_miio
+        #    name: keting
+        #    host: 192.168.88.31
+        #    token: c37a49585c60973872ca34a2499f2148
+        #    model: zhimi.airpurifier.m1
+        #
+        #  - platform: xiaomi_miio
+        #    name: woshi
+        #    host: 192.168.88.11
+        #    token: b156ee551e017bec0291f79e79802bc6
+        #    model: zhimi.airpurifier.m1
+
+# Text to speech
+tts:
+  - platform: google
+    language: 'zh-cn'
+  - platform: baidu
+    #app_id，api_key，secret_key从百度云上注册得到
+    app_id: 6786368
+    api_key: guwmwrNwc7RiDScPK7wgb19n
+    secret_key: IDdbf8M5powM5ViY93A9REsOqLNqRXiT
+    #speed：语速0-9（缺省5）
+    #pitch：语调0-9（缺省5）
+    #volume：音量0-15（缺省5）
+    #person：声音（0：女，1：男，3：百度合成，4：百度合成，缺省0）
+    speed: 4
+    pitch: 5
+    volume: 13
+    person: 0
+
+ifttt:
+  key: cibXF2TxJNFGSNpINKAyc-
+mqtt:
+  password: 1qaz2wsx
+
+media_player:
+- platform: kodi
+  name: KODI
+  host: 192.168.88.8
+  port: 8888
+  username: pi
+  password: iQQ
+
+panel_iframe:
+  kodi:
+    title: KODI
+    icon: mdi:kodi
+    url: http://192.168.88.8:8888
+  homebridge:
+    title: HomeBridge
+    icon: mdi:apple
+    url: http://192.168.88.140:8124
+  terminal:
+    title: Terminal
+    icon: mdi:console
+    url: https://192.168.88.140:4200
+    #device_tracker:
+    #  - platform: asuswrt
+    #    host: 192.168.88.254
+    #    username: admin
+    #    password: Peng0804
+    #    interval_seconds: 60
+    #    consider_home: 180
+    #    new_device_defaults:
+    #      track_new_devices: True
+    #      hide_if_away: True
+
+twilio:
+  account_sid: ACc5a95806884fc02d2be2c59b3f23c0d8
+  auth_token: 4c5e2c4e6721c220e1fb4335e1c691ba
+notify:
+  - platform: twilio_sms
+    name: twilio_sms
+    from_number: "+18038280909"
+
+# Cloud
+cloud:
+# log
+#logger:
+#  default: warning
+#  logs:
+#    homeassistant.components.homekit: debug
+#    pyhap.accessory_driver: debug
+#    #pyhap: debug
+logger:
+  # 可能的日志严重程度是: notset, debug, info, warn, warning, error, fatal, critical
+  default: info
+  logs:
+    aiohttp.access: critical
+    aiohttp.server: critical
+    homeassistant.core: error
+    homeassistant.components.automation: warn
+    homeassistant.components.binary_sensor: warn
+    homeassistant.components.device_tracker: warn
+    homeassistant.components.discovery: warn
+    homeassistant.components.http: warn
+    homeassistant.components.media_player: warn
+    homeassistant.components.recorder: warn
+    homeassistant.components.sensor.command_line: warn
+    homeassistant.components.shell_command: warn
+    homeassistant.helpers.script: warn
+    homeassistant.helpers.entity: warn
+    custom_components.device_tracker.hiwifi: warn
+    custom_components.sensor.moji_weather: warn
+    requests.packages.urllib3.connectionpool: error
+    requests.packages.urllib3: error
+    requests.packages.urllib3.http.client: error
+group: !include_dir_merge_named group
+device_tracker: !include_dir_merge_list device_tracker
+sensor: !include_dir_merge_list sensor
+automation: !include_dir_merge_list automation
+scene: !include_dir_merge_list scene
+switch: !include_dir_merge_list switch
+script: !include_dir_merge_named script
+fan: !include_dir_merge_list fan
+#shell_command: !include_dir_merge_named shell_command
+#group: !include groups.yaml
+#automation: !include automations.yaml
+#script: !include scripts.yaml

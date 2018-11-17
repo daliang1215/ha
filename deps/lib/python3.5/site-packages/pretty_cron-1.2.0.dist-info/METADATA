@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: pretty-cron
+Version: 1.2.0
+Summary: Retired in favour of cron_descriptor. (Converts crontab expressions to human-readable descriptions).
+Home-page: https://github.com/adamchainz/pretty-cron
+Author: Adam Johnson
+Author-email: me@adamj.eu
+License: MIT
+Keywords: c,r,o,n
+Platform: UNKNOWN
+Classifier: Development Status :: 7 - Inactive
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*
+
+===========
+pretty-cron
+===========
+
+**Retired** in favour of cron_descriptor_
+
+.. cron_descriptor_: https://pypi.org/project/cron_descriptor/
+
+**This project is no longer maintained.**
+
+Converts crontab expressions to human-readable descriptions.
+
+Installation
+============
+
+Use pip:
+
+.. code-block:: bash
+
+    pip install pretty-cron
+
+Tested on Python 2.7 and 3.6.
+
+API
+===
+
+``prettify_cron(cron_expression)``
+----------------------------------
+
+Converts the given string cron expression into a pretty, human-readable,
+English description of what it means. If the string is not a valid cron
+expression, or it includes features not currently supported, it is returned
+as-is.
+
+For example:
+
+.. code-block:: python
+
+    >>> import pretty_cron
+    >>> pretty_cron.prettify_cron("0 * * * *")
+    "At 0 minutes past every hour of every day"
+    >>> pretty_cron.prettify_cron("0 0 1 1 *")
+    "At 00:00 on the 1st of January"
+    >>> pretty_cron.prettify_cron("12 15 * 1 *")
+    "At 15:12 every day in January"
+    >>> pretty_cron.prettify_cron("lalala")  # Not a cron expression
+    "lalala"
+
+
+
+
+History
+-------
+
+1.2.0 (2018-08-22)
+------------------
+
+* **Retired** in favour of cron_descriptor_. This project is no longer maintained.
+
+.. _cron_descriptor: https://pypi.org/project/cron_descriptor/
+
+1.1.0 (2018-08-19)
+------------------
+
+* Now always returns ``unicode`` on Python 2 for consistency.
+
+1.0.2 (2016-05-03)
+------------------
+
+* Now supports expressions with multiple weekdays and ordinal days - thanks
+  @jbondia.
+
+1.0.1 (2016-02-09)
+------------------
+
+* Now interprets day 7 as Sunday as well as 0, like Linux crontab parsers -
+  thanks @vetyy.
+* Now supports expressions with multiple months separated by commas - thanks
+  @MerreM.
+
+1.0.0 (2015-07-28)
+------------------
+
+* First release on PyPI, featuring ``prettify_cron`` function.
+
+

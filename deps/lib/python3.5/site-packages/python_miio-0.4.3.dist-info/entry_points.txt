@@ -1,0 +1,8 @@
+[console_scripts]
+miceil = miio.ceil_cli:cli
+mieye = miio.philips_eyecare_cli:cli
+miio-extract-tokens = miio.extract_tokens:main
+miiocli = miio.cli:create_cli
+miplug = miio.plug_cli:cli
+mirobo = miio.vacuum_cli:cli
+

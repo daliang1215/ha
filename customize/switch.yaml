@@ -1,0 +1,16 @@
+switch.keting_xiaomi_ap_buzzer:
+  icon: mdi:volume-high
+  friendly_name: 提示音
+sensor.keting_xiaomi_ap_aqi:
+  icon: mdi:blur
+sensor.keting_xiaomi_ap_humid:
+  icon: mdi:water-percent
+switch.keting_xiaomi_ap_childlock:
+  icon: mdi:lock
+  friendly_name: 儿童锁
+switch.woshi_xiaomi_ap_buzzer:
+  icon: mdi:volume-high
+  friendly_name: 提示音
+switch.woshi_xiaomi_ap_childlock:
+  icon: mdi:lock
+  friendly_name: 儿童锁

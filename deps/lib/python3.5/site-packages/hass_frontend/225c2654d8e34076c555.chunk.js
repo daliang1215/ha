@@ -1,0 +1,218 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[28],{208:function(module,__webpack_exports__,__webpack_require__){"use strict";var polymer_legacy=__webpack_require__(2),iron_flex_layout=__webpack_require__(26),iron_control_state=__webpack_require__(12),iron_validatable_behavior=__webpack_require__(37),polymer_fn=__webpack_require__(3),polymer_dom=__webpack_require__(1),html_tag=__webpack_require__(0);/**
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at
+http://polymer.github.io/LICENSE.txt The complete set of authors may be found at
+http://polymer.github.io/AUTHORS.txt The complete set of contributors may be
+found at http://polymer.github.io/CONTRIBUTORS.txt Code distributed by Google as
+part of the polymer project is also subject to an additional IP rights grant
+found at http://polymer.github.io/PATENTS.txt
+*/Object(polymer_fn.a)({_template:html_tag.a`
+    <style>
+      :host {
+        display: inline-block;
+        position: relative;
+        width: 400px;
+        border: 1px solid;
+        padding: 2px;
+        -moz-appearance: textarea;
+        -webkit-appearance: textarea;
+        overflow: hidden;
+      }
+
+      .mirror-text {
+        visibility: hidden;
+        word-wrap: break-word;
+        @apply --iron-autogrow-textarea;
+      }
+
+      .fit {
+        @apply --layout-fit;
+      }
+
+      textarea {
+        position: relative;
+        outline: none;
+        border: none;
+        resize: none;
+        background: inherit;
+        color: inherit;
+        /* see comments in template */
+        width: 100%;
+        height: 100%;
+        font-size: inherit;
+        font-family: inherit;
+        line-height: inherit;
+        text-align: inherit;
+        @apply --iron-autogrow-textarea;
+      }
+
+      textarea::-webkit-input-placeholder {
+        @apply --iron-autogrow-textarea-placeholder;
+      }
+
+      textarea:-moz-placeholder {
+        @apply --iron-autogrow-textarea-placeholder;
+      }
+
+      textarea::-moz-placeholder {
+        @apply --iron-autogrow-textarea-placeholder;
+      }
+
+      textarea:-ms-input-placeholder {
+        @apply --iron-autogrow-textarea-placeholder;
+      }
+    </style>
+
+    <!-- the mirror sizes the input/textarea so it grows with typing -->
+    <!-- use &#160; instead &nbsp; of to allow this element to be used in XHTML -->
+    <div id="mirror" class="mirror-text" aria-hidden="true">&nbsp;</div>
+
+    <!-- size the input/textarea with a div, because the textarea has intrinsic size in ff -->
+    <div class="textarea-container fit">
+      <textarea id="textarea" name\$="[[name]]" aria-label\$="[[label]]" autocomplete\$="[[autocomplete]]" autofocus\$="[[autofocus]]" inputmode\$="[[inputmode]]" placeholder\$="[[placeholder]]" readonly\$="[[readonly]]" required\$="[[required]]" disabled\$="[[disabled]]" rows\$="[[rows]]" minlength\$="[[minlength]]" maxlength\$="[[maxlength]]"></textarea>
+    </div>
+`,is:"iron-autogrow-textarea",behaviors:[iron_validatable_behavior.a,iron_control_state.a],properties:{value:{observer:"_valueChanged",type:String,notify:!0},bindValue:{observer:"_bindValueChanged",type:String,notify:!0},rows:{type:Number,value:1,observer:"_updateCached"},maxRows:{type:Number,value:0,observer:"_updateCached"},autocomplete:{type:String,value:"off"},autofocus:{type:Boolean,value:!1},inputmode:{type:String},placeholder:{type:String},readonly:{type:String},required:{type:Boolean},minlength:{type:Number},maxlength:{type:Number},label:{type:String}},listeners:{input:"_onInput"},get textarea(){return this.$.textarea},get selectionStart(){return this.$.textarea.selectionStart},get selectionEnd(){return this.$.textarea.selectionEnd},set selectionStart(value){this.$.textarea.selectionStart=value},set selectionEnd(value){this.$.textarea.selectionEnd=value},attached:function(){var IS_IOS=navigator.userAgent.match(/iP(?:[oa]d|hone)/);if(IS_IOS){this.$.textarea.style.marginLeft="-3px"}},validate:function(){var valid=this.$.textarea.validity.valid;if(valid){if(this.required&&""===this.value){valid=!1}else if(this.hasValidator()){valid=iron_validatable_behavior.a.validate.call(this,this.value)}}this.invalid=!valid;this.fire("iron-input-validate");return valid},_bindValueChanged:function(bindValue){this.value=bindValue},_valueChanged:function(value){var textarea=this.textarea;if(!textarea){return}if(textarea.value!==value){textarea.value=!(value||0===value)?"":value}this.bindValue=value;this.$.mirror.innerHTML=this._valueForMirror();this.fire("bind-value-changed",{value:this.bindValue})},_onInput:function(event){var eventPath=Object(polymer_dom.b)(event).path;this.value=eventPath?eventPath[0].value:event.target.value},_constrain:function(tokens){var _tokens;tokens=tokens||[""];if(0<this.maxRows&&tokens.length>this.maxRows){_tokens=tokens.slice(0,this.maxRows)}else{_tokens=tokens.slice(0)}while(0<this.rows&&_tokens.length<this.rows){_tokens.push("")}return _tokens.join("<br/>")+"&#160;"},_valueForMirror:function(){var input=this.textarea;if(!input){return}this.tokens=input&&input.value?input.value.replace(/&/gm,"&amp;").replace(/"/gm,"&quot;").replace(/'/gm,"&#39;").replace(/</gm,"&lt;").replace(/>/gm,"&gt;").split("\n"):[""];return this._constrain(this.tokens)},_updateCached:function(){this.$.mirror.innerHTML=this._constrain(this.tokens)}});var paper_input_char_counter=__webpack_require__(91),paper_input_container=__webpack_require__(92),paper_input_error=__webpack_require__(93),iron_form_element_behavior=__webpack_require__(34),paper_input_behavior=__webpack_require__(68);/**
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at
+http://polymer.github.io/LICENSE.txt The complete set of authors may be found at
+http://polymer.github.io/AUTHORS.txt The complete set of contributors may be
+found at http://polymer.github.io/CONTRIBUTORS.txt Code distributed by Google as
+part of the polymer project is also subject to an additional IP rights grant
+found at http://polymer.github.io/PATENTS.txt
+*/Object(polymer_fn.a)({_template:html_tag.a`
+    <style>
+      :host {
+        display: block;
+      }
+
+      :host([hidden]) {
+        display: none !important;
+      }
+
+      label {
+        pointer-events: none;
+      }
+    </style>
+
+    <paper-input-container no-label-float\$="[[noLabelFloat]]" always-float-label="[[_computeAlwaysFloatLabel(alwaysFloatLabel,placeholder)]]" auto-validate\$="[[autoValidate]]" disabled\$="[[disabled]]" invalid="[[invalid]]">
+
+      <label hidden\$="[[!label]]" aria-hidden="true" for\$="[[_inputId]]" slot="label">[[label]]</label>
+
+      <iron-autogrow-textarea class="paper-input-input" slot="input" id\$="[[_inputId]]" aria-labelledby\$="[[_ariaLabelledBy]]" aria-describedby\$="[[_ariaDescribedBy]]" bind-value="{{value}}" invalid="{{invalid}}" validator\$="[[validator]]" disabled\$="[[disabled]]" autocomplete\$="[[autocomplete]]" autofocus\$="[[autofocus]]" inputmode\$="[[inputmode]]" name\$="[[name]]" placeholder\$="[[placeholder]]" readonly\$="[[readonly]]" required\$="[[required]]" minlength\$="[[minlength]]" maxlength\$="[[maxlength]]" autocapitalize\$="[[autocapitalize]]" rows\$="[[rows]]" max-rows\$="[[maxRows]]" on-change="_onChange"></iron-autogrow-textarea>
+
+      <template is="dom-if" if="[[errorMessage]]">
+        <paper-input-error aria-live="assertive" slot="add-on">[[errorMessage]]</paper-input-error>
+      </template>
+
+      <template is="dom-if" if="[[charCounter]]">
+        <paper-input-char-counter slot="add-on"></paper-input-char-counter>
+      </template>
+
+    </paper-input-container>
+`,is:"paper-textarea",behaviors:[paper_input_behavior.a,iron_form_element_behavior.a],properties:{_ariaLabelledBy:{observer:"_ariaLabelledByChanged",type:String},_ariaDescribedBy:{observer:"_ariaDescribedByChanged",type:String},value:{type:String},rows:{type:Number,value:1},maxRows:{type:Number,value:0}},get selectionStart(){return this.$.input.textarea.selectionStart},set selectionStart(start){this.$.input.textarea.selectionStart=start},get selectionEnd(){return this.$.input.textarea.selectionEnd},set selectionEnd(end){this.$.input.textarea.selectionEnd=end},_ariaLabelledByChanged:function(ariaLabelledBy){this._focusableElement.setAttribute("aria-labelledby",ariaLabelledBy)},_ariaDescribedByChanged:function(ariaDescribedBy){this._focusableElement.setAttribute("aria-describedby",ariaDescribedBy)},get _focusableElement(){return this.inputElement.textarea}})},699:function(module,__webpack_exports__,__webpack_require__){"use strict";__webpack_require__.r(__webpack_exports__);var _polymer_app_layout_app_header_layout_app_header_layout__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__(155),_polymer_app_layout_app_header_app_header__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__(154),_polymer_app_layout_app_toolbar_app_toolbar__WEBPACK_IMPORTED_MODULE_2__=__webpack_require__(121),_polymer_paper_input_paper_textarea__WEBPACK_IMPORTED_MODULE_3__=__webpack_require__(208),_polymer_paper_spinner_paper_spinner__WEBPACK_IMPORTED_MODULE_4__=__webpack_require__(124),_polymer_polymer_lib_utils_async__WEBPACK_IMPORTED_MODULE_5__=__webpack_require__(8),_polymer_polymer_lib_utils_debounce__WEBPACK_IMPORTED_MODULE_6__=__webpack_require__(14),_polymer_polymer_lib_utils_html_tag__WEBPACK_IMPORTED_MODULE_7__=__webpack_require__(0),_polymer_polymer_polymer_element__WEBPACK_IMPORTED_MODULE_8__=__webpack_require__(4),_components_ha_menu_button__WEBPACK_IMPORTED_MODULE_9__=__webpack_require__(134),_resources_ha_style__WEBPACK_IMPORTED_MODULE_10__=__webpack_require__(120);class HaPanelDevTemplate extends _polymer_polymer_polymer_element__WEBPACK_IMPORTED_MODULE_8__.a{static get template(){return _polymer_polymer_lib_utils_html_tag__WEBPACK_IMPORTED_MODULE_7__.a`
+    <style include="ha-style iron-flex iron-positioning"></style>
+    <style>
+      :host {
+        -ms-user-select: initial;
+        -webkit-user-select: initial;
+        -moz-user-select: initial;
+      }
+
+      .content {
+        padding: 16px;
+      }
+
+      .edit-pane {
+        margin-right: 16px;
+      }
+
+      .edit-pane a {
+        color: var(--dark-primary-color);
+      }
+
+      .horizontal .edit-pane {
+        max-width: 50%;
+      }
+
+      .render-pane {
+        position: relative;
+        max-width: 50%;
+      }
+
+      .render-spinner {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+      }
+
+      paper-textarea {
+        --paper-input-container-input: {
+          @apply --paper-font-code1;
+        }
+      }
+
+      .rendered {
+        @apply --paper-font-code1;
+        clear: both;
+        white-space: pre-wrap;
+      }
+
+      .rendered.error {
+        color: red;
+      }
+    </style>
+
+    <app-header-layout has-scrolling-region>
+      <app-header slot="header" fixed>
+        <app-toolbar>
+          <ha-menu-button narrow='[[narrow]]' show-menu='[[showMenu]]'></ha-menu-button>
+          <div main-title>Templates</div>
+        </app-toolbar>
+      </app-header>
+
+      <div class$='[[computeFormClasses(narrow)]]'>
+        <div class='edit-pane'>
+          <p>
+            Templates are rendered using the Jinja2 template engine with some Home Assistant specific extensions.
+          </p>
+          <ul>
+            <li><a href='http://jinja.pocoo.org/docs/dev/templates/' target='_blank'>Jinja2 template documentation</a></li>
+            <li><a href='https://home-assistant.io/docs/configuration/templating/' target='_blank'>Home Assistant template extensions</a></li>
+          </ul>
+          <paper-textarea
+            label="Template editor"
+            value='{{template}}'
+            autofocus
+          ></paper-textarea>
+        </div>
+
+        <div class='render-pane'>
+          <paper-spinner class='render-spinner' active='[[rendering]]'></paper-spinner>
+          <pre class$='[[computeRenderedClasses(error)]]'>[[processed]]</pre>
+        </div>
+      </div>
+    </app-header-layout>
+    `}static get properties(){return{hass:{type:Object},narrow:{type:Boolean,value:!1},showMenu:{type:Boolean,value:!1},error:{type:Boolean,value:!1},rendering:{type:Boolean,value:!1},template:{type:String,value:`Imitate available variables:
+{% set my_test_json = {
+  "temperature": 25,
+  "unit": "°C"
+} %}
+
+The temperature is {{ my_test_json.temperature }} {{ my_test_json.unit }}.
+
+{% if is_state("device_tracker.paulus", "home") and
+      is_state("device_tracker.anne_therese", "home") -%}
+  You are both home, you silly
+{%- else -%}
+  Anne Therese is at {{ states("device_tracker.anne_therese") }}
+  Paulus is at {{ states("device_tracker.paulus") }}
+{%- endif %}
+
+For loop example:
+{% for state in states.sensor -%}
+  {%- if loop.first %}The {% elif loop.last %} and the {% else %}, the {% endif -%}
+  {{ state.name | lower }} is {{state.state_with_unit}}
+{%- endfor %}.`,observer:"templateChanged"},processed:{type:String,value:""}}}computeFormClasses(narrow){return narrow?"content fit":"content fit layout horizontal"}computeRenderedClasses(error){return error?"error rendered":"rendered"}templateChanged(){if(this.error){this.error=!1}this._debouncer=_polymer_polymer_lib_utils_debounce__WEBPACK_IMPORTED_MODULE_6__.a.debounce(this._debouncer,_polymer_polymer_lib_utils_async__WEBPACK_IMPORTED_MODULE_5__.d.after(500),()=>{this.renderTemplate()})}renderTemplate(){this.rendering=!0;this.hass.callApi("POST","template",{template:this.template}).then(function(processed){this.processed=processed;this.rendering=!1}.bind(this),function(error){this.processed=error.body.message;this.error=!0;this.rendering=!1}.bind(this))}}customElements.define("ha-panel-dev-template",HaPanelDevTemplate)}}]);
+//# sourceMappingURL=225c2654d8e34076c555.chunk.js.map

@@ -1,0 +1,23 @@
+- alias: mam_go_home
+  initial_state: True
+  trigger:
+    platform: state
+    entity_id: device_tracker.qingqindeiphone
+    from: 'not_home'
+    to: 'home'
+  condition: 
+    condition: time
+    after: '17:30:00'
+    before: '20:00:00'
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    - delay: 0:0:10
+    - service: tts.baidu_say
+      data:
+        message: '陳璟爍小朋友，妳和媽媽已經回家了吧，那就趕快做飯吧，等爸爸回來後就可以一起吃飯了!'
+    - service: tts.clear_cache

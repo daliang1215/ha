@@ -1,0 +1,26 @@
+{
+    "data": {
+        "entities": [
+            {
+                "config_entry_id": "e05b77984d474f5d8f67c71267ff3b8c",
+                "device_id": "16a4eff1e6d14943bd56fbcf93077e72",
+                "disabled_by": null,
+                "entity_id": "sensor.iphone_battery_level",
+                "name": null,
+                "platform": "ios",
+                "unique_id": "level_iphone"
+            },
+            {
+                "config_entry_id": "e05b77984d474f5d8f67c71267ff3b8c",
+                "device_id": "16a4eff1e6d14943bd56fbcf93077e72",
+                "disabled_by": null,
+                "entity_id": "sensor.iphone_battery_state",
+                "name": null,
+                "platform": "ios",
+                "unique_id": "state_iphone"
+            }
+        ]
+    },
+    "key": "core.entity_registry",
+    "version": 1
+}

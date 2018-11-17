@@ -1,0 +1,5 @@
+sensor.to_company_time:
+  homebridge_name: 去公司时间
+sensor.hachina_pm25:
+  friendly_name: 室外PM2.5
+  unit_of_measurement: pm25

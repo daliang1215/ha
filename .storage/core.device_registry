@@ -1,0 +1,26 @@
+{
+    "data": {
+        "devices": [
+            {
+                "config_entries": [
+                    "e05b77984d474f5d8f67c71267ff3b8c"
+                ],
+                "connections": [],
+                "hub_device_id": null,
+                "id": "16a4eff1e6d14943bd56fbcf93077e72",
+                "identifiers": [
+                    [
+                        "ios",
+                        "BCCC81D8-43EB-486F-B37C-90CE7850A5E8"
+                    ]
+                ],
+                "manufacturer": "Apple",
+                "model": "iPhone 6",
+                "name": "iPhone",
+                "sw_version": "12.1"
+            }
+        ]
+    },
+    "key": "core.device_registry",
+    "version": 1
+}

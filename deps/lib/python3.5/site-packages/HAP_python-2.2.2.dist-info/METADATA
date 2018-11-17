@@ -1,0 +1,38 @@
+Metadata-Version: 2.0
+Name: HAP-python
+Version: 2.2.2
+Summary: HomeKit Accessory Protocol implementation in python3
+Home-page: https://github.com/ikalchev/HAP-python
+Author: HAP-python Authors
+Maintainer: Ivan Kalchev
+License: Apache License 2.0
+Download-URL: https://github.com/ikalchev/HAP-python/archive/2.2.2.zip
+Project-URL: Bug Reports, https://github.com/ikalchev/HAP-python/issues
+Project-URL: Documentation, http://hap-python.readthedocs.io/en/latest/
+Project-URL: Source, https://github.com/ikalchev/HAP-python/tree/master
+Keywords: homekit,home,automation,hap-python
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.5
+Provides-Extra: qrcode
+Requires-Dist: curve25519-donna
+Requires-Dist: ed25519
+Requires-Dist: pycryptodome
+Requires-Dist: tlslite-ng
+Requires-Dist: zeroconf
+Provides-Extra: qrcode
+Requires-Dist: base36; extra == 'qrcode'
+Requires-Dist: pyqrcode; extra == 'qrcode'
+
+UNKNOWN
+
+

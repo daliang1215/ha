@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: aioasuswrt
+Version: 1.1.2
+Summary: Api wrapper for Asuswrt https://www.asus.com/ASUSWRT/
+Home-page: https://github.com/kennedyshead/aioasuswrt
+Author: Magnus Knutas
+Author-email: magnusknutas@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/kennedyshead/aioasuswrt/archive/1.1.2.tar.gz
+Keywords: Asuswrt wrapper
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: asyncssh
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == 'dev'
+
+Small wrapper for asuswrt.
+
+Help neede for tests, just open a PR!
+
+### How to run tests
+
+`python setup.py test`
+
+## Credits:
+[@mvn23](https://github.com/mvn23)
+[@halkeye](https://github.com/halkeye)
+

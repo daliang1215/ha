@@ -1,0 +1,112 @@
+
+xiaomilivingroom:
+  hide_if_away: false
+  icon:
+  mac: 28:6C:07:74:49:6C
+  name: xiaoMi-LivingROOM
+  picture:
+  track: false
+
+skyboxq0102125271d7ad129de6:
+  hide_if_away: false
+  icon:
+  mac: F4:4C:70:B3:E1:91
+  name: Skybox-Q0102-125271d7ad129de6
+  picture:
+  track: true
+
+fuqingqngdeipad:
+  hide_if_away: false
+  icon:
+  mac: 5C:F5:DA:4E:F2:3D
+  name: fuqingqngdeiPad
+  picture:
+  track: true
+
+xiaomibedroom:
+  hide_if_away: false
+  icon:
+  mac: F0:B4:29:93:33:25
+  name: xiaoMi-BedROOM
+  picture:
+  track: false
+
+0017131f18d9:
+  hide_if_away: false
+  icon:
+  mac: 00:17:13:1F:18:D9
+  name: 0017131f18d9
+  picture:
+  track: false
+
+xiaob:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:6C:F9:BC
+  name: xiaoB
+  picture:
+  track: true
+
+greeketing:
+  hide_if_away: false
+  icon:
+  mac: 34:EA:34:C4:45:55
+  name: gree-keting
+  picture:
+  track: true
+
+rock64:
+  hide_if_away: false
+  icon:
+  mac: 1E:EF:FC:28:0C:BA
+  name: rock64
+  picture:
+  track: true
+
+iphone:
+  hide_if_away: true
+  icon:
+  mac: 00:61:71:A8:38:24
+  name: iphone
+  picture:
+  track: true
+
+chenfeidembp:
+  hide_if_away: true
+  icon:
+  mac: A0:99:9B:0D:6B:0B
+  name: chenfeideMBP
+  picture:
+  track: true
+
+r9plus:
+  hide_if_away: true
+  icon:
+  mac: C0:9F:05:32:48:31
+  name: R9PLUS
+  picture:
+  track: true
+
+androidef354cffcb55a9b3:
+  hide_if_away: true
+  icon:
+  mac: 44:66:FC:17:03:AF
+  name: android-ef354cffcb55a9b3
+  picture:
+  track: true
+
+qingqindeiphone:
+  hide_if_away: true
+  icon:
+  mac: 9C:4F:DA:87:2F:7C
+  name: qingqindeiPhone
+  picture:
+  track: true
+
+huawei_nova_2s5163314069:
+  hide_if_away: true
+  icon:
+  mac: DC:72:9B:A9:1D:2B
+  name: HUAWEI nova 2s-5163314069
+  picture:
+  track: true
