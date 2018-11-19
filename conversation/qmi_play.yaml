@@ -1,0 +1,10 @@
+intents:
+  # 意图类型（名称），以及对应的语法匹配规则
+  qmi_play_music:
+    - 播放[一首]{music}
+    - 唱[一]首{music}
+    - 想听{music}
+    - 要听{music}
+ # CloseLight:
+ #   - 关上{item}灯
+ #   - 关闭{item}灯
