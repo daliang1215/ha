@@ -3,8 +3,8 @@ homeassistant:
   name: JimmyHome
   # Location required to calculate the time the sun rises and sets
   # 34.7832120008,113.5896400503
-  latitude: 34.7832120008
-  longitude: 113.5896400503
+  latitude: 34.7831370996
+  longitude: 113.5896239570
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 116
   # metric for Metric, imperial for Imperial
@@ -90,14 +90,6 @@ homekit:
     - device_tracker.xiaomilivingroom
     - fan.kekting
     - fan.woshi
-  #  - input_select.keting_xiaomi_ap_led
-  #  - input_select.keting_xiaomi_ap_mode
-  #  - input_select.woshi_xiaomi_ap_led
-  #  - input_select.woshi_xiaomi_ap_mode
-  #  - switch.keting_xiaomi_ap_buzzer
-  #  - switch.keting_xiaomi_ap_childlock
-  #  - switch.woshi_xiaomi_ap_buzzer
-  #  - switch.woshi_xiaomi_ap_childlock
 # Enables configuration UI
 config:
 
@@ -118,7 +110,33 @@ updater:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
+  intents:
+    # 意图类型（名称），以及对应的语法匹配规则
+    qmi_play_music:
+      - 播放[一首]{music}
+      - 唱[一]首{music}
+   # CloseLight:
+   #   - 关上{item}灯
+   #   - 关闭{item}灯
+# 意图执行组件，根据配置文件决定对不同意图的执行命令
+intent_script:
+  # 意图类型（名称）
+  qmi_play_music:
+    # speech返回
+    speech:
+      text: 正在播放{{ music }}
+    # 执行动作
+    action:
+      service: shell_command.play_sound
+      data_template: 
+        text: >
+          {% if music=="小手拍拍" %}'/mnt/disks/music/qmi/xiaoshoupaipai.mp3'
+          {% elif music=="和快乐在一起" %}'/mnt/disks/music/qmi/hekuailezaiyiqi.mp3'
+          {% endif %}
+    async_action: true
 
+shell_command:
+  play_sound: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh {{text}} "
 # Enables support for tracking state changes over time
 history:
 
@@ -236,7 +254,7 @@ media_player:
 - platform: kodi
   name: KODI
   host: 192.168.88.8
-  port: 8888
+  port: 8889
   username: pi
   password: iQQ
 
@@ -244,7 +262,7 @@ panel_iframe:
   kodi:
     title: KODI
     icon: mdi:kodi
-    url: http://192.168.88.8:8888
+    url: http://192.168.88.8:8889
   homebridge:
     title: HomeBridge
     icon: mdi:apple
@@ -300,7 +318,7 @@ logger:
     homeassistant.components.media_player: warn
     homeassistant.components.recorder: warn
     homeassistant.components.sensor.command_line: warn
-    homeassistant.components.shell_command: warn
+    homeassistant.components.shell_command: debug
     homeassistant.helpers.script: warn
     homeassistant.helpers.entity: warn
     custom_components.device_tracker.hiwifi: warn
