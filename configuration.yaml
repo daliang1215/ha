@@ -115,6 +115,8 @@ conversation:
     qmi_play_music:
       - 播放[一首]{music}
       - 唱[一]首{music}
+      - 想听{music}
+      - 要听{music}
    # CloseLight:
    #   - 关上{item}灯
    #   - 关闭{item}灯
@@ -132,11 +134,14 @@ intent_script:
         text: >
           {% if music=="小手拍拍" %}'/mnt/disks/music/qmi/xiaoshoupaipai.mp3'
           {% elif music=="和快乐在一起" %}'/mnt/disks/music/qmi/hekuailezaiyiqi.mp3'
+          {% elif music=="黄鹂鸟" %}'/mnt/disks/music/qmi/woniuhehuangliniao.mp3'
+          {% elif music=="世上只有妈妈好" %}'/mnt/disks/music/qmi/shishangzhiyoumamahao.mp3'
+          {% elif music=="倍儿爽" %}'/mnt/disks/music/qmi/beishuang.mp3'
+          {% elif music=="倍爽" %}'/mnt/disks/music/qmi/beishuang.mp3'
+          {% elif music=="九月九的酒" %}'/mnt/disks/music/qmi/jiuyuejiudejiu.mp3'
           {% endif %}
     async_action: true
 
-shell_command:
-  play_sound: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh {{text}} "
 # Enables support for tracking state changes over time
 history:
 
@@ -150,83 +155,6 @@ map:
 sun:
 
 # Sensors
-#sensor:
-#  - platform: HeWeather
-#    city: zhengzhou
-#    aqi_city: zhengzhou
-#    appkey: d7c331e73816479f847ee321a4e619fb
-#    options:
-#      - fl
-#      - tmp
-#      - cond_txt
-#      - wind_spd
-#      - hum
-#      - pcpn
-#      - pres
-#      - vis
-#      - wind_sc
-#      - aqi
-#      - main
-#      - qlty
-#      - pm10
-#      - pm25
-#      - comf
-#      - cw
-#      - drsg
-#      - flu
-#      - sport
-#      - trav
-#      - uv
-#      - wind_dir
-#      - tmp_max
-#      - tmp_min
-#      - pop
-#  # GaoDe Map API
-#  - platform: gaode_travel_time
-#    name: driving_to_company
-#    api_key: 9d1f337261ff34e672c3b75d5fe7058c
-#    friendly_name: 从家去公司
-#    homebridge_hidden: false
-#    travel_mode: driving
-#    strategy: 0       #optional, 0-9, default 0 速度最快
-#    origin:
-#      longitude_latitude: 113.596374,34.7827
-#      #city: 郑州
-#      #address: 正商百合里
-#    destination:
-#      longitude_latitude: 113.805421,34.795648
-#      #city: 郑州
-#      #address: 专利局审协河南中心
-#
-#  - platform: gaode_travel_time
-#    name: driving_to_home
-#    api_key: 9d1f337261ff34e672c3b75d5fe7058c
-#    friendly_name: 从公司回家
-#    homebridge_hidden: false
-#    travel_mode: driving
-#    strategy: 0       #optional, 0-9, default 0 速度最快
-#    origin:
-#      longitude_latitude: 113.805421,34.795648
-#      #city: 郑州
-#      #address: 专利局审协河南中心
-#    destination:
-#      longitude_latitude: 113.596374,34.7827
-#      #city: 郑州
-#      #address: 正商百合里
-
-        #fan:
-        #  - platform: xiaomi_miio
-        #    name: keting
-        #    host: 192.168.88.31
-        #    token: c37a49585c60973872ca34a2499f2148
-        #    model: zhimi.airpurifier.m1
-        #
-        #  - platform: xiaomi_miio
-        #    name: woshi
-        #    host: 192.168.88.11
-        #    token: b156ee551e017bec0291f79e79802bc6
-        #    model: zhimi.airpurifier.m1
-
 # Text to speech
 tts:
   - platform: google
@@ -271,16 +199,6 @@ panel_iframe:
     title: Terminal
     icon: mdi:console
     url: https://192.168.88.140:4200
-    #device_tracker:
-    #  - platform: asuswrt
-    #    host: 192.168.88.254
-    #    username: admin
-    #    password: Peng0804
-    #    interval_seconds: 60
-    #    consider_home: 180
-    #    new_device_defaults:
-    #      track_new_devices: True
-    #      hide_if_away: True
 panel_custom:
   - name: inkwavemap
     sidebar_title: '墨澜地图'
@@ -334,7 +252,7 @@ scene: !include_dir_merge_list scene
 switch: !include_dir_merge_list switch
 script: !include_dir_merge_named script
 fan: !include_dir_merge_list fan
-#shell_command: !include_dir_merge_named shell_command
+shell_command: !include_dir_merge_named shell_command
 #group: !include groups.yaml
 #automation: !include automations.yaml
 #script: !include scripts.yaml
