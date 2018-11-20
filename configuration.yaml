@@ -67,7 +67,9 @@ frontend:
 
 http:
   api_password: 1qaz2wsx
-  base_url: 192.168.88.140:8123
+  base_url: https://192.168.88.140:8123
+  ssl_certificate: /home/pi/.homeassistant/ssl/efeichn.top.crt
+  ssl_key: /home/pi/.homeassistant/ssl/efeichn.top.key
   cors_allowed_origins:
     - http://reformedreality.com
 discovery:

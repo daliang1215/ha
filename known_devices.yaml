@@ -110,3 +110,11 @@ huawei_nova_2s5163314069:
   name: HUAWEI nova 2s-5163314069
   picture:
   track: true
+
+androidf94fd32ac22765bf:
+  hide_if_away: true
+  icon:
+  mac: 44:66:FC:A9:F4:A1
+  name: android-f94fd32ac22765bf
+  picture:
+  track: true
