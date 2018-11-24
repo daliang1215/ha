@@ -1,0 +1,2 @@
+killer: >-
+  /home/pi/.homeassistant/script/killer.sh {{text}}
