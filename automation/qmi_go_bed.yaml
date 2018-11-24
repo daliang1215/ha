@@ -2,7 +2,7 @@
   initial_state: True
   trigger:
     platform: time
-    at: '20:50:00'
+    at: '21:10:00'
   action:
     - service: tts.baidu_say
       data:

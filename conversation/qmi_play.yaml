@@ -1,10 +1,20 @@
 intents:
   # 意图类型（名称），以及对应的语法匹配规则
   qmi_play_music:
-    - 播放[一首]{music}
-    - 唱[一]首{music}
-    - 想听{music}
-    - 要听{music}
+    - 播放[一首][倍]{music}
+    - 播放被{music}
+    - 被{music}
+    - 播首[倍]{music}
+    - 唱[一]首[倍]{music}
+    - 想听[倍]{music}
+    - 要听[倍]{music}
+    - 林{music}
+    - 王{music}
+    - 五{music}
+    - 随便{music}
+  killer:
+    - 关闭{item}
+    - close{item}
  # CloseLight:
  #   - 关上{item}灯
  #   - 关闭{item}灯

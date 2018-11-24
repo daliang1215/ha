@@ -118,3 +118,27 @@ androidf94fd32ac22765bf:
   name: android-f94fd32ac22765bf
   picture:
   track: true
+
+fc1a11506266:
+  hide_if_away: true
+  icon:
+  mac: FC:1A:11:50:62:66
+  name: fc1a11506266
+  picture:
+  track: true
+
+jiqidmistoryv1_miio59682032:
+  hide_if_away: true
+  icon:
+  mac: 34:CE:00:93:D9:EB
+  name: jiqid-mistory-v1 miio59682032
+  picture:
+  track: true
+
+redmi5plushongmisho:
+  hide_if_away: true
+  icon:
+  mac: 80:AD:16:66:A4:81
+  name: Redmi5Plus-hongmisho
+  picture:
+  track: true
