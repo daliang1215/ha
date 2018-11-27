@@ -1,0 +1,6 @@
+#intents:
+#  on_keting_light:
+#    - 开{roomid}灯
+#    - 把{roomid}灯打开
+#    - on{roomid}light
+#  off_keting_light:

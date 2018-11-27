@@ -158,3 +158,11 @@ androidd90f1750e3a3928c:
   name: android-d90f1750e3a3928c
   picture:
   track: true
+
+androidfe6359f4de25919d:
+  hide_if_away: true
+  icon:
+  mac: CC:2D:83:D3:D5:69
+  name: android-fe6359f4de25919d
+  picture:
+  track: true

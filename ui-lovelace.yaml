@@ -69,3 +69,12 @@ views:
           - sensor.woshi_xiaomi_ap_humid
           - sensor.woshi_xiaomi_filter_used
           - sensor.woshi_xiaomi_filter_remaining
+  - icon: mdi:lightbulb
+    title: 家居灯控
+    cards:
+      - type: glance
+        title: 灯光控制系统
+        entities:
+          - switch.living_room_light_on_off_status
+          - switch.zhuwo_room_light_on_off_status
+          - switch.ciwo_room_light_on_off_status
