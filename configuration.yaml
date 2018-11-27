@@ -67,7 +67,7 @@ frontend:
 
 http:
   api_password: 1qaz2wsx
-  base_url: https://192.168.88.140:8123
+  base_url: https://www.efeichn.top:8123
   ssl_certificate: /home/pi/.homeassistant/ssl/efeichn.top.crt
   ssl_key: /home/pi/.homeassistant/ssl/efeichn.top.key
   cors_allowed_origins:
@@ -153,11 +153,19 @@ panel_iframe:
   homebridge:
     title: HomeBridge
     icon: mdi:apple
-    url: http://192.168.88.140:8124
+    url: https://www.efeichn.top:8125
   terminal:
     title: Terminal
     icon: mdi:console
-    url: https://192.168.88.140:4200
+    url: https://www.efeichn.top:4200
+  route:
+    title: AC88U
+    icon: mdi:router-wireless
+    url: https://www.efeichn.top:8443
+  kodi:
+    title: KODI
+    icon: mdi:kodi
+    url: https://www.efeichn.top:8890
 panel_custom:
   - name: inkwavemap
     sidebar_title: '墨澜地图'

@@ -142,3 +142,19 @@ redmi5plushongmisho:
   name: Redmi5Plus-hongmisho
   picture:
   track: true
+
+vivox9splusl:
+  hide_if_away: true
+  icon:
+  mac: F4:B7:B3:AC:9D:21
+  name: vivo-X9s-Plus-L
+  picture:
+  track: true
+
+androidd90f1750e3a3928c:
+  hide_if_away: true
+  icon:
+  mac: 84:73:03:75:8E:35
+  name: android-d90f1750e3a3928c
+  picture:
+  track: true

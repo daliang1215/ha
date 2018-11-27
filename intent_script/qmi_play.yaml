@@ -15,6 +15,8 @@ qmi_play_music:
         {% elif music=="儿爽" %}'/mnt/disks/music/qmi/倍爽.mp3'
         {% elif music=="九月九的酒" %}'/mnt/disks/music/qmi/九月九的酒.mp3'
         {% elif music=="小警察" %}'/mnt/disks/music/qmi/我在马路边捡到一分钱.mp3'
+        {% elif music=="小仓娃" %}'/mnt/disks/music/qmi/豫剧-小仓娃.mp3'
+        {% elif music=="小苍娃" %}'/mnt/disks/music/qmi/豫剧-小仓娃.mp3'
         {% elif music=="志颖" %}'jimmylin'
         {% elif music=="杰" %}'davewang'
         {% elif music=="月天" %}'mayday'
