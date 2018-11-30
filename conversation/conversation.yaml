@@ -19,6 +19,7 @@ intents:
     - 开{room}灯
     - 打开{room}灯
     - 把{room}灯[变成]开
+    - 把{room}灯打开
     - 把{room}灯[调成]开
   off_light:
     - 观{room}灯
@@ -33,15 +34,31 @@ intents:
     - 把{room}灯[变成]亮
     - 把{room}灯[调成]亮
     - 把{room}灯[变成]明
+    - 把{room}灯[变成]名
     - 把{room}灯[调成]明
+    - 把{room}灯[调成]名
+    - 把{room}灯变亮
+    - 把{room}灯调亮
+    - 把{room}灯变明
+    - 把{room}灯变名
+    - 把{room}灯调明
+    - 把{room}灯调名
   an_light:
     - 调暗{room}灯
     - 暗{room}灯 
     - 把{room}灯[变成]暗
     - 把{room}灯[调成]暗
+    - 把{room}灯变暗
+    - 把{room}灯调暗
+    - 把{room}灯[变成]案
+    - 把{room}灯[调成]案
+    - 把{room}灯变案
+    - 把{room}灯调案
   quanliang_light:
     - 全亮{room}灯
     - 把{room}灯[变成]最亮
+    - 把{room}灯[变成]全亮
+    - 把{room}灯[调成]最亮
     - 把{room}灯[调成]全亮
   changyedeng_light:
     - 常夜[灯]{room}灯 
