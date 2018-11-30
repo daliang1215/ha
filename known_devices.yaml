@@ -166,3 +166,11 @@ androidfe6359f4de25919d:
   name: android-fe6359f4de25919d
   picture:
   track: true
+
+esp8266_zhuwo:
+  hide_if_away: true
+  icon:
+  mac: 18:FE:34:CB:84:8E
+  name: ESP8266 zhuwo
+  picture:
+  track: true

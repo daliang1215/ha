@@ -1,6 +1,42 @@
-#intents:
-#  on_keting_light:
-#    - 开{roomid}灯
-#    - 把{roomid}灯打开
-#    - on{roomid}light
-#  off_keting_light:
+intents:
+  on_light:
+    - 开{room}灯
+    - 打开{room}灯
+    - 把{room}灯[变成]开
+    - 把{room}灯[调成]开
+  off_light:
+    - 观{room}灯
+    - 关{room}灯
+    - 把{room}灯[变成]关
+    - 把{room}灯[调成]关
+  ming_light:
+    - 调亮{room}灯
+    - 亮{room}灯
+    - 把{room}灯[变成]亮
+    - 把{room}灯[调成]亮
+    - 把{room}灯[变成]明
+    - 把{room}灯[调成]明
+  an_light:
+    - 调暗{room}灯
+    - 暗{room}灯 
+    - 把{room}灯[变成]暗
+    - 把{room}灯[调成]暗
+  quanliang_light:
+    - 全亮{room}灯
+    - 把{room}灯[变成]最亮
+    - 把{room}灯[调成]全亮
+  changyedeng_light:
+    - 常夜[灯]{room}灯 
+    - 把{room}灯[变成]常夜模式
+    - 把{room}灯[调成]常夜模式
+    - 把{room}灯[变成]常夜灯
+    - 把{room}灯[调成]常夜灯
+  riguangse_light:
+    - 日光色{room}灯
+    - 把{room}灯[变成]日光色
+    - 把{room}灯[调成]日光色
+  nuanbaise_light:
+    - 暖白色{room}灯
+    - 把{room}灯[变成]暖白色
+    - 把{room}灯[调成]暖白色
+

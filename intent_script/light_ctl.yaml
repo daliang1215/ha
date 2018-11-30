@@ -1,0 +1,97 @@
+on_light:
+  # speech返回
+  speech:
+    text: 打开{{ room }}灯
+  # 执行动作
+  action:
+    - service: switch.turn_on
+      data_template: 
+        entity_id: >-
+          {% if room=="客厅" %}switch.keting_room_light_on_off
+          {% elif music=="主卧" %}switch.zhuwo_room_light_on_off
+          {% elif music=="次卧" %}switch.ciwo_room_light_on_off
+          {% endif %}
+ #async_action: true
+
+off_light:
+  speech:
+    text: 关闭{{ room }} 灯
+  action:
+    - service: switch.turn_off
+      data_template: 
+        entity_id: >-
+          {% if room=="客厅" %}switch.keting_room_light_on_off
+          {% elif music=="主卧" %}switch.zhuwo_room_light_on_off
+          {% elif music=="次卧" %}switch.ciwo_room_light_on_off
+          {% endif %}
+
+quanliang_light:
+  speech:
+    text: 调整{{ room }} 灯状态为全亮
+  action:
+    - service: switch.turn_on
+      data_template: 
+        entity_id: >-
+          {% if room=="客厅" %}switch.keting_room_light_quanliang
+          {% elif music=="主卧" %}switch.zhuwo_room_light_quanliang
+          {% elif music=="次卧" %}switch.ciwo_room_light_quanliang
+          {% endif %}
+changyedeng_light:
+  speech:
+    text: 把{{ room }} 灯调成常夜灯模式
+  action:
+    - service: switch.turn_on
+      data_template: 
+        entity_id: >-
+          {% if room=="客厅" %}switch.keting_room_light_changyedeng
+          {% elif music=="主卧" %}switch.zhuwo_room_light_changyedeng
+          {% elif music=="次卧" %}switch.ciwo_room_light_changyedeng
+          {% endif %}
+
+ming_light:
+  speech:
+    text: 把{{ room }} 灯调亮一点
+  action:
+    - service: switch.turn_on
+      data_template: 
+        entity_id: >-
+          {% if room=="客厅" %}switch.keting_room_light_ming
+          {% elif music=="主卧" %}switch.zhuwo_room_light_ming
+          {% elif music=="次卧" %}switch.ciwo_room_light_ming
+          {% endif %}
+
+an_light:
+  speech:
+    text: 把{{ room }} 灯调暗一点
+  action:
+    - service: switch.turn_on
+      data_template: 
+        entity_id: >-
+          {% if room=="客厅" %}switch.keting_room_light_an
+          {% elif music=="主卧" %}switch.zhuwo_room_light_an
+          {% elif music=="次卧" %}switch.ciwo_room_light_an
+          {% endif %}
+
+riguangse_light:
+  speech:
+    text: 把{{ room }} 灯调成日光色
+  action:
+    - service: switch.turn_on
+      data_template: 
+        entity_id: >-
+          {% if room=="客厅" %}switch.keting_room_light_riguangse
+          {% elif music=="主卧" %}switch.zhuwo_room_light_riguangse
+          {% elif music=="次卧" %}switch.ciwo_room_light_riguangse
+          {% endif %}
+
+nuanbaise_light:
+  speech:
+    text: 把{{ room }} 灯调成暖白色
+  action:
+    - service: switch.turn_on
+      data_template: 
+        entity_id: >-
+          {% if room=="客厅" %}switch.keting_room_light_nuanbaise
+          {% elif music=="主卧" %}switch.zhuwo_room_light_nuanbaise
+          {% elif music=="次卧" %}switch.ciwo_room_light_nuanbaise
+          {% endif %}
