@@ -169,7 +169,7 @@ notify:
     from_number: "+18038280909"
 
 # Cloud
-cloud:
+#cloud:
 # log
 #logger:
 #  default: warning
