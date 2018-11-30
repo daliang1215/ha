@@ -3,3 +3,7 @@ sensor.to_company_time:
 sensor.hachina_pm25:
   friendly_name: 室外PM2.5
   unit_of_measurement: pm25
+sensor.keting_xiaomi_ap_aqi:
+  icon: mdi:blur
+sensor.keting_xiaomi_ap_humid:
+  icon: mdi:water-percent

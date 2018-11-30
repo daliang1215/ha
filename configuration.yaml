@@ -26,6 +26,9 @@ homeassistant:
     "sensor.*":
       homebridge_hidden: true
 
+    "fan.*":
+      homebridge_hidden: true
+
     "sensor.illumination_*":
       hidden: true
       homebridge_hidden: true
@@ -90,14 +93,8 @@ homekit:
     - device_tracker.huawei_nova_2s5163314069
     - device_tracker.xiaomibedroom
     - device_tracker.xiaomilivingroom
-    - fan.kekting
-    - fan.woshi
 # Enables configuration UI
 config:
-
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
-#   base_url: example.duckdns.org:8123
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -154,14 +151,6 @@ panel_iframe:
     title: HomeBridge
     icon: mdi:apple
     url: https://www.efeichn.top:8125
-  terminal:
-    title: Terminal
-    icon: mdi:console
-    url: https://www.efeichn.top:4200
-  route:
-    title: AC88U
-    icon: mdi:router-wireless
-    url: https://www.efeichn.top:8443
   kodi:
     title: KODI
     icon: mdi:kodi
@@ -198,6 +187,7 @@ logger:
     homeassistant.components.automation: warn
     homeassistant.components.binary_sensor: warn
     homeassistant.components.device_tracker: warn
+    homeassistant.components.switch: debug
     homeassistant.components.discovery: warn
     homeassistant.components.http: warn
     homeassistant.components.media_player: warn

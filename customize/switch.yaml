@@ -1,10 +1,6 @@
 switch.keting_xiaomi_ap_buzzer:
   icon: mdi:volume-high
   friendly_name: 提示音
-sensor.keting_xiaomi_ap_aqi:
-  icon: mdi:blur
-sensor.keting_xiaomi_ap_humid:
-  icon: mdi:water-percent
 switch.keting_xiaomi_ap_childlock:
   icon: mdi:lock
   friendly_name: 儿童锁
@@ -14,3 +10,45 @@ switch.woshi_xiaomi_ap_buzzer:
 switch.woshi_xiaomi_ap_childlock:
   icon: mdi:lock
   friendly_name: 儿童锁
+switch.keting_room_light_on_off:
+  friendly_name: 开关
+switch.keting_room_light_changyedeng:
+  friendly_name: 常夜模式
+switch.keting_room_light_quanliang:
+  friendly_name: 全亮模式
+switch.keting_room_light_an:
+  friendly_name: 变暗一级
+switch.keting_room_light_ming:
+  friendly_name: 变亮一级
+switch.keting_room_light_nuanbaise:
+  friendly_name: 暖白色
+switch.keting_room_light_riguangse:
+  friendly_name: 日白色
+switch.zhuwo_room_light_on_off:
+  friendly_name: 开关
+switch.zhuwo_room_light_changyedeng:
+  friendly_name: 常夜模式
+switch.zhuwo_room_light_quanliang:
+  friendly_name: 全亮模式
+switch.zhuwo_room_light_an:
+  friendly_name: 变暗一级
+switch.zhuwo_room_light_ming:
+  friendly_name: 变亮一级
+switch.zhuwo_room_light_nuanbaise:
+  friendly_name: 暖白色
+switch.zhuwo_room_light_riguangse: 
+  friendly_name: 日白色
+switch.ciwo_room_light_on_off:
+  friendly_name: 开关
+switch.ciwo_room_light_changyedeng:
+  friendly_name: 常夜模式
+switch.ciwo_room_light_quanliang:
+  friendly_name: 全亮模式
+switch.ciwo_room_light_an:
+  friendly_name: 变暗一级
+switch.ciwo_room_light_ming:
+  friendly_name: 变亮一级
+switch.ciwo_room_light_nuanbaise:
+  friendly_name: 暖白色
+switch.ciwo_room_light_riguangse:
+  friendly_name: 日白色

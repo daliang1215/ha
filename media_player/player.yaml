@@ -6,4 +6,4 @@
   password: iQQ
 - platform: vlc
   name: VLC player
-  scan_interval: 1
+  #scan_interval: 1

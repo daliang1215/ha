@@ -73,8 +73,32 @@ views:
     title: 家居灯控
     cards:
       - type: glance
-        title: 灯光控制系统
+        title: 客厅灯光
         entities:
-          - switch.living_room_light_on_off_status
-          - switch.zhuwo_room_light_on_off_status
-          - switch.ciwo_room_light_on_off_status
+          - switch.keting_room_light_on_off
+          - switch.keting_room_light_changyedeng
+          - switch.keting_room_light_quanliang
+          - switch.keting_room_light_an
+          - switch.keting_room_light_ming
+          - switch.keting_room_light_nuanbaise
+          - switch.keting_room_light_riguangse 
+      - type: glance
+        title: 主卧灯光
+        entities:
+          - switch.zhuwo_room_light_on_off
+          - switch.zhuwo_room_light_changyedeng
+          - switch.zhuwo_room_light_quanliang
+          - switch.zhuwo_room_light_an
+          - switch.zhuwo_room_light_ming
+          - switch.zhuwo_room_light_nuanbaise
+          - switch.zhuwo_room_light_riguangse 
+      - type: glance
+        title: 次卧灯光
+        entities:
+          - switch.ciwo_room_light_on_off
+          - switch.ciwo_room_light_changyedeng
+          - switch.ciwo_room_light_quanliang
+          - switch.ciwo_room_light_an
+          - switch.ciwo_room_light_ming
+          - switch.ciwo_room_light_nuanbaise
+          - switch.ciwo_room_light_riguangse 
