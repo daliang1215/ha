@@ -69,7 +69,7 @@ homeassistant:
 frontend:
 
 http:
-  api_password: 1qaz2wsx
+  api_password: !secret http_password
   base_url: https://www.efeichn.top:8123
   ssl_certificate: /home/pi/.homeassistant/ssl/efeichn.top.crt
   ssl_key: /home/pi/.homeassistant/ssl/efeichn.top.key
