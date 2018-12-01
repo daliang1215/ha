@@ -1,4 +1,5 @@
 - alias: qmi_goto_bed 
+  hide_entity: true
   initial_state: True
   trigger:
     platform: time

@@ -16,6 +16,7 @@ homeassistant:
   #packages: !include_dir_named packages
   customize_domain:
     automation:
+      homebridge_hidden: true
       initial_state: on
 
   customize_glob:
@@ -80,19 +81,26 @@ discovery:
     - homekit
 homekit:
   #auto_start: false
-  exclude_entities:
-    - automation.keting_xiaomi_ap_get_led
-    - automation.keting_xiaomi_ap_get_mode
-    - automation.keting_xiaomi_ap_set_led
-    - automation.keting_xiaomi_ap_set_mode
-    - automation.woshi_xiaomi_ap_get_led
-    - automation.woshi_xiaomi_ap_get_mode
-    - automation.woshi_xiaomi_ap_set_led
-    - automation.woshi_xiaomi_ap_set_mode
-    - device_tracker.androidef354cffcb55a9b3
-    - device_tracker.huawei_nova_2s5163314069
-    - device_tracker.xiaomibedroom
-    - device_tracker.xiaomilivingroom
+  filter:
+    exclude_entities:
+      - automation.keting_xiaomi_ap_get_led
+      - automation.keting_xiaomi_ap_get_mode
+      - automation.keting_xiaomi_ap_set_led
+      - automation.keting_xiaomi_ap_set_mode
+      - automation.woshi_xiaomi_ap_get_led
+      - automation.woshi_xiaomi_ap_get_mode
+      - automation.woshi_xiaomi_ap_set_led
+      - automation.woshi_xiaomi_ap_set_mode
+      - automation.mam_go_home
+      - automation.qmi_goto_bed
+      - automation.report_weather_status
+      - automation.cuckoo_clock
+      - device_tracker.androidef354cffcb55a9b3
+      - device_tracker.huawei_nova_2s5163314069
+      - device_tracker.xiaomibedroom
+      - device_tracker.xiaomilivingroom
+      - fan.keting
+      - fan.woshi
 # Enables configuration UI
 config:
 
@@ -145,7 +153,6 @@ ifttt:
 mqtt:
   password: 1qaz2wsx
 
-
 panel_iframe:
   homebridge:
     title: HomeBridge
@@ -155,6 +162,10 @@ panel_iframe:
     title: KODI
     icon: mdi:kodi
     url: https://www.efeichn.top:8890
+    #  weblink:
+    #    title: SmartHome
+    #    icon: mdi:home-automation
+    #    url: https://www.efeichn.top:1234
 panel_custom:
   - name: inkwavemap
     sidebar_title: '墨澜地图'

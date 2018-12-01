@@ -1,0 +1,46 @@
+- alias: Cuckoo Clock
+  hide_entity: true
+  initial_state: true
+  trigger:
+  - platform: time
+    minutes: 00
+    seconds: 01
+  - platform: time
+    minutes: 30
+    seconds: 01
+  condition:
+    condition: or
+    conditions:
+      - condition: and
+        conditions:
+          # 工作日
+          - condition: time
+            after: '08:00:00'
+            before: '22:30:00'
+
+          - condition: state
+            entity_id: sensor.chinese_calendar
+            state: 'workday'
+
+      - condition: and
+        conditions:
+          # 节假日
+          - condition: time
+            after: '09:00:00'
+            before: '22:30:00'
+
+          - condition: state
+            entity_id: sensor.chinese_calendar
+            state: 'holiday'
+  action:
+    - service: media_player.play_media
+      data_template:
+        entity_id: media_player.vlc_player
+        media_content_id: >-
+          {% if now().strftime("%M")|int == 30 %}
+          http://192.168.88.140/sounds/cuckoo-clock-01.mp3
+          {% else %}
+          #http://home.lukin.cn/sounds/cuckoo-clock-{{now().strftime("%I")}}.mp3
+          http://192.168.88.140/sounds/cuckoo-clock.mp3
+          {% endif %}
+        media_content_type: music

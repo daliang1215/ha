@@ -21,3 +21,10 @@ https://www.efeichn.top:8890 {
     log stdout                                                         
     errors stderr                                                      
 }
+:80 {
+    root /home/pi/.homeassistant
+    gzip
+    browse 
+    log stdout                                                         
+    errors stderr                                                      
+}

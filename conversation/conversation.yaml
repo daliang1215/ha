@@ -24,10 +24,11 @@ intents:
   off_light:
     - 观{room}灯
     - 关{room}灯
-    - 把{room}灯[变成]关
+    - 把{room}灯[变成]关[掉]
     - 把{room}灯[变成]关上
-    - 把{room}灯[调成]关
+    - 把{room}灯[调成]关[掉]
     - 把{room}灯[调成]关上
+    - 把{room}灯关[掉]
   ming_light:
     - 调亮{room}灯
     - 亮{room}灯
@@ -60,12 +61,19 @@ intents:
     - 把{room}灯[变成]全亮
     - 把{room}灯[调成]最亮
     - 把{room}灯[调成]全亮
+    - 把{room}灯[变成]全量
+    - 把{room}灯[调成]全量
   changyedeng_light:
     - 常夜[灯]{room}灯 
+    - 长夜[灯]{room}灯 
     - 把{room}灯[变成]常夜模式
     - 把{room}灯[调成]常夜模式
     - 把{room}灯[变成]常夜灯
     - 把{room}灯[调成]常夜灯
+    - 把{room}灯[变成]长夜模式
+    - 把{room}灯[调成]长夜模式
+    - 把{room}灯[变成]长夜灯
+    - 把{room}灯[调成]长夜灯
   riguangse_light:
     - 日光色{room}灯
     - 把{room}灯[变成]日光色

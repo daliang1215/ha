@@ -9,7 +9,7 @@ on_light:
         entity_id: >-
           {% if room=="客厅" %}switch.keting_room_light_on_off
           {% elif room=="主卧" %}switch.zhuwo_room_light_on_off
-          {% elif room=="次卧" %}switch.ciwo_room_light_on_off
+          {% elif room=="卧室" %}switch.ciwo_room_light_on_off
           {% endif %}
  #async_action: true
 
@@ -22,7 +22,7 @@ off_light:
         entity_id: >-
           {% if room=="客厅" %}switch.keting_room_light_on_off
           {% elif room=="主卧" %}switch.zhuwo_room_light_on_off
-          {% elif room=="次卧" %}switch.ciwo_room_light_on_off
+          {% elif room=="卧室" %}switch.ciwo_room_light_on_off
           {% endif %}
 
 quanliang_light:
@@ -34,7 +34,7 @@ quanliang_light:
         entity_id: >-
           {% if room=="客厅" %}switch.keting_room_light_quanliang
           {% elif room=="主卧" %}switch.zhuwo_room_light_quanliang
-          {% elif room=="次卧" %}switch.ciwo_room_light_quanliang
+          {% elif room=="卧室" %}switch.ciwo_room_light_quanliang
           {% endif %}
 changyedeng_light:
   speech:
@@ -45,7 +45,7 @@ changyedeng_light:
         entity_id: >-
           {% if room=="客厅" %}switch.keting_room_light_changyedeng
           {% elif room=="主卧" %}switch.zhuwo_room_light_changyedeng
-          {% elif room=="次卧" %}switch.ciwo_room_light_changyedeng
+          {% elif room=="卧室" %}switch.ciwo_room_light_changyedeng
           {% endif %}
 
 ming_light:
@@ -57,7 +57,7 @@ ming_light:
         entity_id: >-
           {% if room=="客厅" %}switch.keting_room_light_ming
           {% elif room=="主卧" %}switch.zhuwo_room_light_ming
-          {% elif room=="次卧" %}switch.ciwo_room_light_ming
+          {% elif room=="卧室" %}switch.ciwo_room_light_ming
           {% endif %}
 
 an_light:
@@ -69,7 +69,7 @@ an_light:
         entity_id: >-
           {% if room=="客厅" %}switch.keting_room_light_an
           {% elif room=="主卧" %}switch.zhuwo_room_light_an
-          {% elif room=="次卧" %}switch.ciwo_room_light_an
+          {% elif room=="卧室" %}switch.ciwo_room_light_an
           {% endif %}
 
 riguangse_light:
@@ -81,7 +81,7 @@ riguangse_light:
         entity_id: >-
           {% if room=="客厅" %}switch.keting_room_light_riguangse
           {% elif room=="主卧" %}switch.zhuwo_room_light_riguangse
-          {% elif room=="次卧" %}switch.ciwo_room_light_riguangse
+          {% elif room=="卧室" %}switch.ciwo_room_light_riguangse
           {% endif %}
 
 nuanbaise_light:
@@ -93,5 +93,5 @@ nuanbaise_light:
         entity_id: >-
           {% if room=="客厅" %}switch.keting_room_light_nuanbaise
           {% elif room=="主卧" %}switch.zhuwo_room_light_nuanbaise
-          {% elif room=="次卧" %}switch.ciwo_room_light_nuanbaise
+          {% elif room=="卧室" %}switch.ciwo_room_light_nuanbaise
           {% endif %}
