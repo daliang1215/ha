@@ -21,6 +21,12 @@ qmi_play_music:
         {% elif music=="杰" %}'davewang'
         {% elif music=="月天" %}'mayday'
         {% elif music=="听听" %}'tingting'
+        {% elif music=="得瑞" %}'bandari'
+        {% elif music=="dari" %}'bandari'
+        {% elif music=="dari" %}'bandari'
+        {% elif music=="华健" %}'zhouhuajian'
+        {% elif music=="华建" %}'zhouhuajian'
+        {% elif music=="信哲" %}'zhangxinzhe'
         {% endif %}
   async_action: true
 killer:

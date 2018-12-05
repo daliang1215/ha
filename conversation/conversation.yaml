@@ -12,6 +12,10 @@ intents:
     - 王{music}
     - 五{music}
     - 随便{music}
+    - 班{music}
+    - ban{music}
+    - 周{music}
+    - 张{music}
   killer:
     - 关闭{item}
     - close{item}

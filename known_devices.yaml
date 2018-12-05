@@ -174,3 +174,19 @@ esp8266_zhuwo:
   name: ESP8266 zhuwo
   picture:
   track: true
+
+v1732a:
+  hide_if_away: true
+  icon:
+  mac: 90:C5:4A:8D:22:CB
+  name: V1732A
+  picture:
+  track: true
+
+esp_6822b8:
+  hide_if_away: true
+  icon:
+  mac: 5C:CF:7F:68:22:B8
+  name: ESP 6822B8
+  picture:
+  track: true

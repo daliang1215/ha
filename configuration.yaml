@@ -97,9 +97,25 @@ homekit:
       - automation.cuckoo_clock
       - device_tracker.androidef354cffcb55a9b3
       - device_tracker.huawei_nova_2s5163314069
-      - device_tracker.xiaomibedroom
+      - device_tracker.androidd90f1750e3a3928c
+      - device_tracker.androidf94fd32ac22765bf
+      - device_tracker.androidfe6359f4de25919d
+      - device_tracker.fc1a11506266
+      - device_tracker.redmi5plushongmisho
+      - device_tracker.vivox9splusl
+       ## livingroom
       - device_tracker.xiaomilivingroom
+      - switch.keting_xiaomi_ap_buzzer
+      - switch.keting_xiaomi_ap_childlock
+      - sensor.keting_xiaomi_ap_humid
+      - sensor.keting_xiaomi_ap_temp
       - fan.keting
+       ## woshi 
+      - device_tracker.xiaomibedroom
+      - switch.woshi_xiaomi_ap_buzzer
+      - switch.woshi_xiaomi_ap_childlock
+      - sensor.woshi_xiaomi_ap_humid
+      - sensor.woshi_xiaomi_ap_temp
       - fan.woshi
 # Enables configuration UI
 config:
