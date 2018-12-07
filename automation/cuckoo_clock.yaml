@@ -33,13 +33,20 @@
             entity_id: sensor.chinese_calendar
             state: 'holiday'
   action:
-    - service: media_player.play_media
-      data_template:
-        entity_id: media_player.vlc_player
-        media_content_id: >-
-          {% if now().strftime("%M")|int == 30 %}
-          http://192.168.88.140/sounds/cuckoo-clock-01.mp3
-          {% else %}
-          http://192.168.88.140/sounds/cuckoo-clock.mp3
-          {% endif %}
-        media_content_type: music
+    service: shell_command.play_sound
+    data_template:
+      text: >-
+        {% if now().strftime("%M")|int == 30 %}'/home/pi/.homeassistant/sounds/cuckoo-clock-01.mp3'
+        {% else %}'/home/pi/.homeassistant/sounds/cuckoo-clock.mp3'
+        {% endif %}
+
+          #    - service: media_player.play_media
+          #      data_template:
+          #        entity_id: media_player.vlc_player
+          #        media_content_id: >-
+          #          {% if now().strftime("%M")|int == 30 %}
+          #          http://192.168.88.140/sounds/cuckoo-clock-01.mp3
+          #          {% else %}
+          #          http://192.168.88.140/sounds/cuckoo-clock.mp3
+          #          {% endif %}
+          #        media_content_type: music
