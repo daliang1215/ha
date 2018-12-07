@@ -95,6 +95,8 @@ homekit:
       - automation.qmi_goto_bed
       - automation.report_weather_status
       - automation.cuckoo_clock
+      - automation.some_light_auto_off
+      - automation.light_go_to_sleep
       - device_tracker.androidef354cffcb55a9b3
       - device_tracker.huawei_nova_2s5163314069
       - device_tracker.androidd90f1750e3a3928c
@@ -103,6 +105,7 @@ homekit:
       - device_tracker.fc1a11506266
       - device_tracker.redmi5plushongmisho
       - device_tracker.vivox9splusl
+      - device_tracker.v1732a
        ## livingroom
       - device_tracker.xiaomilivingroom
       - switch.keting_xiaomi_ap_buzzer
@@ -110,13 +113,16 @@ homekit:
       - sensor.keting_xiaomi_ap_humid
       - sensor.keting_xiaomi_ap_temp
       - fan.keting
-       ## woshi 
+      - switch.keting_room_light_light_sleep
+      ## woshi 
       - device_tracker.xiaomibedroom
       - switch.woshi_xiaomi_ap_buzzer
       - switch.woshi_xiaomi_ap_childlock
       - sensor.woshi_xiaomi_ap_humid
       - sensor.woshi_xiaomi_ap_temp
       - fan.woshi
+      - switch.zhuwo_room_light_light_sleep
+      - switch.ciwo_room_light_light_sleep
 # Enables configuration UI
 config:
 

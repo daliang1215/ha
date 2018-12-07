@@ -24,6 +24,9 @@
     keting_room_light_nuanbaise:
       ## 192.168.88.9 living_room
       command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=keting&state=nuanbaise'"
+    keting_room_light_light_sleep:
+      ## 192.168.88.9 living_room
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=keting&state=lightsleep'"
     zhuwo_room_light_on_off:
       ## 192.168.88.10 zhuwo_room
       command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=zhuwo&state=on'"
@@ -42,6 +45,8 @@
       command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=zhuwo&state=riguangse'"
     zhuwo_room_light_nuanbaise:
       command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=zhuwo&state=nuanbaise'"
+    zhuwo_room_light_light_sleep:
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=zhuwo&state=lightsleep'"
     ciwo_room_light_on_off:
       ## 192.168.88.13 ciwo_room
       command_on: "/usr/bin/curl -X GET  'http://192.168.88.13/room?roomid=ciwo&state=on'"
@@ -60,3 +65,5 @@
       command_on: "/usr/bin/curl -X GET  'http://192.168.88.13/room?roomid=ciwo&state=riguangse'"
     ciwo_room_light_nuanbaise:
       command_on: "/usr/bin/curl -X GET  'http://192.168.88.13/room?roomid=ciwo&state=nuanbaise'"
+    ciwo_room_light_light_sleep:
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.13/room?roomid=ciwo&state=lightsleep'"

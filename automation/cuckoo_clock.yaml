@@ -40,7 +40,6 @@
           {% if now().strftime("%M")|int == 30 %}
           http://192.168.88.140/sounds/cuckoo-clock-01.mp3
           {% else %}
-          #http://home.lukin.cn/sounds/cuckoo-clock-{{now().strftime("%I")}}.mp3
           http://192.168.88.140/sounds/cuckoo-clock.mp3
           {% endif %}
         media_content_type: music
