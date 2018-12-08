@@ -5,14 +5,9 @@
     platform: time
     at: '6:46:00'
   condition: 
-    condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
-      - sat
+    condition: state
+    entity_id: sensor.chinese_calendar
+    state: 'workday'
   action:
     - service: tts.baidu_say
       data_template:
