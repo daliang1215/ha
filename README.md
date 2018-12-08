@@ -6,4 +6,5 @@
 5. 增加了整点和半点使用布谷鸟报时，并根据中国的假期安排调整播报时间。using omxplayer instead of vlc . 
 6. 定时让esp8266 休眠达到省电的目的。
 # 增加客厅和次卧的ESP8266控制。 或者可以考虑次卧的不做。
+# ESP8266电路图
 ![Image text](LIGHT-ESP8266.png)
