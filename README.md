@@ -7,4 +7,4 @@
 6. 定时让esp8266 休眠达到省电的目的。
 # 增加客厅和次卧的ESP8266控制。 或者可以考虑次卧的不做。
 # ESP8266电路图
-![Image text](LIGHT-ESP8266.png)
+![ESP8266电路图](img/light-esp8266.png)
