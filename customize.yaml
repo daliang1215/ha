@@ -1,1 +1,5 @@
 group.all_automations: {}
+device_tracker.esp8266_zhuwo:
+  friendly_name: ESP8266_客厅
+device_tracker.esp_6822b8:
+  friendly_name: esp8266_主卧

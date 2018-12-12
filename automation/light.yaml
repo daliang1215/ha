@@ -21,6 +21,73 @@
   action:
     service: switch.turn_on
     entity_id:
-      - switch.keting_room_light_light_sleep
+      #- switch.keting_room_light_light_sleep
       - switch.zhuwo_room_light_light_sleep
       - switch.ciwo_room_light_light_sleep
+- alias: open_keting_light
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: time
+    at: '6:40:00'
+  condition:
+    condition: state
+    entity_id: sensor.chinese_calendar
+    state: 'workday'
+  action:
+    service: switch.turn_on
+    entity_id: switch.keting_room_light_on_off
+- alias: close_keting_light
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: '1:00:00'
+  action:
+    service: switch.turn_off
+    entity_id: switch.keting_room_light_on_off
+- alias: mam_and_dad_go_home_workday_open_light
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: device_tracker.qingqindeiphone,device_tracker.iphone,device_tracker.r9plus
+    from: 'not_home'
+    to: 'home'
+  condition: 
+    condition: sun
+    after: sunset
+    after_offset: "-1:00:00" 
+  action:
+    - delay: 0:0:5
+    - service: switch.turn_on
+      entity_id: switch.keting_room_light_on_off
+- alias: somebody_at_home_with_sunset_in_holidayhome_open_light
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-1:00:00'
+  condition: 
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.chinese_calendar
+        state: 'holiday'
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: device_tracker.qingqindeiphone
+            state: 'home'
+          - condition: state
+            entity_id: device_tracker.iphone
+            state: 'home'
+          - condition: state
+            entity_id: device_tracker.r9plus
+            state: 'home'
+  action:
+    - delay: 0:0:5
+    - service: switch.turn_on
+      entity_id: switch.keting_room_light_on_off

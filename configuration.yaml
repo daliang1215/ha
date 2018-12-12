@@ -97,6 +97,10 @@ homekit:
       - automation.cuckoo_clock
       - automation.some_light_auto_off
       - automation.light_go_to_sleep
+      - automation.somebody_at_home_with_sunset_in_holidayhome_open_light
+      - automation.mam_and_dad_go_home_workday_open_light
+      - automation.close_keting_light
+      - automation.open_keting_light
       - device_tracker.androidef354cffcb55a9b3
       - device_tracker.huawei_nova_2s5163314069
       - device_tracker.androidd90f1750e3a3928c
