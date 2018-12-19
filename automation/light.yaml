@@ -17,13 +17,20 @@
   initial_state: true
   trigger:
     platform: time
-    at: '23:30:00'
+    at: '22:20:00'
   action:
-    service: switch.turn_on
-    entity_id:
-      #- switch.keting_room_light_light_sleep
-      - switch.zhuwo_room_light_light_sleep
-      - switch.ciwo_room_light_light_sleep
+    - service: switch.turn_on
+      entity_id:
+        - switch.zhuwo_room_light_changyedeng 
+    - delay: 0:5       
+    - service: switch.turn_off
+      entity_id: 
+        - switch.zhuwo_room_light_on_off
+    - service: switch.turn_on
+      entity_id:
+        #- switch.keting_room_light_light_sleep
+        - switch.zhuwo_room_light_light_sleep
+        - switch.ciwo_room_light_light_sleep
 - alias: open_keting_light
   hide_entity: true
   initial_state: true
@@ -35,8 +42,11 @@
     entity_id: sensor.chinese_calendar
     state: 'workday'
   action:
-    service: switch.turn_on
-    entity_id: switch.keting_room_light_on_off
+    - service: switch.turn_on
+      entity_id: switch.keting_room_light_on_off
+    - delay: 0:0:10
+    - service: switch.turn_on
+      entity_id: switch.keting_room_light_nuanbaise
 - alias: close_keting_light
   hide_entity: true
   initial_state: true

@@ -190,3 +190,19 @@ esp_6822b8:
   name: ESP 6822B8
   picture:
   track: true
+
+esp_6818cd:
+  hide_if_away: true
+  icon:
+  mac: 5C:CF:7F:68:18:CD
+  name: ESP 6818CD
+  picture:
+  track: true
+
+vivo_y51a:
+  hide_if_away: true
+  icon:
+  mac: 9C:A5:C0:5D:DD:E6
+  name: vivo Y51A
+  picture:
+  track: true
