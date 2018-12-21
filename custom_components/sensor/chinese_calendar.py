@@ -73,7 +73,11 @@ class ChineseCalendarSensor(Entity):
 
     def update(self):
         """Get the latest data from Yahoo! and updates the states."""
-        is_holiday, holiday_name = calendar.get_holiday_detail(datetime.today().date())
+#        is_holiday, holiday_name = calendar.get_holiday_detail(datetime.today().date())
+        """早上6:46 点获取的日期是UTC的时间，按照时区增加8个小时，修正以下日期，用于显示是否为中国节假日 """
+        logging.warning(datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S'))
+        is_holiday, holiday_name = calendar.get_holiday_detail((datetime.utcnow()+timedelta(hours=8)).date())
+        logging.warning((datetime.utcnow()+timedelta(hours=8)).strftime('%Y-%m-%d %H:%M:%S'))
         if is_holiday:
             self._state = 'holiday'
             self._attr_name = holiday_name

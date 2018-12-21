@@ -3,7 +3,7 @@
   initial_state: True
   trigger:
     platform: state
-    entity_id: switch.keting_room_light_quanliang,switch.keting_room_light_changyedeng,switch.keting_room_light_ming,switch.keting_room_light_an,switch.keting_room_light_riguangse,switch.keting_room_light_nuanbaise,switch.zhuwo_room_light_quanliang,switch.zhuwo_room_light_changyedeng,switch.zhuwo_room_light_ming,switch.zhuwo_room_light_an,switch.zhuwo_room_light_riguangse,switch.zhuwo_room_light_nuanbaise,switch.ciwo_room_light_quanliang,switch.ciwo_room_light_changyedeng,switch.ciwo_room_light_ming,switch.ciwo_room_light_an,switch.ciwo_room_light_riguangse,switch.ciwo_room_light_nuanbaise,switch.keting_room_light_light_sleep,switch.zhuwo_room_light_light_sleep,switch.ciwo_room_light_light_sleep
+    entity_id: switch.keting_room_light_quanliang,switch.keting_room_light_changyedeng,switch.keting_room_light_ming,switch.keting_room_light_an,switch.keting_room_light_riguangse,switch.keting_room_light_nuanbaise,switch.zhuwo_room_light_quanliang,switch.zhuwo_room_light_changyedeng,switch.zhuwo_room_light_ming,switch.zhuwo_room_light_an,switch.zhuwo_room_light_riguangse,switch.zhuwo_room_light_nuanbaise,switch.ciwo_room_light_quanliang,switch.ciwo_room_light_changyedeng,switch.ciwo_room_light_ming,switch.ciwo_room_light_an,switch.ciwo_room_light_riguangse,switch.ciwo_room_light_nuanbaise
     from: 'off'
     to: 'on'
   action:
@@ -28,7 +28,6 @@
         - switch.zhuwo_room_light_on_off
     - service: switch.turn_on
       entity_id:
-        #- switch.keting_room_light_light_sleep
         - switch.zhuwo_room_light_light_sleep
         - switch.ciwo_room_light_light_sleep
 - alias: open_keting_light
