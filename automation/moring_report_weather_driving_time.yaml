@@ -11,6 +11,7 @@
   action:
     - service: tts.baidu_say
       data_template:
+        entity_id: media_player.vlc_player
         message: >
           主人，下面播送今天的天气预报，今天天气{{ states('sensor.heweather_cond_txt')}},最高气温 {{states('sensor.heweather_tmp_max')}}摄氏度，最低气温{{ states('sensor.heweather_tmp_min')}}摄氏度，现在室外实时温度{{ states('sensor.heweather_tmp') }}摄氏度，现在室外体感温度为{{ states('sensor.heweather_fl') }}摄氏度，室外实时湿度百分之{{ states('sensor.heweather_hum') }}，能见度{{ states('sensor.heweather_vis') }} 公里，{{ states('sensor.heweather_wind_dir')}} {{ states('sensor.heweather_wind_sc')}}级，风速{{ states('sensor.heweather_wind_spd') }} 公里每小时。现在室外空气质量指数{{ states('sensor.heweather_aqi') }} ，主要污染物为{{ states('sensor.heweather_main') }}，PM2.5为{{ states('sensor.heweather_pm25') }}微克每立方米，PM10为{{ states('sensor.heweather_pm10') }}微克每立方米，当前空气质量为{{ states('sensor.heweather_qlty') }}。 室内AQI指数为{{  states.fan.keting.attributes.aqi }} , 
           {% if states('sensor.heweather_aqi')|int -  states.fan.keting.attributes.aqi|int > 100 %}

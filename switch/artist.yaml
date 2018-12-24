@@ -1,0 +1,23 @@
+- platform: command_line
+  switches:
+    jimmylin:
+      command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh jimmylin"
+      command_off: "/home/pi/.homeassistant/script/killer.sh"
+    davewang:
+      command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh davewang"
+      command_off: "/home/pi/.homeassistant/script/killer.sh"
+    mayday:
+      command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh mayday"
+      command_off: "/home/pi/.homeassistant/script/killer.sh"
+    tingting:
+      command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh tingting"
+      command_off: "/home/pi/.homeassistant/script/killer.sh"
+    bandari:
+      command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh bandari"
+      command_off: "/home/pi/.homeassistant/script/killer.sh"
+    zhouhuajian:
+      command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh zhouhuajian"
+      command_off: "/home/pi/.homeassistant/script/killer.sh"
+    zhangxinzhe:
+      command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh zhangxinzhe"
+      command_off: "/home/pi/.homeassistant/script/killer.sh"
