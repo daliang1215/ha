@@ -206,3 +206,19 @@ vivo_y51a:
   name: vivo Y51A
   picture:
   track: true
+
+vivo_x7plus:
+  hide_if_away: true
+  icon:
+  mac: 20:5D:47:FC:87:8B
+  name: vivo X7Plus
+  picture:
+  track: true
+
+r9plus_2:
+  hide_if_away: true
+  icon:
+  mac: 00:0A:F5:03:B2:A8
+  name: r9plus
+  picture:
+  track: true

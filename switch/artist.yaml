@@ -2,22 +2,22 @@
   switches:
     jimmylin:
       command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh jimmylin"
-      command_off: "/home/pi/.homeassistant/script/killer.sh"
+      command_off: "/home/pi/.homeassistant/script/killer.sh omxplayer"
     davewang:
       command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh davewang"
-      command_off: "/home/pi/.homeassistant/script/killer.sh"
+      command_off: "/home/pi/.homeassistant/script/killer.sh omxplayer"
     mayday:
       command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh mayday"
-      command_off: "/home/pi/.homeassistant/script/killer.sh"
+      command_off: "/home/pi/.homeassistant/script/killer.sh omxplayer"
     tingting:
       command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh tingting"
-      command_off: "/home/pi/.homeassistant/script/killer.sh"
+      command_off: "/home/pi/.homeassistant/script/killer.sh omxplayer"
     bandari:
       command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh bandari"
-      command_off: "/home/pi/.homeassistant/script/killer.sh"
+      command_off: "/home/pi/.homeassistant/script/killer.sh omxplayer"
     zhouhuajian:
       command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh zhouhuajian"
-      command_off: "/home/pi/.homeassistant/script/killer.sh"
+      command_off: "/home/pi/.homeassistant/script/killer.sh omxplayer"
     zhangxinzhe:
       command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh zhangxinzhe"
-      command_off: "/home/pi/.homeassistant/script/killer.sh"
+      command_off: "/home/pi/.homeassistant/script/killer.sh omxplayer"

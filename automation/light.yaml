@@ -46,6 +46,9 @@
     - delay: 0:0:10
     - service: switch.turn_on
       entity_id: switch.keting_room_light_nuanbaise
+    - delay: 0:2:10
+    - service: switch.turn_on
+      entity_id: switch.keting_room_light_quanliang
 - alias: close_keting_light
   hide_entity: true
   initial_state: true

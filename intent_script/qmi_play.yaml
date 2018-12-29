@@ -27,6 +27,26 @@ qmi_play_music:
         {% elif music=="华健" %}'zhouhuajian'
         {% elif music=="华建" %}'zhouhuajian'
         {% elif music=="信哲" %}'zhangxinzhe'
+        {% elif music=="小手拍拍" %}'/mnt/disks/music/qmi/小手拍拍.mp3'
+        {% elif music=="和快樂在一起" %}'/mnt/disks/music/qmi/和快樂在一起.mp3'
+        {% elif music=="黃鸝鳥" %}'/mnt/disks/music/qmi/蝸牛和黃鸝鳥.mp3'
+        {% elif music=="世上只有媽媽好" %}'/mnt/disks/music/qmi/世上只有媽媽好.mp3'
+        {% elif music=="爽" %}'/mnt/disks/music/qmi/倍爽.mp3'
+        {% elif music=="兒爽" %}'/mnt/disks/music/qmi/倍爽.mp3'
+        {% elif music=="九月九的酒" %}'/mnt/disks/music/qmi/九月九的酒.mp3'
+        {% elif music=="小員警" %}'/mnt/disks/music/qmi/我在馬路邊撿到一分錢.mp3'
+        {% elif music=="小倉娃" %}'/mnt/disks/music/qmi/豫劇-小倉娃.mp3'
+        {% elif music=="小蒼娃" %}'/mnt/disks/music/qmi/豫劇-小倉娃.mp3'
+        {% elif music=="志穎" %}'jimmylin'
+        {% elif music=="傑" %}'davewang'
+        {% elif music=="月天" %}'mayday'
+        {% elif music=="聽聽" %}'tingting'
+        {% elif music=="得瑞" %}'bandari'
+        {% elif music=="dari" %}'bandari'
+        {% elif music=="dari" %}'bandari'
+        {% elif music=="華健" %}'zhouhuajian'
+        {% elif music=="華建" %}'zhouhuajian'
+        {% elif music=="信哲" %}'zhangxinzhe'
         {% endif %}
   async_action: true
 killer:
@@ -38,6 +58,10 @@ killer:
         text: >-
           {% if item=="音乐"%}'omxplayer'
           {% elif item=="播放器"%}'omxplayer'
+          {% elif item=="music"%}'omxplayer'
+          {% elif item=="player"%}'omxplayer'
+          {% elif item=="音樂"%}'omxplayer'
+          {% elif item=="播放機"%}'omxplayer'
           {% elif item=="music"%}'omxplayer'
           {% elif item=="player"%}'omxplayer'
           {% endif %}
