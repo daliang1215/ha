@@ -37,7 +37,7 @@ else # 163 music
 	## music from $1
 	wget -O /tmp/${1}.txt "http://192.168.88.140:3000/search?keywords=${1}&type=1&limit=1"  2>/dev/null 
 	#songid=`cat /tmp/${1}.txt |grep -Po '(?<=id":)[0-9]+'|head -n 1`
-	songid=`cat /tmp/${1}.txt |jq . |jq '.result.songs[].id'|head -n 1`
+	songid=`cat /tmp/${1}.txt |jq '.result.songs[].id'|head -n 1`
 	wget -O /tmp/${1}.mp3 "https://music.163.com/song/media/outer/url?id=${songid}.mp3"
 	txt="/tmp/${1}.mp3"
 fi
