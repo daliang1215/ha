@@ -21,3 +21,6 @@
     zhangxinzhe:
       command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh zhangxinzhe"
       command_off: "/home/pi/.homeassistant/script/killer.sh omxplayer"
+    qmi:
+      command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh qmi"
+      command_off: "/home/pi/.homeassistant/script/killer.sh omxplayer"
