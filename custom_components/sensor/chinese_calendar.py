@@ -11,7 +11,7 @@ from homeassistant.helpers.entity import Entity
 
 import chinese_calendar as calendar
 
-REQUIREMENTS = ['chinesecalendar==1.0.3']
+REQUIREMENTS = ['chinesecalendar==1.2.0']
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -77,6 +77,7 @@ class ChineseCalendarSensor(Entity):
         """早上6:46 点获取的日期是UTC的时间，按照时区增加8个小时，修正以下日期，用于显示是否为中国节假日 """
         logging.warning(datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S'))
         is_holiday, holiday_name = calendar.get_holiday_detail((datetime.utcnow()+timedelta(hours=8)).date())
+        #is_holiday, holiday_name = calendar.get_holiday_detail(datetime.today().date())
         logging.warning((datetime.utcnow()+timedelta(hours=8)).strftime('%Y-%m-%d %H:%M:%S'))
         if is_holiday:
             self._state = 'holiday'
