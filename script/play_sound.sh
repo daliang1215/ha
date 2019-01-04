@@ -39,8 +39,41 @@ elif [ "$1"x = "mayday"x ] ; then # 五月天 13193
 	done
 	rm -f /tmp/${1}.txt
 elif [ "$1"x = "tingting"x ] ; then # 粤语歌曲
-	txt=`shuf -n1 /mnt/disks/music/lossless无损/list/tingting.txt`
-	omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt 
+	#txt=`shuf -n1 /mnt/disks/music/lossless无损/list/tingting.txt`
+	#omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt 
+	#uid: 84804623
+	#登陆：
+	wget -O /tmp/uid.txt "http://192.168.88.140:3000/login?email=daliang1215@163.com&password=Peng0804" 2>/dev/null
+	sleep 2
+	wget -O /tmp/uid.txt http://192.168.88.140:3000/login/refresh 2>/dev/null
+	#获取用户歌单
+	wget -O /tmp/uid.txt http://192.168.88.140:3000/user/playlist?uid=84804623 2>/dev/null
+	#获取歌单id 并写入uid.txt 
+	cat /tmp/uid.txt |jq '.playlist[].id'|tee /tmp/uid.txt
+
+	#根据上面的id ， 获取歌曲列表 
+	for i in `cat /tmp/uid.txt`
+	do
+		lst="/tmp/${i}.lst"
+		wget -O ${lst} "http://192.168.88.140:3000/playlist/detail?id=${i}" 2>/dev/null 
+		
+		for j in `cat ${lst}|jq '.playlist.tracks[].id'`
+		do
+			wget -O /tmp/t.txt http://192.168.88.140:3000/check/music?id=${j} 2> /dev/null 
+			isTrue=`cat /tmp/t.txt |jq '.success'`
+			if [ "$isTrue"x = "true"x ] ; then 
+				txt="/tmp/${j}.mp3"
+				wget -O ${txt}  https://music.163.com/song/media/outer/url?id=${j}.mp3 2>/dev/null
+				omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt
+				rm -f ${txt}
+			else
+				continue
+			fi
+			rm -f /tmp/t.txt 
+		done
+	done
+
+	rm -f  /tmp/uid.txt
 elif [ "$1"x = "bandari"x ] ; then # 班得瑞/bandari
 	txt=`shuf -n1 /mnt/disks/music/lossless无损/list/bandari.txt`
 	omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt 
