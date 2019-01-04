@@ -38,7 +38,7 @@ elif [ "$1"x = "mayday"x ] ; then # 五月天 13193
 		rm -f $txt
 	done
 	rm -f /tmp/${1}.txt
-elif [ "$1"x = "tingting"x ] ; then # 粤语歌曲
+elif [ "$1"x = "tingting"x ] ; then # 播放163 网易云音乐 收藏歌单里的歌曲
 	#txt=`shuf -n1 /mnt/disks/music/lossless无损/list/tingting.txt`
 	#omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt 
 	#uid: 84804623
@@ -48,8 +48,8 @@ elif [ "$1"x = "tingting"x ] ; then # 粤语歌曲
 	wget -O /tmp/uid.txt http://192.168.88.140:3000/login/refresh 2>/dev/null
 	#获取用户歌单
 	wget -O /tmp/uid.txt http://192.168.88.140:3000/user/playlist?uid=84804623 2>/dev/null
-	#获取歌单id 并写入uid.txt 
-	cat /tmp/uid.txt |jq '.playlist[].id'|tee /tmp/uid.txt
+	#获取歌单id 并随机写入uid.txt 
+	cat /tmp/uid.txt |jq '.playlist[].id'|shuf -o /tmp/uid.txt
 
 	#根据上面的id ， 获取歌曲列表 
 	for i in `cat /tmp/uid.txt`
