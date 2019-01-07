@@ -33,7 +33,7 @@
             entity_id: sensor.chinese_calendar
             state: 'holiday'
   action:
-    service: shell_command.play_sound
+    service: shell_command.play_clock
     data_template:
       text: >-
         {% if now().strftime("%M")|int == 30 %}'/home/pi/.homeassistant/sounds/cuckoo-clock-01.mp3'
