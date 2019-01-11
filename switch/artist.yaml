@@ -24,3 +24,6 @@
     qmi:
       command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh qmi"
       command_off: "/home/pi/.homeassistant/script/killer.sh omxplayer"
+    my_love_song:
+      command_on: "/usr/bin/nohup /home/pi/.homeassistant/script/play_sound.sh my_love"
+      command_off: "/home/pi/.homeassistant/script/killer.sh omxplayer"

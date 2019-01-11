@@ -1,7 +1,7 @@
 on_light:
   # speech返回
   speech:
-    text: 打开{{ room }}灯
+    text: 打开{{ room }}的顶灯
   # 执行动作
   action:
     - service: switch.turn_on
@@ -18,7 +18,7 @@ on_light:
 
 off_light:
   speech:
-    text: 关闭{{ room }} 灯
+    text: 关闭{{ room }} 的顶灯
   action:
     - service: switch.turn_off
       data_template: 
@@ -33,7 +33,7 @@ off_light:
 
 quanliang_light:
   speech:
-    text: 调整{{ room }} 灯状态为全亮
+    text: 打开{{ room }} 的全亮灯
   action:
     - service: switch.turn_on
       data_template: 
@@ -47,7 +47,7 @@ quanliang_light:
           {% endif %}
 changyedeng_light:
   speech:
-    text: 把{{ room }} 灯调成常夜灯模式
+    text: 打开{{ room }}的常夜灯
   action:
     - service: switch.turn_on
       data_template: 
@@ -62,7 +62,7 @@ changyedeng_light:
 
 ming_light:
   speech:
-    text: 把{{ room }} 灯调亮一点
+    text: 打开{{ room }}的亮灯
   action:
     - service: switch.turn_on
       data_template: 
@@ -77,7 +77,7 @@ ming_light:
 
 an_light:
   speech:
-    text: 把{{ room }} 灯调暗一点
+    text: 打开{{ room }}的暗灯
   action:
     - service: switch.turn_on
       data_template: 
@@ -92,7 +92,7 @@ an_light:
 
 riguangse_light:
   speech:
-    text: 把{{ room }} 灯调成日光色
+    text: 打开{{ room }} 的日光灯
   action:
     - service: switch.turn_on
       data_template: 
@@ -107,7 +107,7 @@ riguangse_light:
 
 nuanbaise_light:
   speech:
-    text: 把{{ room }} 灯调成暖白色
+    text: 打开{{ room }} 的暖白灯
   action:
     - service: switch.turn_on
       data_template: 
@@ -119,4 +119,3 @@ nuanbaise_light:
           {% elif room=="主臥" %}switch.zhuwo_room_light_nuanbaise
           {% elif room=="臥室" %}switch.ciwo_room_light_nuanbaise
           {% endif %}
-

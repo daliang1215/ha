@@ -222,3 +222,27 @@ r9plus_2:
   name: r9plus
   picture:
   track: true
+
+androiddd747c41c780dba7:
+  hide_if_away: true
+  icon:
+  mac: F0:79:E8:DF:75:25
+  name: android-dd747c41c780dba7
+  picture:
+  track: true
+
+android9ec21c22b1e42fa5:
+  hide_if_away: true
+  icon:
+  mac: 1C:48:CE:E7:64:B1
+  name: android-9ec21c22b1e42fa5
+  picture:
+  track: true
+
+meizu:
+  hide_if_away: true
+  icon:
+  mac: 68:3E:34:99:31:EF
+  name: MEIZU
+  picture:
+  track: true
