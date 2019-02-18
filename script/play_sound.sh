@@ -98,7 +98,7 @@ elif [ "$1"x = "zhangxinzhe"x ] ; then # 张信哲 6454
 elif [ "$1"x = "qmi"x ] ; then # Q米
 	txt=`shuf -n1 /mnt/disks/music/lossless无损/list/qmi.txt`
 	omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt 
-elif [ "$1"x = "my_love"x ] ; then # 收藏的歌曲
+elif [ "$1"x = "my_love_song"x ] ; then # 收藏的歌曲
 	# login
 	## 从网易云音乐上播放自己收藏的歌曲，类似于个人FM
 	curl -D /tmp/cookie.txt "http://192.168.88.140:3000/login?email=daliang1215@163.com&password=Peng0804"
@@ -115,6 +115,32 @@ elif [ "$1"x = "my_love"x ] ; then # 收藏的歌曲
 			continue
 		fi
 		rm -f /tmp/t.txt 
+	done
+	wget -O /tmp/${1}.txt "http://192.168.88.140:3000/logout" 2>/dev/null
+	rm -f /tmp/${1}.txt
+elif [ "$1"x = "my_love_album"x ] ; then # 收藏的歌曲
+	# login
+	## 从网易云音乐上播放自己收藏的歌曲，类似于个人FM
+	curl -D /tmp/cookie.txt "http://192.168.88.140:3000/login?email=daliang1215@163.com&password=Peng0804"
+	curl -b /tmp/cookie.txt "http://192.168.88.140:3000/album/sublist" > /tmp/${1}.txt
+	rm -f /tmp/cookie.txt
+	## 获取收藏专辑的ID
+	for i in `cat /tmp/${1}.txt |jq '.data[].id'|shuf` ## i 为歌曲专辑id
+
+	do
+		wget -O /tmp/t.txt http://192.168.88.140:3000/album?id=${i} 2> /dev/null 
+		for j in `cat /tmp/t.txt | jq '.songs[].id'` ## j 为歌曲id
+		do
+			wget -O /tmp/tj.txt http://192.168.88.140:3000/check/music?id=${j} 2> /dev/null 
+			isTrue=`cat /tmp/tj.txt |jq '.success'`
+			if [ "$isTrue"x = "true"x ] ; then 
+				playsong $j
+			else
+				continue
+			fi
+			rm -f /tmp/tj.txt 
+		done
+		rm -f /tmp/t.txt
 	done
 	wget -O /tmp/${1}.txt "http://192.168.88.140:3000/logout" 2>/dev/null
 	rm -f /tmp/${1}.txt

@@ -82,7 +82,7 @@ class ChineseCalendarSensor(Entity):
         if is_holiday:
             self._state = 'holiday'
             self._attr_name = holiday_name
-            logging.warning('holiday')
+        #    logging.warning('holiday')
         else:
             self._state = 'workday'
-            logging.warning('workday')
+        #    logging.warning('workday')

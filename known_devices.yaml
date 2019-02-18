@@ -246,3 +246,35 @@ meizu:
   name: MEIZU
   picture:
   track: true
+
+e4c48330ad3f:
+  hide_if_away: true
+  icon:
+  mac: E4:C4:83:30:AD:3F
+  name: e4c48330ad3f
+  picture:
+  track: true
+
+oppok1:
+  hide_if_away: true
+  icon:
+  mac: B8:C7:4A:65:7C:07
+  name: OPPO-K1
+  picture:
+  track: true
+
+iphone_2:
+  hide_if_away: true
+  icon:
+  mac: F8:2D:7C:D2:21:CD
+  name: iPhone
+  picture:
+  track: true
+
+android6d5740df58ac8663:
+  hide_if_away: true
+  icon:
+  mac: 90:C7:D8:82:CA:C0
+  name: android-6d5740df58ac8663
+  picture:
+  track: true

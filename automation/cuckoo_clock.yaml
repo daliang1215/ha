@@ -16,7 +16,7 @@
           # 工作日
           - condition: time
             after: '08:00:00'
-            before: '22:30:00'
+            before: '21:01:00'
 
           - condition: state
             entity_id: sensor.chinese_calendar
