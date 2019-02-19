@@ -15,7 +15,7 @@
         conditions:
           # 工作日
           - condition: time
-            after: '08:00:00'
+            after: '06:59:00'
             before: '21:01:00'
 
           - condition: state
