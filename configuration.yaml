@@ -101,28 +101,32 @@ homekit:
       - automation.mam_and_dad_go_home_workday_open_light
       - automation.close_keting_light
       - automation.open_keting_light
-      - group.all_devices
-      # - device_tracker.androidef354cffcb55a9b3
-      # - device_tracker.android9ec21c22b1e42fa5
-      # - device_tracker.androidd90f1750e3a3928c
-      # - device_tracker.androidf94fd32ac22765bf
-      # - device_tracker.androidd90f1750e3a3928c
-      # - device_tracker.androiddd747c41c780dba7
-      # - device_tracker.androidef354cffcb55a9b3
-      # - device_tracker.androidf94fd32ac22765bf
-      # - device_tracker.androidfe6359f4de25919d
-      # - device_tracker.e4c48330ad3f
-      # - device_tracker.fc1a11506266
-      # - device_tracker.meizu
-      # - device_tracker.oppok1
-      # - device_tracker.vivo_x7plus
-      # - device_tracker.vivo_y51a
-      # - device_tracker.vivox9splusl
-      # - device_tracker.huawei_nova_2s5163314069
-      # - device_tracker.fc1a11506266
-      # - device_tracker.redmi5plushongmisho
-      # - device_tracker.vivox9splusl
-      # - device_tracker.v1732a
+      #- group.all_devices
+      - device_tracker.androidef354cffcb55a9b3
+      - device_tracker.android9ec21c22b1e42fa5
+      - device_tracker.androidd90f1750e3a3928c
+      - device_tracker.androidf94fd32ac22765bf
+      - device_tracker.androidd90f1750e3a3928c
+      - device_tracker.androiddd747c41c780dba7
+      - device_tracker.androidef354cffcb55a9b3
+      - device_tracker.androidf94fd32ac22765bf
+      - device_tracker.androidfe6359f4de25919d
+      - device_tracker.android6d5740df58ac8663
+      - device_tracker.e4c48330ad3f
+      - device_tracker.fc1a11506266
+      - device_tracker.meizu
+      - device_tracker.oppok1
+      - device_tracker.vivo_x7plus
+      - device_tracker.vivo_y51a
+      - device_tracker.vivox9splusl
+      - device_tracker.huawei_nova_2s5163314069
+      - device_tracker.fc1a11506266
+      - device_tracker.redmi5plushongmisho
+      - device_tracker.vivox9splusl
+      - device_tracker.v1732a
+      - device_tracker.r9plus
+      - device_tracker.r9plus_2
+      - device_tracker.iphone
        ## livingroom
       - device_tracker.xiaomilivingroom
       - switch.keting_xiaomi_ap_buzzer

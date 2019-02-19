@@ -1,53 +1,38 @@
 #!/bin/bash
 date
-function playsong(){
-	txt="/tmp/${1}.mp3"
-	wget -O $txt "https://music.163.com/song/media/outer/url?id=${1}.mp3"
-	omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt 
-	rm -f $txt
+function playByArtistsId(){
+	wget -O /tmp/${1}.txt http://192.168.88.140:3000/artists?id=${2} 2>/dev/null
+	for i in `cat /tmp/${1}.txt |jq '.hotSongs[].id'|shuf`
+	do
+		txt="/tmp/${i}.mp3"
+		wget -O $txt "https://music.163.com/song/media/outer/url?id=${i}.mp3"
+		omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt 
+		rm -f $txt
+	done
+	rm -f /tmp/${1}.txt
 }
-#登陆：
-#wget -O /tmp/uid.txt "http://192.168.88.140:3000/login?email=daliang1215@163.com&password=Peng0804" 2>/dev/null
-#sleep 2
-#wget -O /tmp/uid.txt http://192.168.88.140:3000/login/refresh 2>/dev/null
 if [ "$1"x = "jimmylin"x ] ; then # 林志颖 artists_id: 3704
-	#txt=`shuf -n1 /mnt/disks/music/lossless无损/list/jimmylin.txt`
 	## 从网易云音乐上播放歌手hot 50 歌曲
-	wget -O /tmp/${1}.txt http://192.168.88.140:3000/artists?id=3704 2>/dev/null
-	for i in `cat /tmp/${1}.txt |jq '.hotSongs[].id'`
-	do
-		playsong $i
-	done
-	rm -f /tmp/${1}.txt
+	playByArtistsId $1 3704
 elif [ "$1"x = "davewang"x ] ; then # 王杰 5358
-	#txt=`shuf -n1 /mnt/disks/music/lossless无损/list/davewang.txt`
-	#omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt 
 	## 从网易云音乐上播放歌手hot 50 歌曲
-	wget -O /tmp/${1}.txt http://192.168.88.140:3000/artists?id=5358 2>/dev/null
-	for i in `cat /tmp/${1}.txt |jq '.hotSongs[].id'`
-	do
-		playsong $i
-	done
-	rm -f /tmp/${1}.txt
+	playByArtistsId $1 5358
 elif [ "$1"x = "mayday"x ] ; then # 五月天 13193
-	#txt=`shuf -n1 /mnt/disks/music/lossless无损/list/mayday.txt`
-	#omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt 
 	## 从网易云音乐上播放歌手hot 50 歌曲
-	wget -O /tmp/${1}.txt http://192.168.88.140:3000/artists?id=13193 2>/dev/null
-	for i in `cat /tmp/${1}.txt |jq '.hotSongs[].id'`
-	do
-		playsong $i
-	done
-	rm -f /tmp/${1}.txt
+	playByArtistsId $1 13193
+elif [ "$1"x = "zhouhuajian"x ] ; then # 周华健 6456
+	## 从网易云音乐上播放歌手hot 50 歌曲
+	playByArtistsId $1 6456
+elif [ "$1"x = "zhangxinzhe"x ] ; then # 张信哲 6454
+	## 从网易云音乐上播放歌手hot 50 歌曲
+	playByArtistsId $1 6454
 elif [ "$1"x = "tingting"x ] ; then # 播放163 网易云音乐 收藏歌单里的歌曲
 	#txt=`shuf -n1 /mnt/disks/music/lossless无损/list/tingting.txt`
 	#omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt 
 	#uid: 84804623
-	#curl -D /tmp/cookie.txt "http://192.168.88.140:3000/login?email=daliang1215@163.com&password=Peng0804"
 	curl -D /tmp/cookie.txt "http://192.168.88.140:3000/login?email=daliang1215@163.com&password=Peng0804"
 	#获取用户歌单
 	curl -b /tmp/cookie.txt "http://192.168.88.140:3000/user/playlist?uid=84804623" > /tmp/uid.txt
-#	wget -O /tmp/uid.txt http://192.168.88.140:3000/user/playlist?uid=84804623 2>/dev/null
 	rm -f /tmp/cookie.txt
 	#获取歌单id 并随机写入uid.txt 
 	cat /tmp/uid.txt |jq '.playlist[].id'|shuf -o /tmp/uid.txt
@@ -75,26 +60,6 @@ elif [ "$1"x = "tingting"x ] ; then # 播放163 网易云音乐 收藏歌单里�
 elif [ "$1"x = "bandari"x ] ; then # 班得瑞/bandari
 	txt=`shuf -n1 /mnt/disks/music/lossless无损/list/bandari.txt`
 	omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt 
-elif [ "$1"x = "zhouhuajian"x ] ; then # 周华健 6456
-	#txt=`shuf -n1 /mnt/disks/music/lossless无损/list/zhouhuajian.txt`
-	#omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt 
-	## 从网易云音乐上播放歌手hot 50 歌曲
-	wget -O /tmp/${1}.txt http://192.168.88.140:3000/artists?id=6456 2>/dev/null
-	for i in `cat /tmp/${1}.txt |jq '.hotSongs[].id'`
-	do
-		playsong $i
-	done
-	rm -f /tmp/${1}.txt
-elif [ "$1"x = "zhangxinzhe"x ] ; then # 张信哲 6454
-	#txt=`shuf -n1 /mnt/disks/music/lossless无损/list/zhangxinzhe.txt`
-	#omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt 
-	## 从网易云音乐上播放歌手hot 50 歌曲
-	wget -O /tmp/${1}.txt http://192.168.88.140:3000/artists?id=6454 2>/dev/null
-	for i in `cat /tmp/${1}.txt |jq '.hotSongs[].id'`
-	do
-		playsong $i
-	done
-	rm -f /tmp/${1}.txt
 elif [ "$1"x = "qmi"x ] ; then # Q米
 	txt=`shuf -n1 /mnt/disks/music/lossless无损/list/qmi.txt`
 	omxplayer -o local --font /usr/share/fonts/truetype/wqy/wqy-zenhei.ttc  --vol -602  $txt 
@@ -105,7 +70,7 @@ elif [ "$1"x = "my_love_song"x ] ; then # 收藏的歌曲
 	curl -b /tmp/cookie.txt "http://192.168.88.140:3000/likelist?uid=84804623" > /tmp/${1}.txt
 	rm -f /tmp/cookie.txt
 	#wget -O /tmp/uid.txt http://192.168.88.140:3000/likelist?uid=84804623 2>/dev/null
-	for i in `cat /tmp/${1}.txt |jq '.ids[]'`
+	for i in `cat /tmp/${1}.txt |jq '.ids[]'|shuf`
 	do
 		wget -O /tmp/t.txt http://192.168.88.140:3000/check/music?id=${i} 2> /dev/null 
 		isTrue=`cat /tmp/t.txt |jq '.success'`
