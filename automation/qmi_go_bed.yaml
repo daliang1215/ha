@@ -23,7 +23,7 @@
     - service: tts.baidu_say
       data_template:
         entity_id: media_player.vlc_player
-        message: '陳璟爍小朋友，相信你已經收拾好玩具，刷過牙，洗完臉，泡完腳，洗過屁屁了，那我們現在該要趕快上床讀書嘍，爸媽說過如果現在誰沒到床上來要打屁屁的！Good Night！Q米,明天晚上見,再有20分鐘，客廳的頂燈將會關閉，請抓緊時間！'
+        message: '陳璟爍小朋友，相信你已經收拾好玩具，刷過牙，洗完臉，泡完腳，洗過屁屁了，那我們現在該要趕快上床讀書嘍，爸媽說過如果現在誰沒到床上來要打屁屁的！Good Night！Q米,明天晚上見,再有1分鐘，客廳的頂燈將會關閉，請抓緊時間！'
     - service: tts.clear_cache
     - delay: 0:01
     - service: switch.turn_off

@@ -12,6 +12,9 @@ switch.woshi_xiaomi_ap_childlock:
   friendly_name: 儿童锁
 switch.keting_room_light_on_off:
   friendly_name: 开关
+  hagenie_deviceName: 顶灯  
+  hagenie_deviceType: light  
+  hagenie_zone: 客厅
 switch.keting_room_light_changyedeng:
   friendly_name: 常夜模式
 switch.keting_room_light_quanliang:

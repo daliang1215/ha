@@ -278,3 +278,11 @@ android6d5740df58ac8663:
   name: android-6d5740df58ac8663
   picture:
   track: true
+
+tmallgenie:
+  hide_if_away: true
+  icon:
+  mac: 78:DA:07:8E:1A:88
+  name: Tmall-Genie
+  picture:
+  track: true

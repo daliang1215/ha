@@ -3,7 +3,7 @@
   initial_state: True
   trigger:
     platform: time
-    at: '6:46:00'
+    at: '6:41:00'
   condition: 
     condition: state
     entity_id: sensor.chinese_calendar
