@@ -11,10 +11,7 @@ switch.woshi_xiaomi_ap_childlock:
   icon: mdi:lock
   friendly_name: 儿童锁
 switch.keting_room_light_on_off:
-  friendly_name: 开关
-  hagenie_deviceName: 顶灯  
-  hagenie_deviceType: light  
-  hagenie_zone: 客厅
+  friendly_name: 客厅顶灯
 switch.keting_room_light_changyedeng:
   friendly_name: 常夜模式
 switch.keting_room_light_quanliang:
@@ -71,11 +68,3 @@ switch.bandari:
   friendly_name: 班得瑞
 switch.my_love_album:
   friendly_name: 好专辑
-
-
-
-
-
-
-
-
