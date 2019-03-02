@@ -286,3 +286,19 @@ tmallgenie:
   name: Tmall-Genie
   picture:
   track: true
+
+redminote2hongmisho:
+  hide_if_away: true
+  icon:
+  mac: 20:82:C0:B0:95:3D
+  name: RedmiNote2-hongmisho
+  picture:
+  track: true
+
+rmproplus5a6cc2:
+  hide_if_away: true
+  icon:
+  mac: 78:0F:77:5A:6C:C2
+  name: RMPROPLUS-5a-6c-c2
+  picture:
+  track: true
