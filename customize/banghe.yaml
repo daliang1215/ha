@@ -1,0 +1,14 @@
+banghe_up: # 上升
+  friendly_name: 晾衣架上升
+banghe_down: # 下降
+  friendly_name: 晾衣架下降
+banghe_stop: # 停止
+  friendly_name: 晾衣架停止
+banghe_light: # 照明
+  friendly_name: 晾衣架照明
+banghe_fan: # 风干
+  friendly_name: 晾衣架风干
+banghe_disinfect: # 消毒
+  friendly_name: 晾衣架消毒
+banghe_onoff:
+  friendly_name: 晾衣架开关
