@@ -127,6 +127,18 @@ homekit:
       - device_tracker.r9plus
       - device_tracker.r9plus_2
       - device_tracker.iphone
+      - device_tracker.jiqidmistoryv1_miio59682032
+      - device_tracker.rmproplus5a6cc2
+      - device_tracker.rock64
+      - device_tracker.skyboxq0102125271d7ad129de6
+      - device_tracker.tmallgenie
+      - device_tracker.xiaob
+      - device_tracker.chenfeidembp
+      - device_tracker.fuqingqngdeipad
+      - device_tracker.esp_6818cd
+      - device_tracker.esp_6822b8
+      - device_tracker.esp8266_zhuwo
+      - device_tracker.redminote2hongmisho
        ## livingroom
       - device_tracker.xiaomilivingroom
       - switch.keting_xiaomi_ap_buzzer
@@ -217,10 +229,10 @@ panel_custom:
     #twilio:
     #  account_sid: ACc5a95806884fc02d2be2c59b3f23c0d8
     #  auth_token: 4c5e2c4e6721c220e1fb4335e1c691ba
-    #notify:
-    #  - platform: twilio_sms
-    #    name: twilio_sms
-    #    from_number: "+18038280909"
+notify:
+  - platform: twilio_sms
+    name: twilio_sms
+    from_number: "+18038280909"
 
 # Cloud
 #cloud:

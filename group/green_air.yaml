@@ -1,0 +1,19 @@
+keting_green_air:
+  name: 客厅格力空调
+  view: no
+  control: hidden
+  entities:
+    - switch.air_conditioner
+    - script.cool
+    - script.heat
+    - script.heat_slave
+    - script.left_right
+    - script.light_mode
+    - script.mode
+    - script.sleep_mode
+    - script.smart_enjoy
+    - script.speed
+    - script.temp_down
+    - script.temp_up
+    - script.temp_visiable
+    - script.up_down
