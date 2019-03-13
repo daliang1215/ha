@@ -302,3 +302,19 @@ rmproplus5a6cc2:
   name: RMPROPLUS-5a-6c-c2
   picture:
   track: true
+
+ksmbwalkingpadv1_mibt13252632:
+  hide_if_away: true
+  icon:
+  mac: 04:CF:8C:99:A0:24
+  name: ksmb-walkingpad-v1 mibt13252632
+  picture:
+  track: true
+
+huawei_p10_plusa5425d040:
+  hide_if_away: true
+  icon:
+  mac: 54:B1:21:16:8F:5C
+  name: HUAWEI P10 Plus-a5425d040
+  picture:
+  track: true

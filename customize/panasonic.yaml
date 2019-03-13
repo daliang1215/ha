@@ -1,20 +1,20 @@
-panasonic_on: # 开
+script.panasonic_on: # 开
   friendly_name: 松下客厅开
-panasonic_off: # 关
+script.panasonic_off: # 关
   friendly_name: 松下客厅关
-panasonic_quanliang: # 全亮
+script.panasonic_quanliang: # 全亮
   friendly_name: 松下客厅全亮
-panasonic_changye: # 常夜
+script.panasonic_changye: # 常夜
   friendly_name: 松下客厅常夜
-panasonic_ming: # 明
+script.panasonic_ming: # 明
   friendly_name: 松下客厅明
-panasonic_an: # 暗
+script.panasonic_an: # 暗
   friendly_name: 松下客厅暗
-panasonic_riguang: # 日光色
+script.panasonic_riguang: # 日光色
   friendly_name: 松下客厅日光色
-panasonic_nuanbai: # 暖白色
+script.panasonic_nuanbai: # 暖白色
   friendly_name: 松下客厅暖白色
-panasonic_powersave: # 节能
+script.panasonic_powersave: # 节能
   friendly_name: 松下客厅节能
-panasonic_jiuqiin: # 就寝
+script.panasonic_jiuqiin: # 就寝
   friendly_name: 松下客厅就寝

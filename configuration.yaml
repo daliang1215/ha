@@ -230,9 +230,9 @@ panel_custom:
     #  account_sid: ACc5a95806884fc02d2be2c59b3f23c0d8
     #  auth_token: 4c5e2c4e6721c220e1fb4335e1c691ba
 notify:
-  - platform: twilio_sms
-    name: twilio_sms
-    from_number: "+18038280909"
+    #  - platform: twilio_sms
+    #    name: twilio_sms
+    #    from_number: "+18038280909"
 
 # Cloud
 #cloud:
