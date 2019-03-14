@@ -1,0 +1,22 @@
+- platform: command_line
+  switches:
+    panasonic_on: # 开
+      command_on: ""
+    panasonic_off: # 关
+      command_on: ""
+    panasonic_quanliang: # 全亮
+      command_on: ""
+    panasonic_changye: # 常夜
+      command_on: ""
+    panasonic_ming: # 明
+      command_on: ""
+    panasonic_an: # 暗
+      command_on: ""
+    panasonic_riguang: # 日光色
+      command_on: ""
+    panasonic_nuanbai: # 暖白色
+      command_on: ""
+    panasonic_powersave: # 节能
+      command_on: ""
+    panasonic_jiuqiin: # 就寝
+      command_on: ""
