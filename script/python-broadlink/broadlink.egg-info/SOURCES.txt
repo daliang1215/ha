@@ -1,0 +1,9 @@
+README.md
+setup.py
+broadlink/__init__.py
+broadlink.egg-info/PKG-INFO
+broadlink.egg-info/SOURCES.txt
+broadlink.egg-info/dependency_links.txt
+broadlink.egg-info/not-zip-safe
+broadlink.egg-info/requires.txt
+broadlink.egg-info/top_level.txt
