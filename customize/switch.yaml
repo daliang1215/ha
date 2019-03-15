@@ -10,20 +10,20 @@ switch.woshi_xiaomi_ap_buzzer:
 switch.woshi_xiaomi_ap_childlock:
   icon: mdi:lock
   friendly_name: 儿童锁
-switch.keting_room_light_on_off:
-  friendly_name: 客厅顶灯
-switch.keting_room_light_changyedeng:
-  friendly_name: 常夜模式
-switch.keting_room_light_quanliang:
-  friendly_name: 全亮模式
-switch.keting_room_light_an:
-  friendly_name: 变暗一级
-switch.keting_room_light_ming:
-  friendly_name: 变亮一级
-switch.keting_room_light_nuanbaise:
-  friendly_name: 暖白色
-switch.keting_room_light_riguangse:
-  friendly_name: 日白色
+#switch.keting_room_light_on_off:
+#  friendly_name: 客厅顶灯
+#switch.keting_room_light_changyedeng:
+#  friendly_name: 常夜模式
+#switch.keting_room_light_quanliang:
+#  friendly_name: 全亮模式
+#switch.keting_room_light_an:
+#  friendly_name: 变暗一级
+#switch.keting_room_light_ming:
+#  friendly_name: 变亮一级
+#switch.keting_room_light_nuanbaise:
+#  friendly_name: 暖白色
+#switch.keting_room_light_riguangse:
+#  friendly_name: 日白色
 switch.zhuwo_room_light_on_off:
   friendly_name: 开关
 switch.zhuwo_room_light_changyedeng:
@@ -52,19 +52,19 @@ switch.ciwo_room_light_nuanbaise:
   friendly_name: 暖白色
 switch.ciwo_room_light_riguangse:
   friendly_name: 日白色
-switch.davewang:
-  friendly_name: 王杰
-switch.jimmylin:
-  friendly_name: 林志颖
-switch.mayday:
-  friendly_name: 五月天
-switch.tingting:
-  friendly_name: 随便听听
-switch.zhangxinzhe:
-  friendly_name: 张信哲
-switch.zhouhuajian:
-  friendly_name: 周华健
-switch.bandari:
-  friendly_name: 班得瑞
-switch.my_love_album:
-  friendly_name: 好专辑
+  #switch.davewang:
+  #  friendly_name: 王杰
+  #switch.jimmylin:
+  #  friendly_name: 林志颖
+  #switch.mayday:
+  #  friendly_name: 五月天
+  #switch.tingting:
+  #  friendly_name: 随便听听
+  #switch.zhangxinzhe:
+  #  friendly_name: 张信哲
+  #switch.zhouhuajian:
+  #  friendly_name: 周华健
+  #switch.bandari:
+  #  friendly_name: 班得瑞
+  #switch.my_love_album:
+  #  friendly_name: 好专辑

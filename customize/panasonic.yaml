@@ -1,7 +1,5 @@
-switch.panasonic_on: # 开
-  friendly_name: 松下客厅开
-switch.panasonic_off: # 关
-  friendly_name: 松下客厅关
+switch.panasonic_on_off: # 开和关
+  friendly_name: 松下客厅顶灯
 switch.panasonic_quanliang: # 全亮
   friendly_name: 松下客厅全亮
 switch.panasonic_changye: # 常夜

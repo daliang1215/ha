@@ -3,7 +3,7 @@
   name: driving_to_company
   api_key: 9d1f337261ff34e672c3b75d5fe7058c
   friendly_name: 从家去公司
-  homebridge_hidden: false
+  #homebridge_hidden: false
   travel_mode: driving
   strategy: 0       #optional, 0-9, default 0 速度最快
   origin:
@@ -19,7 +19,7 @@
   name: driving_to_home
   api_key: 9d1f337261ff34e672c3b75d5fe7058c
   friendly_name: 从公司回家
-  homebridge_hidden: false
+  #homebridge_hidden: false
   travel_mode: driving
   strategy: 0       #optional, 0-9, default 0 速度最快
   origin:

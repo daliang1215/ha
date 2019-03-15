@@ -2,10 +2,10 @@
   hide_entity: true
   initial_state: true
   trigger:
-  - platform: time
+  - platform: time_pattern
     minutes: 00
     seconds: 01
-  - platform: time
+  - platform: time_pattern
     minutes: 30
     seconds: 01
   condition:

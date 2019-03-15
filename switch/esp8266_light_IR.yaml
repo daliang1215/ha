@@ -1,69 +1,42 @@
 - platform: command_line
   switches:
-    keting_room_light_on_off:
-      ## 192.168.88.9 living_room
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=keting&state=on'"
-      command_off: "/usr/bin/curl -X GET 'http://192.168.88.9/room?roomid=keting&state=off'"
-      #command_state: "/usr/bin/curl -X GET 'http://192.168.88.9/room?roomid=keting&state=stats'"
-      #value_template: '{{ value == "on" }}'
-    keting_room_light_quanliang:
-      ## 192.168.88.9 living_room
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=keting&state=quanliang'"
-    keting_room_light_changyedeng:
-      ## 192.168.88.9 living_room
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=keting&state=changyedeng'"
-    keting_room_light_ming:
-      ## 192.168.88.9 living_room
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=keting&state=ming'"
-    keting_room_light_an:
-      ## 192.168.88.9 living_room
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=keting&state=an'"
-    keting_room_light_riguangse:
-      ## 192.168.88.9 living_room
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=keting&state=riguangse'"
-    keting_room_light_nuanbaise:
-      ## 192.168.88.9 living_room
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=keting&state=nuanbaise'"
-    keting_room_light_light_sleep:
-      ## 192.168.88.9 living_room
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=keting&state=lightsleep'"
     zhuwo_room_light_on_off:
-      ## 192.168.88.10 zhuwo_room
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=zhuwo&state=on'"
-      command_off: "/usr/bin/curl -X GET 'http://192.168.88.10/room?roomid=zhuwo&state=off'"
-      #command_state: "/usr/bin/curl -X GET 'http://192.168.88.10/room?roomid=zhuwo&state=stats'"
+      ## 192.168.88.9 zhuwo_room
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=zhuwo&state=on'"
+      command_off: "/usr/bin/curl -X GET 'http://192.168.88.9/room?roomid=zhuwo&state=off'"
+      #command_state: "/usr/bin/curl -X GET 'http://192.168.88.9/room?roomid=zhuwo&state=stats'"
       #value_template: '{{ value == "on" }}'
     zhuwo_room_light_quanliang:
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=zhuwo&state=quanliang'"
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=zhuwo&state=quanliang'"
     zhuwo_room_light_changyedeng:
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=zhuwo&state=changyedeng'"
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=zhuwo&state=changyedeng'"
     zhuwo_room_light_ming:
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=zhuwo&state=ming'"
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=zhuwo&state=ming'"
     zhuwo_room_light_an:
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=zhuwo&state=an'"
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=zhuwo&state=an'"
     zhuwo_room_light_riguangse:
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=zhuwo&state=riguangse'"
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=zhuwo&state=riguangse'"
     zhuwo_room_light_nuanbaise:
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=zhuwo&state=nuanbaise'"
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=zhuwo&state=nuanbaise'"
     zhuwo_room_light_light_sleep:
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=zhuwo&state=lightsleep'"
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.9/room?roomid=zhuwo&state=lightsleep'"
     ciwo_room_light_on_off:
-      ## 192.168.88.13 ciwo_room
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.13/room?roomid=ciwo&state=on'"
-      command_off: "/usr/bin/curl -X GET 'http://192.168.88.13/room?roomid=ciwo&state=off'"
-      #command_state: "/usr/bin/curl -X GET 'http://192.168.88.13/room?roomid=ciwo&state=stats'"
+      ## 192.168.88.10 ciwo_room
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=ciwo&state=on'"
+      command_off: "/usr/bin/curl -X GET 'http://192.168.88.10/room?roomid=ciwo&state=off'"
+      #command_state: "/usr/bin/curl -X GET 'http://192.168.88.10/room?roomid=ciwo&state=stats'"
       #value_template: '{{ value == "on" }}'
     ciwo_room_light_quanliang:
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.13/room?roomid=ciwo&state=quanliang'"
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=ciwo&state=quanliang'"
     ciwo_room_light_changyedeng:
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.13/room?roomid=ciwo&state=changyedeng'"
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=ciwo&state=changyedeng'"
     ciwo_room_light_ming:
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.13/room?roomid=ciwo&state=ming'"
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=ciwo&state=ming'"
     ciwo_room_light_an:
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.13/room?roomid=ciwo&state=an'"
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=ciwo&state=an'"
     ciwo_room_light_riguangse:
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.13/room?roomid=ciwo&state=riguangse'"
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=ciwo&state=riguangse'"
     ciwo_room_light_nuanbaise:
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.13/room?roomid=ciwo&state=nuanbaise'"
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=ciwo&state=nuanbaise'"
     ciwo_room_light_light_sleep:
-      command_on: "/usr/bin/curl -X GET  'http://192.168.88.13/room?roomid=ciwo&state=lightsleep'"
+      command_on: "/usr/bin/curl -X GET  'http://192.168.88.10/room?roomid=ciwo&state=lightsleep'"

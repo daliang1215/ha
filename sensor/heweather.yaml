@@ -1,6 +1,6 @@
 - platform: HeWeather
   city: zhengzhou
-  aqi_city: zhengzhou
+  #aqi_city: zhengzhou
   appkey: d7c331e73816479f847ee321a4e619fb
   options:
     - fl
