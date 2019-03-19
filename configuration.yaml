@@ -248,6 +248,8 @@ notify:
 #    homeassistant.components.homekit: debug
 #    pyhap.accessory_driver: debug
 #    #pyhap: debug
+system_health:
+
 logger:
   # 可能的日志严重程度是: notset, debug, info, warn, warning, error, fatal, critical
   default: info
