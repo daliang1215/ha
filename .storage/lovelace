@@ -1,0 +1,423 @@
+{
+    "data": {
+        "config": {
+            "title": "JimmyHome",
+            "views": [
+                {
+                    "badges": [
+                        "sensor.heweather_hum",
+                        "sensor.heweather_pop",
+                        "sensor.heweather_cw",
+                        "sensor.heweather_pcpn",
+                        "sensor.heweather_main",
+                        "sensor.heweather_uv",
+                        "sensor.heweather_comf",
+                        "sensor.heweather_wind_spd",
+                        "sensor.heweather_tmp_min",
+                        "sensor.heweather_aqi",
+                        "sensor.heweather_trav",
+                        "sensor.driving_to_home",
+                        "sensor.heweather_tmp_max",
+                        "sensor.heweather_vis",
+                        "sensor.heweather_flu",
+                        "sensor.chinese_calendar",
+                        "sensor.heweather_sport",
+                        "sensor.heweather_pres",
+                        "sensor.heweather_pm25",
+                        "sensor.heweather_fl",
+                        "sensor.driving_to_company",
+                        "sensor.heweather_cond_txt",
+                        "sensor.heweather_qlty",
+                        "sensor.heweather_pm10",
+                        "sensor.heweather_tmp",
+                        "sensor.heweather_wind_dir",
+                        "sensor.heweather_drsg",
+                        "sensor.heweather_wind_sc",
+                        "sun.sun"
+                    ],
+                    "cards": [
+                        {
+                            "entities": [
+                                "sensor.to_company_time",
+                                "sensor.to_home_time"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "\u5f00\u8f66\u65f6\u95f4\u8ba1\u7b97",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "fan.keting",
+                                "switch.keting_xiaomi_ap_buzzer",
+                                "switch.keting_xiaomi_ap_childlock",
+                                "sensor.keting_xiaomi_ap_aqi",
+                                "sensor.keting_xiaomi_ap_temp",
+                                "sensor.keting_xiaomi_ap_humid",
+                                "sensor.keting_xiaomi_filter_used",
+                                "sensor.keting_xiaomi_filter_remaining"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "\u5ba2\u5385\u7a7a\u51c0",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "fan.woshi",
+                                "switch.woshi_xiaomi_ap_buzzer",
+                                "switch.woshi_xiaomi_ap_childlock",
+                                "sensor.woshi_xiaomi_ap_aqi",
+                                "sensor.woshi_xiaomi_ap_temp",
+                                "sensor.woshi_xiaomi_ap_humid",
+                                "sensor.woshi_xiaomi_filter_used",
+                                "sensor.woshi_xiaomi_filter_remaining"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "\u5367\u5ba4\u7a7a\u51c0",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "media_player.vlc_player",
+                            "type": "media-control"
+                        },
+                        {
+                            "entity": "media_player.kodi",
+                            "type": "media-control"
+                        }
+                    ],
+                    "path": "default_view",
+                    "title": "Home"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.heweather_wind_sc"
+                                },
+                                {
+                                    "entity": "sensor.heweather_wind_dir"
+                                },
+                                {
+                                    "entity": "sensor.heweather_wind_spd"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "\u98ce",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sun.sun"
+                                },
+                                {
+                                    "entity": "sensor.heweather_tmp_max"
+                                },
+                                {
+                                    "entity": "sensor.heweather_tmp_min"
+                                },
+                                {
+                                    "entity": "sensor.heweather_fl"
+                                },
+                                {
+                                    "entity": "sensor.heweather_tmp"
+                                },
+                                {
+                                    "entity": "sensor.heweather_hum"
+                                },
+                                {
+                                    "entity": "sensor.heweather_pop"
+                                },
+                                {
+                                    "entity": "sensor.heweather_cond_txt"
+                                },
+                                {
+                                    "entity": "sensor.heweather_pcpn"
+                                },
+                                {
+                                    "entity": "sensor.heweather_pres"
+                                },
+                                {
+                                    "entity": "sensor.heweather_vis"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "\u81ea\u7136",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.heweather_pm25"
+                                },
+                                {
+                                    "entity": "sensor.heweather_pm10"
+                                },
+                                {
+                                    "entity": "sensor.heweather_main"
+                                },
+                                {
+                                    "entity": "sensor.heweather_aqi"
+                                },
+                                {
+                                    "entity": "sensor.heweather_qlty"
+                                }
+                            ],
+                            "title": "\u7a7a\u6c14\u8d28\u91cf",
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.heweather_comf"
+                                },
+                                {
+                                    "entity": "sensor.heweather_cw"
+                                },
+                                {
+                                    "entity": "sensor.heweather_drsg"
+                                },
+                                {
+                                    "entity": "sensor.heweather_flu"
+                                },
+                                {
+                                    "entity": "sensor.heweather_sport"
+                                },
+                                {
+                                    "entity": "sensor.heweather_trav"
+                                },
+                                {
+                                    "entity": "sensor.heweather_uv"
+                                }
+                            ],
+                            "title": "\u751f\u6d3b\u6307\u6570",
+                            "type": "glance"
+                        }
+                    ],
+                    "icon": "mdi:weather-rainy",
+                    "panel": false,
+                    "title": "\u90d1\u5dde\u5ba4\u5916\u5929\u6c14\u72b6\u51b5"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "fan.keting"
+                                },
+                                {
+                                    "entity": "switch.keting_xiaomi_ap_buzzer"
+                                },
+                                {
+                                    "entity": "switch.keting_xiaomi_ap_childlock"
+                                },
+                                {
+                                    "entity": "sensor.keting_xiaomi_ap_aqi"
+                                },
+                                {
+                                    "entity": "sensor.keting_xiaomi_ap_temp"
+                                },
+                                {
+                                    "entity": "sensor.keting_xiaomi_ap_humid"
+                                },
+                                {
+                                    "entity": "sensor.keting_xiaomi_filter_used"
+                                },
+                                {
+                                    "entity": "sensor.keting_xiaomi_filter_remaining"
+                                }
+                            ],
+                            "title": "\u5ba2\u5385\u7a7a\u6c14\u51c0\u5316\u5668",
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "fan.woshi"
+                                },
+                                {
+                                    "entity": "switch.woshi_xiaomi_ap_buzzer"
+                                },
+                                {
+                                    "entity": "switch.woshi_xiaomi_ap_childlock"
+                                },
+                                {
+                                    "entity": "sensor.woshi_xiaomi_ap_aqi"
+                                },
+                                {
+                                    "entity": "sensor.woshi_xiaomi_ap_temp"
+                                },
+                                {
+                                    "entity": "sensor.woshi_xiaomi_ap_humid"
+                                },
+                                {
+                                    "entity": "sensor.woshi_xiaomi_filter_used"
+                                },
+                                {
+                                    "entity": "sensor.woshi_xiaomi_filter_remaining"
+                                }
+                            ],
+                            "title": "\u5367\u5ba4\u7a7a\u6c14\u51c0\u5316\u5668",
+                            "type": "glance"
+                        }
+                    ],
+                    "icon": "mdi:cards-variant",
+                    "panel": false,
+                    "theme": "Backend-selected",
+                    "title": "\u7a7a\u6c14\u51c0\u5316\u5668"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.panasonic_on_off"
+                                },
+                                {
+                                    "entity": "switch.panasonic_an"
+                                },
+                                {
+                                    "entity": "switch.panasonic_changye"
+                                },
+                                {
+                                    "entity": "switch.panasonic_jiuqiin"
+                                },
+                                {
+                                    "entity": "switch.panasonic_ming"
+                                },
+                                {
+                                    "entity": "switch.panasonic_nuanbai"
+                                },
+                                {
+                                    "entity": "switch.panasonic_powersave"
+                                },
+                                {
+                                    "entity": "switch.panasonic_quanliang"
+                                }
+                            ],
+                            "title": "\u5ba2\u5385\u706f",
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.zhuwo_room_light_on_off"
+                                },
+                                {
+                                    "entity": "switch.zhuwo_room_light_changyedeng"
+                                },
+                                {
+                                    "entity": "switch.zhuwo_room_light_quanliang"
+                                },
+                                {
+                                    "entity": "switch.zhuwo_room_light_an"
+                                },
+                                {
+                                    "entity": "switch.zhuwo_room_light_ming"
+                                },
+                                {
+                                    "entity": "switch.zhuwo_room_light_nuanbaise"
+                                },
+                                {
+                                    "entity": "switch.zhuwo_room_light_riguangse"
+                                }
+                            ],
+                            "title": "\u4e3b\u5367\u706f",
+                            "type": "glance"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.ciwo_room_light_on_off"
+                                },
+                                {
+                                    "entity": "switch.ciwo_room_light_changyedeng"
+                                },
+                                {
+                                    "entity": "switch.ciwo_room_light_quanliang"
+                                },
+                                {
+                                    "entity": "switch.ciwo_room_light_an"
+                                },
+                                {
+                                    "entity": "switch.ciwo_room_light_ming"
+                                },
+                                {
+                                    "entity": "switch.ciwo_room_light_nuanbaise"
+                                },
+                                {
+                                    "entity": "switch.ciwo_room_light_riguangse"
+                                }
+                            ],
+                            "title": "\u6b21\u5367\u706f",
+                            "type": "glance"
+                        }
+                    ],
+                    "icon": "mdi:lightbulb",
+                    "title": "\u5bb6\u5c45\u706f\u63a7"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.air_conditioner"
+                                },
+                                {
+                                    "entity": "switch.cool"
+                                },
+                                {
+                                    "entity": "switch.heat_slave"
+                                },
+                                {
+                                    "entity": "switch.heat"
+                                },
+                                {
+                                    "entity": "switch.left_right"
+                                },
+                                {
+                                    "entity": "switch.light_mode"
+                                },
+                                {
+                                    "entity": "switch.mode"
+                                },
+                                {
+                                    "entity": "switch.sleep_mode"
+                                },
+                                {
+                                    "entity": "switch.smart_enjoy"
+                                },
+                                {
+                                    "entity": "switch.speed"
+                                },
+                                {
+                                    "entity": "switch.temp_down"
+                                },
+                                {
+                                    "entity": "switch.temp_up"
+                                },
+                                {
+                                    "entity": "switch.temp_visiable"
+                                },
+                                {
+                                    "entity": "switch.up_down"
+                                }
+                            ],
+                            "title": "\u5ba2\u5385\u7a7a\u8c03",
+                            "type": "glance"
+                        }
+                    ],
+                    "icon": "mdi:air-conditioner",
+                    "panel": true,
+                    "title": "\u7a7a\u8c03"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

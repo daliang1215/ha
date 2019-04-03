@@ -1,4 +1,7 @@
 homeassistant:
+  auth_providers:
+    - type: homeassistant
+    - type: legacy_api_password
   # Name of the location where Home Assistant is running
   name: JimmyHome
   # Location required to calculate the time the sun rises and sets
@@ -210,9 +213,8 @@ tts:
 
     #ifttt:
     #  key: cibXF2TxJNFGSNpINKAyc-
-#mqtt:
-#  password: 1qaz2wsx
-
+mqtt:
+  broker: 192.168.88.141
 panel_iframe:
   homebridge:
     title: HomeBridge
@@ -226,6 +228,10 @@ panel_iframe:
     #    title: SmartHome
     #    icon: mdi:home-automation
     #    url: https://www.efeichn.top:1234
+  dash:
+    title: 面板
+    icon: mdi:microsoft
+    url: /local/dash.html
 panel_custom:
   - name: inkwavemap
     sidebar_title: '墨澜地图'
@@ -249,7 +255,8 @@ notify:
 #    pyhap.accessory_driver: debug
 #    #pyhap: debug
 system_health:
-
+aligenie:
+  expire_hours: 720
 logger:
   # 可能的日志严重程度是: notset, debug, info, warn, warning, error, fatal, critical
   default: info
@@ -274,12 +281,13 @@ logger:
     requests.packages.urllib3.connectionpool: error
     requests.packages.urllib3: error
     requests.packages.urllib3.http.client: error
-group: !include_dir_merge_named group
+#group: !include_dir_merge_named group
 #device_tracker: !include_dir_merge_list device_tracker
 sensor: !include_dir_merge_list sensor
 automation: !include_dir_merge_list automation
 scene: !include_dir_merge_list scene
 switch: !include_dir_merge_list switch
+light: !include_dir_merge_list light
 script: !include_dir_merge_named script
 fan: !include_dir_merge_list fan
 shell_command: !include_dir_merge_named shell_command

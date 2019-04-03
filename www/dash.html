@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>物联控制</title>
+		<meta charset="utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="apple-touch-icon" href="/static/images/config_insteon.png" />
+		<link href="https://cdn.bootcss.com/MaterialDesign-Webfont/3.2.89/css/materialdesignicons.min.css" rel="stylesheet" />
+		<style>
+			.entity {
+				float: left;
+				width: 120px;
+				height: 120px;
+				margin: 2px;
+				color: white;
+				font-size: 14px;
+				font-weight: 300;
+				text-align: center;
+			}
+
+			@media (hover: hover) {
+				.entity:hover {
+					background-color: #009688;
+					cursor: pointer;
+				}
+
+				.tuner:hover,
+				.moder:hover {
+					background-color: #9c27b0;
+					cursor: pointer;
+				}
+			}
+
+			.sensor {
+				background-color: #00bcd4;
+			}
+
+			.weather {
+				background-color: #00bcd4; /*3f51b5;*/
+			}
+
+			.binary_sensor {
+				background-color: #03a9f4;
+			}
+
+			.device_tracker {
+				background-color: #2196f3;
+			}
+
+			.light {
+				background-color: #ff5722;
+			}
+
+			.switch,
+			.cover,
+			.media_player,
+			.vacuum {
+				background-color: #ff9800;
+			}
+
+			.fan,
+			.climate {
+				background-color: #8bc34a;
+			}
+
+			.name,
+			.extra {
+				height: 34px;
+				line-height: 34px;
+				overflow: hidden;
+				text-overflow: clip;
+				white-space: nowrap;
+			}
+
+			.state {
+				height: 52px;
+				line-height: 52px;
+				overflow: hidden;
+				font-size: 44px;
+			}
+
+			.nan {
+				font-size: 36px;
+			}
+
+			.off {
+				color: rgba(230, 230, 230, 0.5);
+			}
+
+			.caution {
+				color: #ffd835;
+			}
+
+			.critical {
+				color: #e91e63;
+			}
+
+			.unit {
+				font-size: 10px;
+			}
+
+			.moder,
+			.tuner {
+				height: 30px;
+				line-height: 30px;
+				display: inline-block;
+				border-radius: 4px;
+				background-color: rgba(0, 0, 0, 0.05);
+			}
+
+			.moder {
+				border: 0;
+				color: white;
+				padding: 1px 6px;
+				appearance: none;
+				-webkit-appearance: none;
+				text-transform: capitalize;
+			}
+
+			.tuner {
+				margin: 2px;
+				width: 30px;
+			}
+
+			::-webkit-scrollbar {
+				display: none;
+			}
+
+			body {
+				margin: 0;
+				color: white;
+				font-family: Helvetica;
+				background-color: black;
+				-webkit-user-select: none;
+			}
+
+			#loading {
+				position: fixed;
+				z-index: 1;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				width: 100px;
+				height: 100px;
+				border: 5px rgba(0, 0, 0, 0.1) solid;
+				border-left-color: #ff5500;
+				border-right-color: #0c80fe;
+				border-radius: 100%;
+				animation: loading 2s infinite linear;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+
+			#error {
+				position: fixed;
+				z-index: 1;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				width: 300px;
+				height: 32px;
+				line-height: 32px;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.5);
+				border-radius: 3px;
+			}
+
+			@keyframes loading {
+				from {
+					transform: rotate(0deg);
+				}
+
+				to {
+					transform: rotate(360deg);
+				}
+			}
+
+			@keyframes tuning {
+				100% {
+					background: #607d8b;
+				}
+			}
+		</style>
+		<script>
+			_ws = null // WebSocket handle
+			_wsid = 0 // WebSocket session id
+			_wsapi = null // WebSocket api url
+			_token = null // Access token or password
+			_call_entity_id = null // Processing entity_id
+			_entities = null // All entities
+			_entities_retained = false
+
+			function load() {
+				// Respond to mobile browser
+				if (navigator.userAgent.match('Mobile')) {
+					var meta = document.createElement('meta')
+					meta.name = 'viewport'
+					meta.setAttribute('content', 'width=device-width, initial-scale=1, user-scalable=no')
+					document.getElementsByTagName('head')[0].appendChild(meta)
+				}
+
+				// Adjust grid width
+				var clientWidth = document.documentElement.clientWidth
+				var count = Math.floor(clientWidth / 124)
+				var width = (clientWidth - count * 4) / count
+				width = Math.floor(width * 10) / 10
+				document.styleSheets[1].cssRules[0].style.width = width + 'px'
+				//alert('clientWidth:' + clientWidth + ' count:' + count + ' width:' + width);
+
+				// Parse api url
+				var params = location.search.split('@')
+				if (params.length > 1 && params[1].startsWith('ws')) {
+					_wsapi = params[1]
+				} else {
+					_wsapi = (location.protocol == 'https:' ? 'wss://' : 'ws://') + location.host
+				}
+				_wsapi += '/api/websocket'
+
+				// Parse access token
+				_token = params[0].slice(1)
+				if (!_token && localStorage.hassTokens) {
+					try {
+						_token = JSON.parse(localStorage.hassTokens).access_token
+					} catch (e) {}
+				}
+
+				connect()
+			}
+
+			function connect() {
+				floater('loading')
+
+				_ws = new WebSocket(_wsapi)
+				_ws.onopen = handleOpen
+				_ws.onclose = handleClose
+				_ws.onmessage = handleMessage
+			}
+
+			function handleOpen() {
+				if (_token) {
+					_ws.send('{"type": "auth", "' + (_token.length < 20 ? 'api_password' : 'access_token') + '": "' + _token + '"}')
+				}
+				_ws.send('{"id": 1, "type": "get_states"}')
+				_ws.send('{"id": 2, "type": "subscribe_events", "event_type": "state_changed"}')
+				_wsid = 2
+			}
+
+			var _retryCount = 0
+			function handleClose() {
+				var retry = ''
+				if (_retryCount < 4) {
+					_retryCount++
+					var timeout = Math.pow(4, _retryCount)
+					retry = timeout + ' 秒后尝试'
+					setTimeout('connect()', timeout * 1000)
+				}
+				if (!document.getElementById('error')) {
+					floater('error', '连接关闭，' + retry + '<a href="javascript:connect()">重新连接</a>')
+				}
+			}
+
+			function handleMessage(message) {
+				var json = JSON.parse(message.data)
+				switch (json.type) {
+					case 'result':
+						if (json.success) {
+							if (json.id == 1) {
+								// Responed to get_states
+								_retryCount = 0
+								_entities = json.result
+								_entities_retained = false
+								handleStates()
+								if (!_entities_retained) {
+									_entities = null // Free _entities if not used in handleEvent/makeEntity/renderTemplate
+								}
+								break
+							} else if (json.id == 2) {
+								// Responed to subscribe_events
+								break
+							} else if (json.id == _wsid && _call_entity_id) {
+								// Avoid mis-operation and ensure animation
+								setTimeout(function() {
+									// Responed to call_service
+									document.getElementById(_call_entity_id).style = ''
+									_call_entity_id = null
+								}, 1000)
+								break
+							}
+						}
+						floater('error', '未知结果 ' + (json.error ? json.error.message : message.data) + '，<a href="javascript:connect()">重新连接</a>')
+						break
+					case 'event':
+						var entity = json.event.data.new_state
+						if (entity) {
+							handleEvent(entity)
+						} else {
+							floater('error', '事件错误 ' + (json.error.message || message.data) + '，<a href="javascript:connect()">重新连接</a>')
+						}
+						break
+					case 'auth_invalid':
+						var error = '无效认证！请先<a href="javascript:location=\'' + location.protocol + '//' + location.host + '\'">登录首页</a>'
+						error += '，或指定密码和地址' + location.href.split('?')[0] + '?password@ws:host:8123'
+						floater('error', error)
+						break
+					default:
+						console.log(json)
+						break
+				}
+			}
+
+			_DOMAIN_ICONS = {
+				weather: 'weather-partlycloudy',
+				sensor: 'flower',
+				binary_sensor: 'bullseye',
+				device_tracker: 'account',
+
+				light: 'lightbulb',
+
+				switch: 'light-switch',
+				media_player: 'play-circle-outline',
+				cover: 'window-closed',
+				vacuum: 'robot-vacuum',
+
+				fan: 'fan',
+				climate: 'thermostat'
+			}
+
+			var _group_entity_ids = null
+			function handleStates() {
+				// Fetch entities id in group
+				var group_id = location.hash ? location.hash.slice(1) : 'group.default_view'
+				if (group_id.startsWith('group.')) {
+					_group_entity_ids = []
+					fetchEntities(group_id)
+					if (_group_entity_ids.length == 0) {
+						_group_entity_ids = null
+					}
+				} else {
+					_group_entity_ids = null
+				}
+
+				// Purify and sort
+				//console.time('Purify')
+				// var entities = _entities
+				// for (var j = entities.length - 1; j >= 0; j--) {
+				// 	if (!isValidEntity(entities[j])) {
+				// 		entities.splice(j, 1)
+				// 	}
+				// }
+				// entities.sort(compareEntity)
+
+				// Purify and sort to another array (without purifying _entities)
+				var entities = []
+				var entities_count = 0
+				for (var k in _entities) {
+					var entity = _entities[k]
+					if (isValidEntity(entity)) {
+						var low = 0
+						var high = entities_count++
+						while (low < high) {
+							var mid = (low + high) >>> 1
+							if (compareEntity(entities[mid], entity) < 0) low = mid + 1
+							else high = mid
+						}
+						entities.splice(low, 0, entity)
+					}
+				}
+				//console.timeEnd('Purify')
+
+				// Generate entities
+				var html = ''
+				for (var i in entities) {
+					html += makeGrid(entities[i])
+				}
+
+				floater()
+				document.getElementById('content').innerHTML = html
+			}
+
+			function handleEvent(entity) {
+				var entity_id = entity.entity_id
+				var grid = document.getElementById(entity_id)
+				if (grid) {
+					grid.innerHTML = makeEntity(entity)
+					//console.log('Update entity: ' + entity_id);
+				} else if (isValidEntity(entity)) {
+					floater('error', '发现新设备“' + entity.attributes.friendly_name + '”，请<a href="javascript:connect()">重新连接</a>')
+				} else {
+					console.log('Skip entity event: ' + entity_id)
+				}
+			}
+
+			function handleClick(grid) {
+				var off = grid.children[1].className.startsWith('state off')
+				if (grid.className == 'entity cover') {
+					var service = off ? 'open_cover' : 'close_cover'
+				} else {
+					var service = off ? 'turn_on' : 'turn_off'
+				}
+				// Kavana: Respond right away
+				// var entity = findEntity(grid.id)
+				// if (entity) {
+				// 	entity.state = off ? 'on' : 'off'
+				// 	grid.innerHTML = makeEntity(entity)
+				// }
+				callService(service, { entity_id: grid.id }, grid)
+			}
+
+			function handleTune(event) {
+				event.stopPropagation()
+
+				var tuner = event.target
+				var extra = tuner.parentElement
+				var grid = extra.parentElement
+				var moder = extra.children[1]
+				var text = moder.options[moder.selectedIndex].innerText
+				var temperature = parseInt(text.split(' ')[1]) + (tuner.innerText == '△' ? 1 : -1)
+				callService('set_temperature', { entity_id: grid.id, temperature: temperature }, tuner)
+			}
+
+			function handleMode(moder) {
+				var extra = moder.parentElement
+				var grid = extra.parentElement
+				var mode = moder.options[moder.selectedIndex].value
+				if (grid.className == 'entity climate') {
+					callService('set_operation_mode', { entity_id: grid.id, operation_mode: mode }, moder)
+				} else {
+					callService('set_speed', { entity_id: grid.id, speed: mode }, moder)
+				}
+			}
+
+			function callService(service, data, element) {
+				var entity_id = data.entity_id
+				if (_call_entity_id) {
+					console.log('Skip call: ' + service + '/' + entity_id)
+					return
+				}
+				_call_entity_id = entity_id
+
+				var domain = entity_id.split('.')[0]
+				element.style = 'animation: tuning 1s infinite alternate'
+				console.log('Processing: ' + domain + '/' + service + '/' + entity_id)
+				_ws.send(
+					JSON.stringify({
+						id: ++_wsid,
+						type: 'call_service',
+						domain: domain,
+						service: service,
+						service_data: data
+					})
+				)
+			}
+
+			_STATE_MAPS = {
+				off: '关闭',
+				on: '开启',
+
+				idle: '空闲',
+				auto: '自动',
+				low: '低速',
+				medium: '中速',
+				middle: '中速',
+				high: '高速',
+				favorite: '最爱',
+
+				strong: '高速',
+				silent: '静音',
+				interval: '间歇',
+
+				cool: '制冷',
+				heat: '制热',
+				dry: '除湿',
+				fan: '送风',
+
+				unknown: '未知',
+				unavailable: '不可用'
+			}
+
+			_BINARY_SENSOR_ICONS = {
+				battery: ['battery', 'battery-outline'],
+				cold: ['thermometer', 'snowflake'],
+				connectivity: ['server-network-off', 'server-network'],
+				door: ['door-closed', 'door-open'],
+				garage_door: ['garage', 'garage-open'],
+				gas: ['shield-check', 'alert'],
+				power: ['shield-check', 'alert'],
+				problem: ['shield-check', 'alert'],
+				safety: ['shield-check', 'alert'],
+				smoke: ['shield-check', 'alert'],
+				heat: ['thermometer', 'fire'],
+				light: ['brightness-5', 'brightness-7'],
+				lock: ['lock', 'lock-open'],
+				moisture: ['water-off', 'water'],
+				motion: ['walk', 'run'],
+				occupancy: ['home-outline', 'home'],
+				opening: ['square', 'square-outline'],
+				plug: ['power-plug-off', 'power-plug'],
+				presence: ['home-outline', 'home'],
+				sound: ['music-note-off', 'music-note'],
+				vibration: ['crop-portrait', 'vibrate'],
+				window: ['window-closed', 'window-open'],
+				default: ['radiobox-blank', 'checkbox-marked-circle']
+			}
+
+			function makeGrid(entity) {
+				var entity_id = entity.entity_id
+				var domain = entity_id.split('.')[0]
+
+				var html = '<div class="entity ' + domain + '" id="' + entity_id + '"'
+				if (entity.attributes.hasOwnProperty('dash_click')) {
+					var dash_click = entity.attributes.dash_click
+					if (dash_click.startsWith('http') || dash_click.startsWith('/')) {
+						dash_click = "location='" + dash_click + "'"
+					}
+					html += ' onclick="' + dash_click + '"'
+				} else if (domain != 'sensor' && domain != 'weather' && domain != 'binary_sensor' && domain != 'device_tracker') {
+					html += ' onclick="handleClick(this)"'
+				}
+				html += '>'
+				html += makeEntity(entity)
+				html += '</div> '
+
+				return html
+			}
+
+			function makeEntity(entity) {
+				var entity_id = entity.entity_id
+				var domain = entity_id.split('.')[0]
+				var state = entity.state
+				var attributes = entity.attributes
+
+				var name = attributes.hasOwnProperty('dash_name') ? renderTemplate(attributes.dash_name, state, attributes) : attributes.friendly_name
+				var html = '<div class="name">' + name + '</div>'
+
+				var na = state == '' || state == 'unavailable' || state == 'unknown'
+				var off =
+					state == 'off' || state == 'not_home' || state == 'closed' || state == 'docked' || state == 'idle' || state == 'low' || na ? ' off' : ''
+
+				var has_dash_icon = attributes.hasOwnProperty('dash_icon')
+				if ((!has_dash_icon && (domain == 'sensor' || domain == 'climate')) || na) {
+					var value = !na && domain == 'climate' ? attributes.current_temperature : _STATE_MAPS[state] || state || '无'
+					var nan = isNaN(value)
+					var overflow = nan ? '' : stateOverflow(entity_id, value)
+					html += '<div class="state' + off + overflow + (nan ? ' nan' : '') + '">'
+					html += nan ? value : Math.floor(parseFloat(value) * 100) / 100
+
+					if (!off) {
+						var unit = attributes.hasOwnProperty('dash_unit')
+							? renderTemplate(attributes.dash_unit, state, attributes)
+							: attributes.unit_of_measurement
+						if (unit) {
+							html += '<span class="unit">' + unit + '</span>'
+						}
+					}
+				} else {
+					var icon = has_dash_icon ? renderTemplate(attributes.dash_icon, state, attributes) : attributes.icon
+					if (icon && icon.startsWith('mdi:')) {
+						icon = icon.slice(4)
+					} else if (domain == 'binary_sensor') {
+						var device_class = attributes.device_class
+						if (!_BINARY_SENSOR_ICONS.hasOwnProperty(device_class)) {
+							device_class = 'default'
+						}
+						icon = _BINARY_SENSOR_ICONS[device_class][off ? 0 : 1]
+					} else {
+						icon = _DOMAIN_ICONS[domain]
+					}
+
+					html += '<div class="state' + off + '">'
+					html += '<i class="mdi mdi-' + icon + '"></i>'
+				}
+				html += '</div>'
+
+				if (!off || attributes.dash_extra_forced) {
+					if (attributes.hasOwnProperty('dash_extra')) {
+						var extra = renderTemplate(attributes.dash_extra, state, attributes)
+						if (extra.length > 8) {
+							extra  = '<marquee scrollamount="3">' + extra + '</marquee>'
+						}
+					} else if (domain == 'climate' || domain == 'fan') {
+						var extra = ''
+						if (domain == 'climate') {
+							extra += '<span class="tuner" onclick="handleTune(event)">▽</span>'
+						}
+
+						extra += '<select class="moder" onclick="event.stopPropagation()" onchange="handleMode(this)">'
+						var current = domain == 'climate' ? attributes.operation_mode : attributes.speed
+						var mode_list = domain == 'climate' ? attributes.operation_list : attributes.speed_list
+						for (var i in mode_list) {
+							var mode = mode_list[i]
+							var key = mode.toLowerCase()
+							var text = _STATE_MAPS[key] || mode.replace('level', '档位')
+							extra += '<option value="' + mode + '"' + (mode == current ? ' selected' : '') + '>' + text
+							if (mode == current && domain == 'climate') {
+								extra += ' ' + attributes.temperature
+							}
+							extra += '</option>'
+						}
+						extra += '</select>'
+
+						if (domain == 'climate') {
+							extra += '<span class="tuner" onclick="handleTune(event)">△</span>'
+						}
+					} else {
+						return html
+					}
+					html += '<div class="extra">' + extra + '</div>'
+				}
+
+				return html
+			}
+
+			_SENSOR_THRESHOLDS = {
+				pm25: [40, 70],
+				co2: [900, 1600],
+				humidity: [72, 82],
+				hcho: [0.08, 0.2],
+				temperature: [30, 38]
+			}
+
+			function stateOverflow(entity_id, value) {
+				var warning = ''
+				for (var k in _SENSOR_THRESHOLDS) {
+					if (entity_id.endsWith(k)) {
+						var thresholds = _SENSOR_THRESHOLDS[k]
+						if (value >= thresholds[1]) {
+							return ' critical'
+						} else if (value >= thresholds[0]) {
+							return ' caution'
+						}
+					}
+				}
+				return ''
+			}
+
+			function renderTemplate(template, state, attributes) {
+				if (attributes.hasOwnProperty(template)) {
+					return attributes[template]
+				}
+
+				var result = ''
+				for (var end = 0; true; end++) {
+					var start = template.indexOf('${', end)
+					if (start != -1) {
+						result += template.slice(end, start)
+						end = template.indexOf('}', start)
+						if (end != -1) {
+							var macro = template.slice(start + 2, end)
+							var parts = macro.split('.')
+							var count = parts.length
+							if (count == 1) {
+								result += macro == 'state' ? state : attributes.hasOwnProperty(macro) ? attributes[macro] : '无属性'
+							} else {
+								_entities_retained = true // Retained _entities for feature using
+								var entity = findEntity(parts[0] + '.' + parts[1])
+								result += entity
+									? count == 2
+										? entity.state
+										: attributes.hasOwnProperty(parts[2])
+										? attributes[parts[2]]
+										: '无属性'
+									: '无设备'
+							}
+							continue
+						}
+					} else {
+						result += template.slice(end)
+					}
+					return result.startsWith('eval:') ? eval(result.slice(5)) : result
+				}
+			}
+
+			var _sorted_domains = Object.keys(_DOMAIN_ICONS)
+			function compareEntity(entity1, entity2) {
+				// Sort entities by domain+group order
+				var entity_id1 = entity1.entity_id
+				var entity_id2 = entity2.entity_id
+				var index1 = _sorted_domains.indexOf(entity_id1.split('.')[0])
+				var index2 = _sorted_domains.indexOf(entity_id2.split('.')[0])
+				if (index1 == index2) {
+					if (_group_entity_ids) {
+						index1 = _group_entity_ids.indexOf(entity_id1)
+						index2 = _group_entity_ids.indexOf(entity_id2)
+					} else {
+						return entity1.attributes.friendly_name.localeCompare(entity2.attributes.friendly_name)
+					}
+				}
+				return index1 - index2
+			}
+
+			function findEntity(entity_id) {
+				for (var i in _entities) {
+					var entity = _entities[i]
+					if (entity.entity_id == entity_id) {
+						return entity
+					}
+				}
+				console.log('Entity id not found: ' + entity_id)
+				return null
+			}
+
+			function fetchEntities(group_id) {
+				var group = findEntity(group_id)
+				if (group) {
+					//console.log('Sort by ' + group_id)
+					var ids = group.attributes.entity_id
+					for (var i in ids) {
+						var entity_id = ids[i]
+						if (entity_id.startsWith('group')) {
+							fetchEntities(entity_id)
+						} else {
+							_group_entity_ids.push(entity_id)
+						}
+					}
+				}
+			}
+
+			function isValidEntity(entity) {
+				var entity_id = entity.entity_id
+				return (
+					_DOMAIN_ICONS.hasOwnProperty(entity_id.split('.')[0]) &&
+					!entity.attributes.hidden &&
+					!entity.attributes.dash_hidden &&
+					(!_group_entity_ids || _group_entity_ids.indexOf(entity_id) != -1)
+				)
+			}
+
+			function floater(type, text) {
+				document.getElementById('floater').innerHTML = type ? '<div id="' + type + '">' + (text || '') + '</div>' : ''
+			}
+		</script>
+	</head>
+
+	<body onload="load()">
+		<div id="content"></div> <div id="floater"></div>
+	</body>
+</html>
