@@ -5,7 +5,7 @@
                 "connection_class": "local_push",
                 "data": {},
                 "domain": "mqtt",
-                "entry_id": "662178022d4c47f886db03940034a982",
+                "entry_id": "cd261f222ddc44c7938cdbb7b4626c9f",
                 "options": {},
                 "source": "import",
                 "title": "configuration.yaml",

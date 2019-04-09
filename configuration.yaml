@@ -228,6 +228,10 @@ panel_iframe:
     #    title: SmartHome
     #    icon: mdi:home-automation
     #    url: https://www.efeichn.top:1234
+  weblink:
+    title: NODE-RED
+    icon: mdi:home-automation
+    url: https://www.efeichn.top:1881
   dash:
     title: 面板
     icon: mdi:microsoft
@@ -255,8 +259,8 @@ notify:
 #    pyhap.accessory_driver: debug
 #    #pyhap: debug
 system_health:
-aligenie:
-  expire_hours: 720
+#aligenie:
+#  expire_hours: 720
 logger:
   # 可能的日志严重程度是: notset, debug, info, warn, warning, error, fatal, critical
   default: info
