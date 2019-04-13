@@ -3,19 +3,12 @@
         "credentials": [
             {
                 "auth_provider_id": null,
-                "auth_provider_type": "legacy_api_password",
-                "data": {},
-                "id": "6e7906a6b31444e4a5b6f454def2235c",
-                "user_id": "d2284c4e6b594c899c4f77b95ff4d451"
-            },
-            {
-                "auth_provider_id": null,
                 "auth_provider_type": "homeassistant",
                 "data": {
                     "username": "efeichn"
                 },
-                "id": "f09207fd6d5148259b99720118b96f90",
-                "user_id": "760fbc0759084e4cae8980a02f275f66"
+                "id": "25a5a73218554f66a3de5ca5f7340070",
+                "user_id": "d54492152a4f4b2d9e124122e498474a"
             }
         ],
         "groups": [
@@ -34,70 +27,84 @@
                 "client_icon": null,
                 "client_id": "https://tmall.hass.app:8888",
                 "client_name": null,
-                "created_at": "2019-04-11T14:31:36.604110+00:00",
-                "id": "a7809ca7e5764365a0d56a3f7ca1fe25",
-                "jwt_key": "e9add8c0bc3a4e8135d506d77963bc29b27e46d38890657e463ea59f156fb895e21483c6cc714a686e886b7e8470daef14fea2b833598b2fb981a19b039881a6",
-                "last_used_at": "2019-04-11T14:31:36.606454+00:00",
+                "created_at": "2019-04-13T13:59:47.199360+00:00",
+                "id": "02cd4af04267465ab0d808c419b55f57",
+                "jwt_key": "de9b50c4489be41c3eee049498810991d8fbbea8bfaac95f5f77159aff79748c122bdc7aeec2542e33350f33b8707c7a14ca5329ab816d95c95e2bd770337e72",
+                "last_used_at": "2019-04-13T13:59:47.201572+00:00",
                 "last_used_ip": "36.111.149.179",
-                "token": "a4d31004138232160f2804a0e75f372375900344db84659a5c49a243780efa0d840164d1d19627ed8f3bfdfdd4b4e4e757f07e42503b75e5a87caf4653405418",
+                "token": "414cf3134571be5aa73b98803c7f01b6ba0ceab5f6f665c7db075a6d5b25b76955ac0a72f7142659436c698c0e9037505c98f8c972eb555ceecfaf2bb6a695d0",
                 "token_type": "normal",
-                "user_id": "d2284c4e6b594c899c4f77b95ff4d451"
+                "user_id": "d54492152a4f4b2d9e124122e498474a"
             },
             {
                 "access_token_expiration": 1800.0,
                 "client_icon": null,
                 "client_id": "https://tmall.hass.app:8888",
                 "client_name": null,
-                "created_at": "2019-04-11T14:06:03.077822+00:00",
-                "id": "948e8250f99e47f2bdb2fb1a3981f2e2",
-                "jwt_key": "e87ffa4854e537a3427ad12b7feec07d42f41f98574364a4b5d0ad8271c4dfd47f431c0270ff9fff301095f94d86da075000c2b60a4067cb55edfbe679d4c27c",
-                "last_used_at": "2019-04-11T14:06:03.079975+00:00",
+                "created_at": "2019-04-13T23:13:51.942895+00:00",
+                "id": "39bd14dd60fa413593e59051f238cab9",
+                "jwt_key": "6b6be16ac43d61d67d5a900c091658301358b426a5270ee05e89b5f4cda4ed9b89ef0af1b4a3c6b7e63b103382ed484af2f07a91206b2c9eddff96677014ad0d",
+                "last_used_at": "2019-04-13T23:13:51.945093+00:00",
                 "last_used_ip": "36.111.149.179",
-                "token": "483758e7fd09ba8ba408bd3caa3c81134ce47ef66e845c69fe07e3464bf812997e9079943f8fca2aa3caeca54cf73e35f4b3fc65571b474a280684a24257e588",
+                "token": "06d1e1cc84d2f78e803dbf67871a031889ed096fd09c8b1d118317d72dd9103b8f1bf105a7240f6b6995d49760a5686b5d59d91b11d39858340c7ec8f28bd756",
                 "token_type": "normal",
-                "user_id": "d2284c4e6b594c899c4f77b95ff4d451"
+                "user_id": "d54492152a4f4b2d9e124122e498474a"
             },
             {
-                "access_token_expiration": 2592000.0,
-                "client_icon": null,
-                "client_id": "https://www.efeichn.top:8123/",
-                "client_name": null,
-                "created_at": "2019-04-09T10:38:23.578983+00:00",
-                "id": "396afde258924386a7e506f08833df22",
-                "jwt_key": "320e34066b2b0f01e16f0bf1b4e3a7e85d0dff9461752caeb8ad8548056136a0f28780b975c6e8437a43ccce345f4a92b6aa924f3c0e9bb347f55cd5575c1dff",
-                "last_used_at": "2019-04-09T10:38:23.581176+00:00",
-                "last_used_ip": "61.158.148.58",
-                "token": "d67cd48bdc0c40702e20fe4dfb8e4a35db6dcd5b0092186de66c310837091799ee43b922414f531878a0cdb79aee379546a0e27394192bb45e38f6eb393c023e",
-                "token_type": "normal",
-                "user_id": "760fbc0759084e4cae8980a02f275f66"
-            },
-            {
-                "access_token_expiration": 2592000.0,
+                "access_token_expiration": 1800.0,
                 "client_icon": null,
                 "client_id": "https://tmall.hass.app:8888",
                 "client_name": null,
-                "created_at": "2019-04-09T10:44:58.480083+00:00",
-                "id": "11d126c3ca1e4220aad0f71b741d6f3d",
-                "jwt_key": "8dbdc0808a6c904df332c71ef626066690882b433237753974b0b1133fafac2427557097b05c0ca90eb0813cb6395d98aca8b90a428cedefc92aa830d9dc0e81",
-                "last_used_at": "2019-04-09T10:44:58.482208+00:00",
+                "created_at": "2019-04-12T14:33:53.947569+00:00",
+                "id": "065a0e6bee3d46be91ea32b1fae994d1",
+                "jwt_key": "4a04f62546f90694931ce32c22aff60376fce88fed93a48c811e8766d679916a0acfe60241c96299a906d2f2d643081957bfe0cf323f86ed07d2db1fd03be14c",
+                "last_used_at": "2019-04-12T14:33:53.949549+00:00",
                 "last_used_ip": "36.111.149.179",
-                "token": "cd39c8c0e0f9057d7a6048fc5f330a67aaba0afcca44bfda5eebd2f75030b58198cc0a6acf87417a77463d534793e641674222e0f2c60466921dab7c5b007f81",
+                "token": "73498d6afb55c3841560b5a463c20b77dae7885547e9249acbf50512f06f58ed59b0f9dd1b0cfea3b6a8d3995a07025b111f7b396c18f7e4308bc9411ca92da8",
                 "token_type": "normal",
-                "user_id": "760fbc0759084e4cae8980a02f275f66"
+                "user_id": "d54492152a4f4b2d9e124122e498474a"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": "https://www.efeichn.top:8123/",
+                "client_name": null,
+                "created_at": "2019-04-12T22:44:23.811915+00:00",
+                "id": "a4bc869941774d63838984fade4080ed",
+                "jwt_key": "ec5c3677331a9cca4d3dd8d83b3119424c5a322d05985287a5cbf6d54b242c2e3771d6095537779c49ab4dbb48ba7ff85538f933058ca940c27bce7a7af4d370",
+                "last_used_at": "2019-04-13T23:49:34.788603+00:00",
+                "last_used_ip": "192.168.88.254",
+                "token": "5a9896254058ecaaaeb8ab7fe45c0cafe60c7599741a02a84cfc10ee790546f2e4d75898c43b34554d87c04739f547ab74625da320e000a8338ff3ffba555ca3",
+                "token_type": "normal",
+                "user_id": "d54492152a4f4b2d9e124122e498474a"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": "https://tmall.hass.app:8888",
+                "client_name": null,
+                "created_at": "2019-04-12T14:20:43.475463+00:00",
+                "id": "13c0a0c8acc94f82877af9517c2b2482",
+                "jwt_key": "04c4ef3e6705425dc19f7e4d08b3b6098fbd770d858179b62d363aeee4c763e4a57fcd44c5ea2da2aad52d0b0d60b71b5cab93e0ef9d71822476eee4dc1bd35a",
+                "last_used_at": "2019-04-12T14:20:43.477412+00:00",
+                "last_used_ip": "36.111.149.179",
+                "token": "8e3985115155308d90c9c86b2f142baca3cdc51048d368f3c3da902456718b9ed190315c5ce51406a355eb5cde94f36027c5861a661cd652e30a1f069574f833",
+                "token_type": "normal",
+                "user_id": "d54492152a4f4b2d9e124122e498474a"
             },
             {
                 "access_token_expiration": 315360000.0,
                 "client_icon": null,
                 "client_id": null,
-                "client_name": "tmall",
-                "created_at": "2019-04-09T10:42:31.089967+00:00",
-                "id": "178a9b5f79bf40229d6434c2a8817e44",
-                "jwt_key": "64b07b80cf0d7475f71ffb3c96e992609ec6bb0c80da7013aa7797276fb0054751658b1eeedbec134405e862cb165578031d794e7d6578f5f61992c2a9cf4509",
-                "last_used_at": "2019-04-09T10:42:31.104400+00:00",
+                "client_name": "\u5929\u732b",
+                "created_at": "2019-04-12T14:19:04.419147+00:00",
+                "id": "7ecab90e94cb4526bce01fdf4b063ef8",
+                "jwt_key": "a3251d5c09795ab3d64c753099579ccb0aefea102b706afca9816877f9c9f1e51f0e049ea1236a7b443894e2f488c2bb7979b7685ed2434976e9c57ae39a9b29",
+                "last_used_at": "2019-04-12T14:19:04.421183+00:00",
                 "last_used_ip": null,
-                "token": "557b849331d243803e7e31a3c1d3f5ff30e41de88d39ad6367c35223acee5357ea6fb2befda145974e295e1ed50dfce8764b50c6435f09d7b081d212181e38c3",
+                "token": "e3aac6a29e2dedbe4cfec2c53b7e7f0c1c6ee7d0ec4206a49ae055ac908c02c1f3c945c7dd0077a9045f1f48014a568c70c0df602e787232aedbf82da55cf7ec",
                 "token_type": "long_lived_access_token",
-                "user_id": "760fbc0759084e4cae8980a02f275f66"
+                "user_id": "d54492152a4f4b2d9e124122e498474a"
             }
         ],
         "users": [
@@ -105,19 +112,9 @@
                 "group_ids": [
                     "system-admin"
                 ],
-                "id": "d2284c4e6b594c899c4f77b95ff4d451",
+                "id": "d54492152a4f4b2d9e124122e498474a",
                 "is_active": true,
-                "is_owner": false,
-                "name": "Legacy API password user",
-                "system_generated": false
-            },
-            {
-                "group_ids": [
-                    "system-admin"
-                ],
-                "id": "760fbc0759084e4cae8980a02f275f66",
-                "is_active": true,
-                "is_owner": false,
+                "is_owner": true,
                 "name": "Jimmy Chen",
                 "system_generated": false
             }

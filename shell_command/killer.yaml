@@ -1,2 +1,2 @@
 killer: >-
-  /home/pi/.homeassistant/script/killer.sh {{text}}
+  /home/pi/.homeassistant/shell/killer.sh {{text}}

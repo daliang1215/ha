@@ -1,0 +1,2 @@
+rm_pro_send: >-
+  /usr/bin/nohup /home/pi/.homeassistant/shell/rm_pro_send_ir_rf.sh {{text}} 
