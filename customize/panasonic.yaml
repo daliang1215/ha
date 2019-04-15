@@ -1,18 +1,30 @@
-switch.panasonic_on_off: # 开和关
-  friendly_name: 松下客厅顶灯
-switch.panasonic_quanliang: # 全亮
+script.panasonic_on: # 开和关
+  friendly_name: 松下客厅顶灯开
+  tmall_genie: true
+script.panasonic_off: # 开和关
+  friendly_name: 松下客厅顶灯关
+  tmall_genie: true
+script.panasonic_quanliang: # 全亮
   friendly_name: 松下客厅全亮
-switch.panasonic_changye: # 常夜
+  tmall_genie: true
+script.panasonic_changye: # 常夜
   friendly_name: 松下客厅常夜
-switch.panasonic_ming: # 明
+  tmall_genie: true
+script.panasonic_ming: # 明
   friendly_name: 松下客厅明
-switch.panasonic_an: # 暗
+  tmall_genie: true
+script.panasonic_an: # 暗
   friendly_name: 松下客厅暗
-switch.panasonic_riguang: # 日光色
+  tmall_genie: true
+script.panasonic_riguang: # 日光色
   friendly_name: 松下客厅日光色
-switch.panasonic_nuanbai: # 暖白色
+  tmall_genie: true
+script.panasonic_nuanbai: # 暖白色
   friendly_name: 松下客厅暖白色
-switch.panasonic_powersave: # 节能
+  tmall_genie: true
+script.panasonic_powersave: # 节能
   friendly_name: 松下客厅节能
-switch.panasonic_jiuqiin: # 就寝
+  tmall_genie: true
+script.panasonic_jiuqiin: # 就寝
   friendly_name: 松下客厅就寝
+  tmall_genie: true

@@ -93,6 +93,7 @@ homekit:
       - automation.woshi_xiaomi_ap_get_mode
       - automation.woshi_xiaomi_ap_set_led
       - automation.woshi_xiaomi_ap_set_mode
+      - automation.adjust_diningroom_fan_speed
       - automation.mam_go_home
       - automation.qmi_goto_bed
       - automation.report_weather_status
@@ -103,6 +104,14 @@ homekit:
       - automation.mam_and_dad_go_home_workday_open_light
       - automation.close_keting_light
       - automation.open_keting_light
+      #########---- script 
+      - script.kayee_fan_slow
+      - script.kayee_fan_middle
+      - script.kayee_fan_fast
+      - script.kayee_fan_off
+      - script.kayee_time_onehour
+      - script.kayee_light_onoff
+      #########---- script
        ## livingroom
       #- device_tracker.xiaomilivingroom
       #- switch.keting_xiaomi_ap_buzzer
@@ -254,6 +263,7 @@ light: !include_dir_merge_list light
 cover: !include_dir_merge_list cover
 script: !include_dir_merge_named script
 fan: !include_dir_merge_list fan
+input_number: !include_dir_merge_named input_number
 shell_command: !include_dir_merge_named shell_command
 conversation: !include_dir_merge_named conversation
 intent_script: !include_dir_merge_named intent_script

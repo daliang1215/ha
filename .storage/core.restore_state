@@ -1,64 +1,7 @@
 {
     "data": [
         {
-            "last_seen": "2019-04-13T23:49:49.192009+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "test_light",
-                    "supported_features": 17
-                },
-                "context": {
-                    "id": "fa6f5718954d41e0a2c5da9b07976906",
-                    "user_id": null
-                },
-                "entity_id": "light.test_light",
-                "last_changed": "2019-04-13T14:04:11.217741+00:00",
-                "last_updated": "2019-04-13T14:04:11.217741+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2019-04-13T23:49:49.192009+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "qmi_goto_bed",
-                    "hidden": true,
-                    "homebridge_hidden": true,
-                    "initial_state": true,
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "d929c158dfc741a7b80c761acdcd5099",
-                    "user_id": null
-                },
-                "entity_id": "automation.qmi_goto_bed",
-                "last_changed": "2019-04-13T14:04:13.083954+00:00",
-                "last_updated": "2019-04-13T14:04:13.083954+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-04-13T23:49:49.192009+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "report_weather_status",
-                    "hidden": true,
-                    "homebridge_hidden": true,
-                    "initial_state": true,
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "28d2eed08f7e4884b5c9a8dc76d4affd",
-                    "user_id": null
-                },
-                "entity_id": "automation.report_weather_status",
-                "last_changed": "2019-04-13T14:04:13.809039+00:00",
-                "last_updated": "2019-04-13T14:04:13.809039+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-04-13T23:49:49.192009+00:00",
+            "last_seen": "2019-04-15T07:08:18.055870+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "open_keting_light",
@@ -68,77 +11,36 @@
                     "last_triggered": null
                 },
                 "context": {
-                    "id": "53847dbb0e4249cd9998206eac4868e4",
+                    "id": "143a35cd3b33417d9055525dc2b966d3",
                     "user_id": null
                 },
                 "entity_id": "automation.open_keting_light",
-                "last_changed": "2019-04-13T14:04:13.522674+00:00",
-                "last_updated": "2019-04-13T14:04:13.522674+00:00",
+                "last_changed": "2019-04-15T06:08:15.811969+00:00",
+                "last_updated": "2019-04-15T06:08:15.811969+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2019-04-13T23:49:49.192009+00:00",
+            "last_seen": "2019-04-15T07:08:18.055870+00:00",
             "state": {
                 "attributes": {
-                    "friendly_name": "Cuckoo Clock",
-                    "hidden": true,
+                    "friendly_name": "adjust_diningroom_fan_speed",
                     "homebridge_hidden": true,
                     "initial_state": true,
                     "last_triggered": null
                 },
                 "context": {
-                    "id": "a59b9581a2d14ff4a5dd5bd4b6df1c05",
+                    "id": "5342334ccb8c490ca972b9e14abfee31",
                     "user_id": null
                 },
-                "entity_id": "automation.cuckoo_clock",
-                "last_changed": "2019-04-13T14:04:13.744688+00:00",
-                "last_updated": "2019-04-13T14:04:13.744688+00:00",
+                "entity_id": "automation.adjust_diningroom_fan_speed",
+                "last_changed": "2019-04-15T06:08:15.295167+00:00",
+                "last_updated": "2019-04-15T06:08:15.295167+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2019-04-13T23:49:49.192009+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "close_keting_light",
-                    "hidden": true,
-                    "homebridge_hidden": true,
-                    "initial_state": true,
-                    "last_triggered": "2019-04-13T22:25:13.099647+00:00"
-                },
-                "context": {
-                    "id": "3ed6fa6200d14d578ea5f69d378a85b9",
-                    "user_id": null
-                },
-                "entity_id": "automation.close_keting_light",
-                "last_changed": "2019-04-13T14:04:13.604536+00:00",
-                "last_updated": "2019-04-13T22:25:13.102554+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-04-13T23:49:49.192009+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "light_go_to_sleep",
-                    "hidden": true,
-                    "homebridge_hidden": true,
-                    "initial_state": true,
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "f781215e03c84876a29b813b4ce0622a",
-                    "user_id": null
-                },
-                "entity_id": "automation.light_go_to_sleep",
-                "last_changed": "2019-04-13T14:04:13.419547+00:00",
-                "last_updated": "2019-04-13T14:04:13.419547+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-04-13T23:49:49.192009+00:00",
+            "last_seen": "2019-04-15T07:08:18.055870+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "some_light_auto_off",
@@ -148,13 +50,151 @@
                     "last_triggered": null
                 },
                 "context": {
-                    "id": "1f560df8a05c41f1b845c6924086ecef",
+                    "id": "5a4ddfc471b447abb9d07b24f5f43b52",
                     "user_id": null
                 },
                 "entity_id": "automation.some_light_auto_off",
-                "last_changed": "2019-04-13T14:04:13.255371+00:00",
-                "last_updated": "2019-04-13T14:04:13.255371+00:00",
+                "last_changed": "2019-04-15T06:08:15.681822+00:00",
+                "last_updated": "2019-04-15T06:08:15.681822+00:00",
                 "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-04-15T07:08:18.055870+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "light_go_to_sleep",
+                    "hidden": true,
+                    "homebridge_hidden": true,
+                    "initial_state": true,
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "0b240711e52f44dcb95ebc3b89a98594",
+                    "user_id": null
+                },
+                "entity_id": "automation.light_go_to_sleep",
+                "last_changed": "2019-04-15T06:08:15.741373+00:00",
+                "last_updated": "2019-04-15T06:08:15.741373+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-04-15T07:08:18.055870+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "report_weather_status",
+                    "hidden": true,
+                    "homebridge_hidden": true,
+                    "initial_state": true,
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "f5c47d32c7dc492f8b4c8f438fcc7138",
+                    "user_id": null
+                },
+                "entity_id": "automation.report_weather_status",
+                "last_changed": "2019-04-15T06:08:15.390683+00:00",
+                "last_updated": "2019-04-15T06:08:15.390683+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-04-15T07:08:18.055870+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Cuckoo Clock",
+                    "hidden": true,
+                    "homebridge_hidden": true,
+                    "initial_state": true,
+                    "last_triggered": "2019-04-15T07:00:10.246126+00:00"
+                },
+                "context": {
+                    "id": "a00533ce8f0546389fe2d50359b0674e",
+                    "user_id": null
+                },
+                "entity_id": "automation.cuckoo_clock",
+                "last_changed": "2019-04-15T06:08:16.071316+00:00",
+                "last_updated": "2019-04-15T07:00:10.249591+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-04-15T07:08:18.055870+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "qmi_goto_bed",
+                    "hidden": true,
+                    "homebridge_hidden": true,
+                    "initial_state": true,
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "e737890a6446495891b837c7ff114fd5",
+                    "user_id": null
+                },
+                "entity_id": "automation.qmi_goto_bed",
+                "last_changed": "2019-04-15T06:08:15.525575+00:00",
+                "last_updated": "2019-04-15T06:08:15.525575+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-04-15T07:08:18.055870+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "close_keting_light",
+                    "hidden": true,
+                    "homebridge_hidden": true,
+                    "initial_state": true,
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "866f2945d63a461987d2f70e8d772f8d",
+                    "user_id": null
+                },
+                "entity_id": "automation.close_keting_light",
+                "last_changed": "2019-04-15T06:08:15.911282+00:00",
+                "last_updated": "2019-04-15T06:08:15.911282+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-04-15T07:08:18.055870+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "test_light",
+                    "supported_features": 17
+                },
+                "context": {
+                    "id": "c236b60a1c62412691d28dee9b257ff6",
+                    "user_id": null
+                },
+                "entity_id": "light.test_light",
+                "last_changed": "2019-04-15T06:08:13.114620+00:00",
+                "last_updated": "2019-04-15T06:08:13.114620+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-04-15T07:08:18.055870+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "\u98ce\u901f",
+                    "initial": 1.0,
+                    "max": 3.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "05a5d2a3470b4ae1bb689a17f30fe2ff",
+                    "user_id": null
+                },
+                "entity_id": "input_number.fan_speed",
+                "last_changed": "2019-04-15T06:08:12.047795+00:00",
+                "last_updated": "2019-04-15T06:08:12.047795+00:00",
+                "state": "1.0"
             }
         }
     ],

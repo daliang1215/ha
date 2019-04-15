@@ -1,0 +1,23 @@
+- platform: template
+  fans:
+    kayee_fan:
+      friendly_name: "dinningroom_fan"
+      value_template: >-
+        {% if states('input_number.fan_speed') == 0 %}"off"
+        {% else %}"on"
+        {% endif %}
+      speed_template: "{{ states('input_number.fan_speed') }}"        
+      turn_on:
+        service: script.kayee_fan_slow
+      turn_off:
+        service: script.kayee_fan_off
+      set_speed:
+        service: input_number.set_value
+        entity_id: input_number.fan_speed
+        data_template:
+          speed: "{{ speed | int }}"
+      speeds:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
