@@ -1,15 +1,18 @@
 script.kayee_fan_slow: # 慢
   friendly_name: 嘉业慢
-  tmall_genie: true
 script.kayee_fan_middle: # 中
   friendly_name: 嘉业中
 script.kayee_fan_fast: # 快
   friendly_name: 嘉业快
 script.kayee_fan_off: # 关
   friendly_name: 嘉业关
-  tmall_genie: true
 script.kayee_time_onehour: # 1小时
   friendly_name: 嘉业1小时
 script.kayee_light_onoff: # 灯开关
   friendly_name: 嘉业灯开关
+fan.kayee_fan:
+  friendly_name: "餐厅风扇"
+  tmall_genie: true
+light.kayee_fan_light:
+  friendly_name: "餐厅灯"
   tmall_genie: true
