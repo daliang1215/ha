@@ -28,3 +28,13 @@
     - tmp_max
     - tmp_min
     - pop
+#- platform: template
+#  sensors:
+#    tmp:
+#      friendly_name: "温度"
+#      device_class: temperature
+#      value_template: "{{ states('sensor.heweather_tmp') }}"
+#    hum:
+#      friendly_name: "湿度"
+#      device_class: humidity
+#      value_template: "{{ states('sensor.heweather_hum') }}"

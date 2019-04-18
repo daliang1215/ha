@@ -28,3 +28,6 @@ script.panasonic_powersave: # 节能
 script.panasonic_jiuqiin: # 就寝
   friendly_name: 松下客厅就寝
   tmall_genie: true
+switch.panasonic_on_off:
+  friendly_name: 客厅顶灯
+  #tmall_genie: true

@@ -15,56 +15,31 @@ homeassistant:
   time_zone: Asia/Shanghai
   # Customization file
   customize: !include_dir_merge_named customize
-  #packages: !include_dir_named packages
   customize_domain:
     automation:
       homebridge_hidden: true
       initial_state: on
 
-  customize_glob:
-    "switch.*":
-      hidden: true
-      homebridge_hidden: false
+  #customize_glob:
+  #  "switch.*":
+  #    hidden: true
+  #    homebridge_hidden: true
 
-    "sensor.*":
-      homebridge_hidden: true
+  #  "sensor.*":
+  #    homebridge_hidden: true
 
-    "fan.*":
-      homebridge_hidden: true
+  #  "fan.*":
+  #    homebridge_hidden: true
 
-    "sensor.illumination_*":
-      hidden: true
-      homebridge_hidden: true
+  #  "group.*":
+  #    homebridge_hidden: true
 
-    "binary_sensor.motion_sensor_*":
-      hidden: true
-      homebridge_hidden: true
+  #  "automation.*":
+  #    homebridge_hidden: true
 
-    "binary_sensor.switch_*":
-      hidden: true
-      homebridge_hidden: true
-
-    "group.*":
-      homebridge_hidden: true
-
-    "automation.*":
-      homebridge_hidden: true
-
-    "device_tracker.*":
-      hidden: true
-      homebridge_hidden: true
-
-    "sensor.hiwifi_router_*":
-      hidden: true
-      homebridge_hidden: true
-
-    "sensor.openwrt_router_*":
-      hidden: true
-      homebridge_hidden: true
-
-    "script.*":
-      hidden: true
-      homebridge_hidden: true
+  #  "script.*":
+  #    hidden: true
+  #    homebridge_hidden: true
 # Show links to resources in log and frontend
 #introduction:
 
@@ -84,13 +59,15 @@ http:
 homekit:
   #auto_start: false
   filter:
+    #include_entities:
     include_domains:
       - cover
       - light
       - fan
-     #- switch
-    exclude_entities:
-      - light.test_light
+        #- switch
+      - sensor
+    #exclude_entities:
+    #  - light.test_light
 # Enables configuration UI
 config:
 
@@ -199,6 +176,7 @@ logger:
     homeassistant.components.binary_sensor: warn
     homeassistant.components.device_tracker: warn
     homeassistant.components.switch: debug
+    homeassistant.components.sensor: debug
     homeassistant.components.discovery: warn
     homeassistant.components.http: warn
     homeassistant.components.media_player: warn

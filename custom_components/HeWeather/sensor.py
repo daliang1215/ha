@@ -21,9 +21,9 @@ CONF_APPKEY = "appkey"
 life_index_list = {"comf_txt": None, "drsg_txt": None, "flu_txt": None,
                    "sport_txt": None, "trav_txt": None, "uv_txt": None, "cw_txt": None}
 
-OPTIONS = dict(fl=["HeWeather_fl", "实时体感温度", "mdi:temperature-celsius", "℃"],
-               tmp=["HeWeather_tmp", "实时室外温度", "mdi:thermometer", "℃"],
-               hum=["HeWeather_hum", "实时室外湿度", "mdi:water-percent", "%Rh"],
+OPTIONS = dict(fl=["HeWeather_fl", "实时体感温度", "mdi:temperature-celsius", "Celsius"],
+               tmp=["HeWeather_tmp", "实时室外温度", "mdi:thermometer", "Celsius"],
+               hum=["HeWeather_hum", "实时室外湿度", "mdi:water-percent", "%"],
                pcpn=["HeWeather_pcpn", "降水量", "mdi:weather-rainy", "mm"],
                pres=["HeWeather_pres", "大气压", "mdi:debug-step-over", "hPa"],
                vis=["HeWeather_vis", "能见度", "mdi:eye", "km"],
