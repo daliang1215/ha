@@ -47,7 +47,6 @@ homeassistant:
 frontend:
 
 http:
-  #api_password: !secret http_password
   base_url: https://www.efeichn.top:8123
   ssl_certificate: /home/pi/.homeassistant/ssl/efeichn.top.crt
   ssl_key: /home/pi/.homeassistant/ssl/efeichn.top.key
@@ -64,10 +63,39 @@ homekit:
       - cover
       - light
       - fan
-        #- switch
+      - switch
       - sensor
-    #exclude_entities:
-    #  - light.test_light
+    exclude_entities:
+      - switch.ciwo_room_light_an
+      - switch.ciwo_room_light_changyedeng
+      - switch.ciwo_room_light_light_sleep
+      - switch.ciwo_room_light_ming
+      - switch.ciwo_room_light_nuanbaise
+      - switch.ciwo_room_light_on_off
+      - switch.ciwo_room_light_quanliang
+      - switch.ciwo_room_light_riguangse
+      - switch.cool
+      - switch.heat
+      - switch.heat_slave
+      - switch.left_right
+      - switch.light_mode
+      - switch.mode
+      - switch.sleep_mode
+      - switch.smart_enjoy
+      - switch.speed
+      - switch.temp_down
+      - switch.temp_up
+      - switch.temp_visiable
+      - switch.up_down
+      - switch.zhuwo_room_light_an
+      - switch.zhuwo_room_light_changyedeng
+      - switch.zhuwo_room_light_light_sleep
+      - switch.zhuwo_room_light_ming
+      - switch.zhuwo_room_light_nuanbaise
+      - switch.zhuwo_room_light_on_off
+      - switch.zhuwo_room_light_quanliang
+      - switch.zhuwo_room_light_riguangse
+      - switch.air_conditioner
 # Enables configuration UI
 config:
 
@@ -100,7 +128,10 @@ sun:
 # Text to speech
 tts:
   - platform: google
+    #service_name: google_say
     language: 'zh-cn'
+  #- platform: google_translate
+    #service_name: google_say
   - platform: baidu
     #app_id，api_key，secret_key从百度云上注册得到
     app_id: 6786368

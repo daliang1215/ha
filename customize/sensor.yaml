@@ -4,14 +4,11 @@ sensor.keting_xiaomi_ap_aqi:
   icon: mdi:blur
 sensor.keting_xiaomi_ap_humid:
   icon: mdi:water-percent
-sensor.heweather_pm25:
-  friendly_name: PM2.5
+sensor.heweather_tmp:
+  friendly_name: 温度
   tmall_genie: 
     enabled: true
     attach_sensor:
-      - sensor.heweather_tmp
       - sensor.heweather_hum
-sensor.heweather_tmp:
-  friendly_name: 温度
 sensor.heweather_hum:
   friendly_name: 湿度
