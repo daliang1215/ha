@@ -1,7 +1,0 @@
-home_and_company_time_computer:
-  name: 开车时间计算
-  view: no
-  control: hidden
-  entities:
-    - sensor.to_company_time
-    - sensor.to_home_time

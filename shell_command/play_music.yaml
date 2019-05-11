@@ -1,4 +1,0 @@
-play_sound: >-
-  /usr/bin/nohup /home/pi/.homeassistant/shell/play_sound.sh {{text}}
-play_clock: >-
-  /usr/bin/nohup /home/pi/.homeassistant/shell/play_clock.sh {{text}}

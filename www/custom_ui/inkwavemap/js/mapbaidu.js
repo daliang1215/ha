@@ -1,6 +1,0 @@
-function MapBaidu() {
-}
-
-MapBaidu.prototype = {
-    
-}
