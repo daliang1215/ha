@@ -1,0 +1,239 @@
+homeassistant:
+  auth_providers:
+    - type: homeassistant
+  # Name of the location where Home Assistant is running
+  name: JimmyHome
+  # Location required to calculate the time the sun rises and sets
+  # 34.7832120008,113.5896400503
+  latitude: 34.7831370996
+  longitude: 113.5896239570
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 116
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Asia/Shanghai
+  # Customization file
+  customize: !include_dir_merge_named customize
+  customize_domain:
+    automation:
+      homebridge_hidden: true
+      initial_state: on
+
+  #customize_glob:
+  #  "switch.*":
+  #    hidden: true
+  #    homebridge_hidden: true
+
+  #  "sensor.*":
+  #    homebridge_hidden: true
+
+  #  "fan.*":
+  #    homebridge_hidden: true
+
+  #  "group.*":
+  #    homebridge_hidden: true
+
+  #  "automation.*":
+  #    homebridge_hidden: true
+
+  #  "script.*":
+  #    hidden: true
+  #    homebridge_hidden: true
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+http:
+  base_url: https://www.efeichn.top:8123
+  ssl_certificate: /home/pi/.homeassistant/ssl/efeichn.top.crt
+  ssl_key: /home/pi/.homeassistant/ssl/efeichn.top.key
+  cors_allowed_origins:
+    - http://reformedreality.com
+      #Discovery:
+      #  enable:
+      #    - homekit
+homekit:
+  #auto_start: false
+  filter:
+    #include_entities:
+    include_domains:
+      - cover
+      - light
+      - fan
+      - switch
+      - sensor
+    exclude_entities:
+      - switch.ciwo_room_light_an
+      - switch.ciwo_room_light_changyedeng
+      - switch.ciwo_room_light_light_sleep
+      - switch.ciwo_room_light_ming
+      - switch.ciwo_room_light_nuanbaise
+      - switch.ciwo_room_light_on_off
+      - switch.ciwo_room_light_quanliang
+      - switch.ciwo_room_light_riguangse
+      - switch.cool
+      - switch.heat
+      - switch.heat_slave
+      - switch.left_right
+      - switch.light_mode
+      - switch.mode
+      - switch.sleep_mode
+      - switch.smart_enjoy
+      - switch.speed
+      - switch.temp_down
+      - switch.temp_up
+      - switch.temp_visiable
+      - switch.up_down
+      - switch.zhuwo_room_light_an
+      - switch.zhuwo_room_light_changyedeng
+      - switch.zhuwo_room_light_light_sleep
+      - switch.zhuwo_room_light_ming
+      - switch.zhuwo_room_light_nuanbaise
+      - switch.zhuwo_room_light_on_off
+      - switch.zhuwo_room_light_quanliang
+      - switch.zhuwo_room_light_riguangse
+      - switch.air_conditioner
+# Enables configuration UI
+config:
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  include_used_components: true
+
+# Discover some devices automatically
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Sensors
+# Text to speech
+tts:
+  - platform: google
+    #service_name: google_say
+    language: 'zh-cn'
+  #- platform: google_translate
+    #service_name: google_say
+  - platform: baidu
+    #app_id，api_key，secret_key从百度云上注册得到
+    app_id: 6786368
+    api_key: guwmwrNwc7RiDScPK7wgb19n
+    secret_key: IDdbf8M5powM5ViY93A9REsOqLNqRXiT
+    #speed：语速0-9（缺省5）
+    #pitch：语调0-9（缺省5）
+    #volume：音量0-15（缺省5）
+    #person：声音（0：女，1：男，3：百度合成，4：百度合成，缺省0）
+    speed: 4
+    pitch: 5
+    volume: 13
+    person: 0
+
+    #ifttt:
+    #  key: cibXF2TxJNFGSNpINKAyc-
+mqtt:
+  broker: 192.168.88.141
+panel_iframe:
+  homebridge:
+    title: HomeBridge
+    icon: mdi:apple
+    url: https://www.efeichn.top:8125
+  kodi:
+    title: KODI
+    icon: mdi:kodi
+    url: https://www.efeichn.top:8890
+    #  weblink:
+    #    title: SmartHome
+    #    icon: mdi:home-automation
+    #    url: https://www.efeichn.top:1234
+  weblink:
+    title: NODE-RED
+    icon: mdi:home-automation
+    url: https://www.efeichn.top:1881
+  dash:
+    title: 面板
+    icon: mdi:microsoft
+    url: /local/dash.html
+panel_custom:
+  - name: inkwavemap
+    sidebar_title: '墨澜地图'
+    sidebar_icon: mdi:map
+    url_path: inkwavemap
+    #twilio:
+    #  account_sid: ACc5a95806884fc02d2be2c59b3f23c0d8
+    #  auth_token: 4c5e2c4e6721c220e1fb4335e1c691ba
+notify:
+    #  - platform: twilio_sms
+    #    name: twilio_sms
+    #    from_number: "+18038280909"
+
+# Cloud
+#cloud:
+# log
+#logger:
+#  default: warning
+#  logs:
+#    homeassistant.components.homekit: debug
+#    pyhap.accessory_driver: debug
+#    #pyhap: debug
+system_health:
+#aligenie:
+#  expire_hours: 720
+logger:
+  # 可能的日志严重程度是: notset, debug, info, warn, warning, error, fatal, critical
+  default: info
+  logs:
+    aiohttp.access: critical
+    aiohttp.server: critical
+    homeassistant.core: error
+    homeassistant.components.automation: warn
+    homeassistant.components.binary_sensor: warn
+    homeassistant.components.device_tracker: warn
+    homeassistant.components.switch: debug
+    homeassistant.components.sensor: debug
+    homeassistant.components.discovery: warn
+    homeassistant.components.http: warn
+    homeassistant.components.media_player: warn
+    homeassistant.components.recorder: warn
+    homeassistant.components.sensor.command_line: warn
+    homeassistant.components.shell_command: debug
+    homeassistant.helpers.script: warn
+    homeassistant.helpers.entity: warn
+    custom_components.device_tracker.hiwifi: warn
+    custom_components.sensor.moji_weather: warn
+    requests.packages.urllib3.connectionpool: error
+    requests.packages.urllib3: error
+    requests.packages.urllib3.http.client: error
+group: !include_dir_merge_named group
+#device_tracker: !include_dir_merge_list device_tracker
+sensor: !include_dir_merge_list sensor
+automation: !include_dir_merge_list automation
+scene: !include_dir_merge_list scene
+switch: !include_dir_merge_list switch
+light: !include_dir_merge_list light
+cover: !include_dir_merge_list cover
+script: !include_dir_merge_named script
+fan: !include_dir_merge_list fan
+input_number: !include_dir_merge_named input_number
+input_boolean: !include_dir_merge_named input_boolean
+shell_command: !include_dir_merge_named shell_command
+conversation: !include_dir_merge_named conversation
+intent_script: !include_dir_merge_named intent_script
+media_player: !include_dir_merge_list media_player

@@ -1,0 +1,12 @@
+group.all_fans:
+  homebridge_hidden: true
+group.all_switches:
+  homebridge_hidden: true
+group.all_automations:
+  homebridge_hidden: true
+automation.keting_xiaomi_ap_get_led:
+  homebridge_hidden: true
+group.keting_xiaomi_air_purifier:
+  homebridge_hidden: true
+group.woshi_xiaomi_air_purifier:
+  homebridge_hidden: true

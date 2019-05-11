@@ -1,0 +1,42 @@
+- platform: template
+  sensors:
+    keting_xiaomi_ap_aqi:
+      friendly_name: 空气质量
+      value_template: "{{ states.fan.keting.attributes.aqi }}"
+    keting_xiaomi_ap_temp:
+      friendly_name: 客厅温度
+      value_template: "{{ states.fan.keting.attributes.temperature }}"
+      unit_of_measurement: °C
+    keting_xiaomi_ap_humid:
+      friendly_name: 湿度
+      value_template: "{{ states.fan.keting.attributes.humidity }}"
+      unit_of_measurement: "%"
+    keting_xiaomi_filter_used:
+      friendly_name: 滤芯已用
+      value_template: "{{ states.fan.keting.attributes.filter_hours_used }}"
+      unit_of_measurement: '小时'
+    keting_xiaomi_filter_remaining:
+      friendly_name: 滤芯剩余
+      value_template: "{{ states.fan.keting.attributes.filter_life_remaining }}"
+      unit_of_measurement: '%'
+- platform: template
+  sensors:
+    woshi_xiaomi_ap_aqi:
+      friendly_name: 空气质量
+      value_template: "{{ states.fan.woshi.attributes.aqi }}"
+    woshi_xiaomi_ap_temp:
+      friendly_name: 主卧温度
+      value_template: "{{ states.fan.woshi.attributes.temperature }}"
+      unit_of_measurement: °C
+    woshi_xiaomi_ap_humid:
+      friendly_name: 湿度
+      value_template: "{{ states.fan.woshi.attributes.humidity }}"
+      unit_of_measurement: "%"
+    woshi_xiaomi_filter_used:
+      friendly_name: 滤芯已用
+      value_template: "{{ states.fan.woshi.attributes.filter_hours_used }}"
+      unit_of_measurement: '小时'
+    woshi_xiaomi_filter_remaining:
+      friendly_name: 滤芯剩余
+      value_template: "{{ states.fan.woshi.attributes.filter_life_remaining }}"
+      unit_of_measurement: '%'

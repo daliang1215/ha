@@ -1,0 +1,16 @@
+- platform: mqtt
+  name: "test_light"
+  retain: true
+  state_topic: "keting/led/light/status"
+  command_topic: "keting/led/light/set"
+  state_value_template: "{{ value_json.state }}"
+  qos: 0
+  brightness_state_topic: "keting/led/brightness/status"
+  brightness_command_topic: "keting/led/brightness/set"
+  brightness_value_template: "{{ value_json.brightness }}"
+  brightness_scale: 100      
+  rgb_state_topic: "keting/led/rgb/status"
+  rgb_command_topic: "keting/led/rgb/set"
+  rgb_command_template: "{{ value_json.rgb| join(',') }}"
+  payload_on: "on"
+  payload_off: "off"

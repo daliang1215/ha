@@ -1,0 +1,60 @@
+qmi_play_music:
+  # speech返回
+  speech:
+    text: 正在播放{{ music }}
+  # 执行动作
+  action:
+    service: shell_command.play_sound
+    data_template: 
+      text: >-
+        {% if music=="小手拍拍" %}'xiaoshoupaipai'
+        {% elif music=="和快乐在一起" %}'hekuailezaiyiqi'
+        {% elif music=="和快樂在一起" %}'hekuailezaiyiqi'
+        {% elif music=="黄鹂鸟" %}'huangliniao'
+        {% elif music=="黃鸝鳥" %}'huangliniao'
+        {% elif music=="世上只有妈妈好" %}'shishangzhiyoumamahao'
+        {% elif music=="世上只有媽媽好" %}'shishangzhiyoumamahao'
+        {% elif music=="爽" %}'beishuang'
+        {% elif music=="儿爽" %}'beishuang'
+        {% elif music=="兒爽" %}'beishuang'
+        {% elif music=="九月九的酒" %}'jiuyuejiudejiu'
+        {% elif music=="小警察" %}'xiaojingcha'
+        {% elif music=="小仓娃" %}'xiaocangwa'
+        {% elif music=="小倉娃" %}'xiaocangwa'
+        {% elif music=="小蒼娃" %}'xiaocangwa'
+        {% elif music=="小苍娃" %}'xiaocangwa'
+        {% elif music=="志颖" %}'jimmylin'
+        {% elif music=="志穎" %}'jimmylin'
+        {% elif music=="杰" %}'davewang'
+        {% elif music=="傑" %}'davewang'
+        {% elif music=="月天" %}'mayday'
+        {% elif music=="听听" %}'tingting'
+        {% elif music=="聽聽" %}'tingting'
+        {% elif music=="得瑞" %}'bandari'
+        {% elif music=="德瑞" %}'bandari'
+        {% elif music=="dari" %}'bandari'
+        {% elif music=="华健" %}'zhouhuajian'
+        {% elif music=="華健" %}'zhouhuajian'
+        {% elif music=="華建" %}'zhouhuajian'
+        {% elif music=="华建" %}'zhouhuajian'
+        {% elif music=="信哲" %}'zhangxinzhe'
+        {% else %}
+          {{ music }}
+        {% endif %}
+  async_action: true
+killer:
+  speech:
+    text: 即将关闭{{ item }}
+  action:
+    - service: shell_command.killer
+      data_template: 
+        text: >-
+          {% if item=="音乐"%}'omxplayer'
+          {% elif item=="播放器"%}'omxplayer'
+          {% elif item=="music"%}'omxplayer'
+          {% elif item=="player"%}'omxplayer'
+          {% elif item=="音樂"%}'omxplayer'
+          {% elif item=="播放機"%}'omxplayer'
+          {% elif item=="music"%}'omxplayer'
+          {% elif item=="player"%}'omxplayer'
+          {% endif %}

@@ -1,0 +1,26 @@
+keting_xiaomi_air_purifier:
+  name: 客厅空净
+  view: no
+  control: hidden
+  entities:
+    - fan.keting
+    - switch.keting_xiaomi_ap_buzzer
+    - switch.keting_xiaomi_ap_childlock
+    - sensor.keting_xiaomi_ap_aqi
+    - sensor.keting_xiaomi_ap_temp
+    - sensor.keting_xiaomi_ap_humid
+    - sensor.keting_xiaomi_filter_used
+    - sensor.keting_xiaomi_filter_remaining
+woshi_xiaomi_air_purifier:
+  name: 卧室空净
+  view: no
+  control: hidden
+  entities:
+    - fan.woshi
+    - switch.woshi_xiaomi_ap_buzzer
+    - switch.woshi_xiaomi_ap_childlock
+    - sensor.woshi_xiaomi_ap_aqi
+    - sensor.woshi_xiaomi_ap_temp
+    - sensor.woshi_xiaomi_ap_humid
+    - sensor.woshi_xiaomi_filter_used
+    - sensor.woshi_xiaomi_filter_remaining

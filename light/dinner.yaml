@@ -1,0 +1,7 @@
+- platform: template
+  lights:
+    kayee_fan_light:
+      turn_on:
+        service: script.kayee_light_onoff
+      turn_off:
+        service: script.kayee_light_onoff

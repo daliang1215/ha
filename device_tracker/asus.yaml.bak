@@ -1,0 +1,9 @@
+- platform: asuswrt
+  host: 192.168.88.254
+  username: admin
+  password: Peng0804
+  interval_seconds: 60
+  consider_home: 180
+  new_device_defaults:
+    track_new_devices: True
+    hide_if_away: True

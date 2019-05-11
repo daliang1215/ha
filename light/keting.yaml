@@ -1,0 +1,7 @@
+- platform: template
+  lights:
+    keting_panasonic:
+      turn_on:
+        service: script.panasonic_on
+      turn_off:
+        service: script.panasonic_off

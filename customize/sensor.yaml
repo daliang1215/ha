@@ -1,0 +1,14 @@
+sensor.to_company_time:
+  homebridge_name: 去公司时间
+sensor.keting_xiaomi_ap_aqi:
+  icon: mdi:blur
+sensor.keting_xiaomi_ap_humid:
+  icon: mdi:water-percent
+sensor.heweather_tmp:
+  friendly_name: 温度
+  tmall_genie: 
+    enabled: true
+    attach_sensor:
+      - sensor.heweather_hum
+sensor.heweather_hum:
+  friendly_name: 湿度

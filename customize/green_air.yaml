@@ -1,0 +1,28 @@
+switch.air_conditioner:
+  friendly_name: 客厅空调
+switch.cool:
+  friendly_name: 制冷
+switch.heat:
+  friendly_name: 制热
+switch.heat_slave:
+  friendly_name: 辅热
+switch.left_right:
+  friendly_name: 左右扫风
+switch.light_mode:
+  friendly_name: 灯光
+switch.mode:
+  friendly_name: 空调模式
+switch.sleep_mode:
+  friendly_name: 睡眠
+switch.smart_enjoy:
+  friendly_name: 智享
+switch.speed:
+  friendly_name: 空调风速
+switch.temp_down:
+  friendly_name: 温度减
+switch.temp_up:
+  friendly_name: 温度加
+switch.temp_visiable:
+  friendly_name: 显示温度
+switch.up_down:
+  friendly_name: 上下扫风

@@ -1,0 +1,104 @@
+- alias: some_light_auto_off
+  hide_entity: true
+  initial_state: True
+  trigger:
+    platform: state
+    entity_id: switch.keting_room_light_quanliang,switch.keting_room_light_changyedeng,switch.keting_room_light_ming,switch.keting_room_light_an,switch.keting_room_light_riguangse,switch.keting_room_light_nuanbaise,switch.zhuwo_room_light_quanliang,switch.zhuwo_room_light_changyedeng,switch.zhuwo_room_light_ming,switch.zhuwo_room_light_an,switch.zhuwo_room_light_riguangse,switch.zhuwo_room_light_nuanbaise,switch.ciwo_room_light_quanliang,switch.ciwo_room_light_changyedeng,switch.ciwo_room_light_ming,switch.ciwo_room_light_an,switch.ciwo_room_light_riguangse,switch.ciwo_room_light_nuanbaise
+    from: 'off'
+    to: 'on'
+  action:
+    - delay: 0:0:10
+    - service: switch.turn_off
+      data_template:
+        entity_id: > 
+          {{ trigger.entity_id }}
+- alias: light_go_to_sleep
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: time
+    at: '21:10:00'
+  action:
+    - service: switch.turn_on
+      entity_id:
+        - switch.zhuwo_room_light_changyedeng 
+    - delay: 0:5       
+    - service: switch.turn_off
+      entity_id: 
+        - switch.zhuwo_room_light_on_off
+    - service: switch.turn_on
+      entity_id:
+        - switch.zhuwo_room_light_light_sleep
+        - switch.ciwo_room_light_light_sleep
+- alias: open_keting_light
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: time
+    at: '6:40:00'
+  condition:
+    condition: state
+    entity_id: sensor.chinese_calendar
+    state: 'workday'
+  action:
+    - service: switch.turn_on
+      entity_id: switch.panasonic_on
+    - delay: 0:0:10
+    - service: switch.turn_on
+      entity_id: switch.panasonic_nuanbai
+    - delay: 0:2:10
+    - service: switch.turn_on
+      entity_id: switch.panasonic_quanliang
+- alias: close_keting_light
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: '0:30:00'
+  action:
+    service: switch.turn_on
+    entity_id: switch.panasonic_off
+    #- alias: mam_and_dad_go_home_workday_open_light
+    #  hide_entity: true
+    #  initial_state: true
+    #  trigger:
+    #    platform: state
+    #    entity_id: device_tracker.qingqindeiphone,device_tracker.iphone,device_tracker.r9plus
+    #    from: 'not_home'
+    #    to: 'home'
+    #  condition: 
+    #    condition: sun
+    #    after: sunset
+    #    after_offset: "-1:00:00" 
+    #  action:
+    #    - service: switch.turn_on
+    #      entity_id: switch.keting_room_light_on_off
+    #- alias: somebody_at_home_with_sunset_in_holidayhome_open_light
+    #  hide_entity: true
+    #  initial_state: true
+    #  trigger:
+    #    platform: sun
+    #    event: sunset
+    #    offset: '-1:00:00'
+    #  condition: 
+    #    condition: and
+    #    conditions:
+    #      - condition: state
+    #        entity_id: sensor.chinese_calendar
+    #        state: 'holiday'
+    #      - condition: or
+    #        conditions:
+    #          - condition: state
+    #            entity_id: device_tracker.qingqindeiphone
+    #            state: 'home'
+    #          - condition: state
+    #            entity_id: device_tracker.iphone
+    #            state: 'home'
+    #          - condition: state
+    #            entity_id: device_tracker.r9plus
+    #            state: 'home'
+    #  action:
+    #    - delay: 0:0:5
+    #    - service: switch.turn_on
+    #      entity_id: switch.keting_room_light_on_off

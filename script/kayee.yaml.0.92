@@ -1,0 +1,42 @@
+kayee_fan_slow: # 慢
+  sequence:
+    - service: broadlink.send
+      data:
+        host: 192.168.88.166
+        packet:
+          - "sQY0ACUMJQsOIw4jJQwNIw4jDiMNIw4jDiMlCyUMJQsOIw0jDSMlCyUMDSMlCw0jDiMOIw0AAW0AAAAA"
+kayee_fan_middle: # 中
+  sequence:
+    - service: broadlink.send
+      data:
+        host: 192.168.88.166
+        packet:
+          - "sQc0AA4jDSMOIyULJQslCw4jDSMOIyULJQsNIw0jDiMlDA0jDgABbSULJQsOIw0jJQwNIw4jDSMAAAAA"
+kayee_fan_fast: # 快
+  sequence:
+    - service: broadlink.send
+      data:
+        host: 192.168.88.166
+        packet:
+          - "sgY0ACUMJQsNIw4jJQsOIw4jDiMOIw0jDiMlCyUMJQwNIw4jDSMlCyULDiMOIyULJQsOIw0AAW0AAAAA"
+kayee_fan_off: # 开关
+  sequence:
+    - service: broadlink.send
+      data:
+        host: 192.168.88.166
+        packet:
+          - "sQY0AA0jDQABbSUMJQwNJA0jJQwNIw0jDSQNIw0jDSMlDCUMJQwNIw0jDSMlDCUMDSMlDCUMDSMAAAAA"
+kayee_time_onehour: # 1小时
+  sequence:
+    - service: broadlink.send
+      data:
+        host: 192.168.88.166
+        packet:
+          - "sQY0AA0jDSMNIw0jJQwlCyULDiMNIw0jJQslCw0jDiMlCw4jDSMOAAFsJQslCw0jDSMlCw0jDSMAAAAA"
+kayee_light_onoff: # 灯开关
+  sequence:
+    - service: broadlink.send
+      data:
+        host: 192.168.88.166
+        packet:
+          - "sQc0AA0jJQwNIyULDQABbSUMJQwNIw0jJQwNIw0jDSMNIw0jDSMlCyUMJQwNIw0jDSMlDCUMDSMAAAAA"
