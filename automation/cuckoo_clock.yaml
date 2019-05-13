@@ -9,29 +9,33 @@
     minutes: 30
     seconds: 01
   condition:
-    condition: or
-    conditions:
-      - condition: and
-        conditions:
-          # 工作日
-          - condition: time
-            after: '06:59:00'
-            before: '21:01:00'
+    condition: time
+    after: '06:59:00'
+    before: '21:01:00'
+  #condition:
+  #  condition: or
+  #  conditions:
+  #    - condition: and
+  #      conditions:
+  #        # 工作日
+  #        - condition: time
+  #          after: '06:59:00'
+  #          before: '21:01:00'
 
-          - condition: state
-            entity_id: sensor.chinese_calendar
-            state: 'workday'
+  #        - condition: state
+  #          entity_id: sensor.chinese_calendar
+  #          state: 'workday'
 
-      - condition: and
-        conditions:
-          # 节假日
-          - condition: time
-            after: '09:00:00'
-            before: '22:30:00'
+  #    - condition: and
+  #      conditions:
+  #        # 节假日
+  #        - condition: time
+  #          after: '09:00:00'
+  #          before: '22:30:00'
 
-          - condition: state
-            entity_id: sensor.chinese_calendar
-            state: 'holiday'
+  #        - condition: state
+  #          entity_id: sensor.chinese_calendar
+  #          state: 'holiday'
   action:
     service: shell_command.play_clock
     data_template:

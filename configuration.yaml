@@ -127,7 +127,8 @@ sun:
 # Sensors
 # Text to speech
 tts:
-  - platform: google
+  - platform: google_translate
+    service_name: google_say
     #service_name: google_say
     language: 'zh-cn'
   #- platform: google_translate

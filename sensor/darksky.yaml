@@ -1,0 +1,8 @@
+- platform: darksky
+  api_key: 7751ae67ab416e442f8f609044c87a7f
+  language: zh
+  longitude: 113.5896239570
+  latitude: 34.7831370996
+  monitored_conditions:
+    - temperature
+    - humidity
