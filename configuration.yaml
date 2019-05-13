@@ -147,19 +147,17 @@ tts:
     volume: 13
     person: 0
 
-    #ifttt:
-    #  key: cibXF2TxJNFGSNpINKAyc-
 mqtt:
   broker: 192.168.88.141
 panel_iframe:
-  homebridge:
-    title: HomeBridge
-    icon: mdi:apple
-    url: https://www.efeichn.top:8125
-  kodi:
-    title: KODI
-    icon: mdi:kodi
-    url: https://www.efeichn.top:8890
+    #  homebridge:
+    #    title: HomeBridge
+    #    icon: mdi:apple
+    #    url: https://www.efeichn.top:8125
+    #  kodi:
+    #    title: KODI
+    #    icon: mdi:kodi
+    #    url: https://www.efeichn.top:8890
     #  weblink:
     #    title: SmartHome
     #    icon: mdi:home-automation
@@ -168,18 +166,6 @@ panel_iframe:
     title: NODE-RED
     icon: mdi:home-automation
     url: https://www.efeichn.top:1881
-  dash:
-    title: 面板
-    icon: mdi:microsoft
-    url: /local/dash.html
-panel_custom:
-  - name: inkwavemap
-    sidebar_title: '墨澜地图'
-    sidebar_icon: mdi:map
-    url_path: inkwavemap
-    #twilio:
-    #  account_sid: ACc5a95806884fc02d2be2c59b3f23c0d8
-    #  auth_token: 4c5e2c4e6721c220e1fb4335e1c691ba
 notify:
     #  - platform: twilio_sms
     #    name: twilio_sms
