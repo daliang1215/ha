@@ -129,23 +129,20 @@ sun:
 tts:
   - platform: google_translate
     service_name: google_say
-    #service_name: google_say
     language: 'zh-cn'
-  #- platform: google_translate
-    #service_name: google_say
-  - platform: baidu
-    #app_id，api_key，secret_key从百度云上注册得到
-    app_id: 6786368
-    api_key: guwmwrNwc7RiDScPK7wgb19n
-    secret_key: IDdbf8M5powM5ViY93A9REsOqLNqRXiT
-    #speed：语速0-9（缺省5）
-    #pitch：语调0-9（缺省5）
-    #volume：音量0-15（缺省5）
-    #person：声音（0：女，1：男，3：百度合成，4：百度合成，缺省0）
-    speed: 4
-    pitch: 5
-    volume: 13
-    person: 0
+  #- platform: baidu
+  #  #app_id，api_key，secret_key从百度云上注册得到
+  #  app_id: 6786368
+  #  api_key: guwmwrNwc7RiDScPK7wgb19n
+  #  secret_key: IDdbf8M5powM5ViY93A9REsOqLNqRXiT
+  #  #speed：语速0-9（缺省5）
+  #  #pitch：语调0-9（缺省5）
+  #  #volume：音量0-15（缺省5）
+  #  #person：声音（0：女，1：男，3：百度合成，4：百度合成，缺省0）
+  #  speed: 4
+  #  pitch: 5
+  #  volume: 13
+  #  person: 0
 
 mqtt:
   broker: 192.168.88.141
