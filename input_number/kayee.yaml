@@ -1,6 +1,6 @@
 fan_speed:
   name: 风速
-  initial: 1
+  initial: 0
   min: 0
   max: 3
   step: 1

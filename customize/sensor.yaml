@@ -6,9 +6,7 @@ sensor.keting_xiaomi_ap_humid:
   icon: mdi:water-percent
 sensor.dark_sky_temperature:
   friendly_name: 温度
-  tmall_genie: 
-    enabled: true
-    attach_sensor:
-      - sensor.dark_sky_humidity
+  tmall_genie: true
 sensor.dark_sky_humidity:
+  device_class: humidity
   friendly_name: 湿度

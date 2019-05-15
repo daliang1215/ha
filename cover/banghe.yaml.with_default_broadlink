@@ -1,0 +1,12 @@
+- platform: template
+  covers:
+    banghe:
+      friendly_name: "邦禾晾衣架"
+      position_template: "{{ states('sensor.heweather_hum')  | int }}"
+      icon_template: mdi:tshirt-crew  
+      open_cover:
+        service: script.banghe_open
+      close_cover:
+        service: script.banghe_close
+      stop_cover:
+        service: script.banghe_stop
