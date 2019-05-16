@@ -1,0 +1,27 @@
+title: Jimmy Home
+included_entities:
+  - cover.banghe
+  - light.kayee_fan_light
+  - light.keting_panasonic
+  - fan.kayee_fan
+  - switch.lg_tv
+views:
+    # View tab title.
+  - icon: mdi:home-assistant
+    cards:
+      - type: glance
+        title: Example
+        entities:
+          - cover.banghe
+          - fan.kayee_fan
+          - switch.lg_tv
+  - icon: mdi:ceiling-light
+    cards:
+      - type: light
+        title: panasonic
+        entity: light.keting_panasonic
+        name: 客厅顶灯
+      - type: light
+        title: kayee
+        entity: light.kayee_fan_light
+        name: 餐厅风扇灯
