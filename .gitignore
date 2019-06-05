@@ -4,3 +4,4 @@ tts/*
 deps/*
 secrets.yaml
 ssl/*
+device_tracker/*

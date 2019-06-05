@@ -214,7 +214,7 @@ logger:
     requests.packages.urllib3: error
     requests.packages.urllib3.http.client: error
 group: !include_dir_merge_named group
-#device_tracker: !include_dir_merge_list device_tracker
+device_tracker: !include_dir_merge_list device_tracker
 sensor: !include_dir_merge_list sensor
 automation: !include_dir_merge_list automation
 scene: !include_dir_merge_list scene
