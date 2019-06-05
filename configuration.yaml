@@ -162,7 +162,7 @@ panel_iframe:
   weblink:
     title: NODE-RED
     icon: mdi:home-automation
-    url: https://www.efeichn.top:1881
+    url: https://www.efeichn.top:1880
 notify:
   - platform: Qiyeweichat
     name: weichat_jimmychen
