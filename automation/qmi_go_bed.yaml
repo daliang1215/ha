@@ -5,22 +5,22 @@
     platform: time
     at: '20:30:00'
   action:
-    - service: tts.google_say
+    - service: tts.baidu_say
       data_template:
         entity_id: media_player.vlc_player
         message: '陳璟爍小朋友，現在該自己收拾玩具，開始刷牙、洗臉、洗腳、洗屁股了！要趕快哦, 先收拾玩具，刷牙吧，10分鐘后，我會看你有没有收拾好玩具，並且還會再提示妳刷牙的！'
     - delay: 0:10
-    - service: tts.google_say
+    - service: tts.baidu_say
       data_template:
         entity_id: media_player.vlc_player
         message: '陳璟爍小朋友，玩具都收拾好了吧？刷好牙了嗎？按照剛才咱們的約定，你應該已經收拾好玩具了。牙應該也已經刷好了。現在我們開始洗臉加泡腳吧，這次時間還是10分鐘，10分鐘後我會再提示妳的，加快速度喲！'
     - delay: 0:10
-    - service: tts.google_say
+    - service: tts.baidu_say
       data_template:
         entity_id: media_player.vlc_player
         message: '陳璟爍小朋友，按照剛才咱們的約定，你應該已經洗過臉了，也泡過腳了吧。現在讓媽媽幫你洗屁屁吧，我們每天都得好好的洗洗屁股，這樣才能睡個好较哦，洗屁屁時間為10分鐘！加快速度喲！'
     - delay: 0:10
-    - service: tts.google_say
+    - service: tts.baidu_say
       data_template:
         entity_id: media_player.vlc_player
         message: '陳璟爍小朋友，相信你已經收拾好玩具，刷過牙，洗完臉，泡完腳，洗過屁屁了，那我們現在該要趕快上床讀書嘍，爸媽說過如果現在誰沒到床上來要打屁屁的！Good Night！Q米,明天晚上見,再有1分鐘，客廳的頂燈將會關閉，請抓緊時間！'

@@ -1,0 +1,10 @@
+- alias: adjust_diningroom_fan_speed
+  trigger:
+    platform: state
+    entity_id: input_number.fan_speed
+  action:
+    service_template: >
+      {% if trigger.to_state.state | int ==0 %}script.kayee_fan_off
+      {% if trigger.to_state.state | int ==1 %}script.kayee_fan_slow
+      {% if trigger.to_state.state | int ==2 %}script.kayee_fan_middle
+      {% if trigger.to_state.state | int ==3 %}script.kayee_fan_fast

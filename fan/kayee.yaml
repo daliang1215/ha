@@ -8,10 +8,16 @@
       turn_off:
         service: script.kayee_fan_off
       set_speed:
-        service: input_number.set_value
-        entity_id: input_number.fan_speed
-        data_template:
-          speed: "{{ speed }}"
+        - service_template: >
+            {% if speed | int == 0 %}script.kayee_fan_off
+            {% elif speed | int == 1 %}script.kayee_fan_slow
+            {% elif speed | int == 2 %}script.kayee_fan_middle
+            {% else %}script.kayee_fan_fast
+            {% endif %}
+        - service: input_number.set_value
+          entity_id: input_number.fan_speed
+          data_template:
+            value: "{{ speed }}"
       speeds:
         - '0'
         - '1'
