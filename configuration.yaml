@@ -95,7 +95,7 @@ homekit:
       - switch.zhuwo_room_light_on_off
       - switch.zhuwo_room_light_quanliang
       - switch.zhuwo_room_light_riguangse
-      - switch.air_conditioner
+      #- switch.air_conditioner
 # Enables configuration UI
 config:
 
