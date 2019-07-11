@@ -1,0 +1,35 @@
+{
+    "data": {
+        "entities": [
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "climate.keting_ac",
+                "name": null,
+                "platform": "smartir",
+                "unique_id": "keting_ac"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "media_player.lg_tv",
+                "name": null,
+                "platform": "smartir",
+                "unique_id": "lg_tv"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "fan.kayee_fan",
+                "name": null,
+                "platform": "smartir",
+                "unique_id": "kayee_fan"
+            }
+        ]
+    },
+    "key": "core.entity_registry",
+    "version": 1
+}

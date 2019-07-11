@@ -1,0 +1,10 @@
+- platform: mqtt
+  state_topic: 'living/esp8266_12f'
+  name: 'Temperature'
+  unit_of_measurement: '°C'
+  value_template: '{{ value_json.temperature }}'
+- platform: mqtt
+  state_topic: 'living/esp8266_12f'
+  name: 'Humidity'
+  unit_of_measurement: '%'
+  value_template: '{{ value_json.humidity }}'

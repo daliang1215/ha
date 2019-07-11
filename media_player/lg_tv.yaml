@@ -1,0 +1,5 @@
+- platform: smartir
+  name: lg_tv
+  unique_id: lg_tv
+  device_code: 1040
+  controller_data: 192.168.88.166

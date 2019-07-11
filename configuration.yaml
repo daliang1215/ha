@@ -65,6 +65,8 @@ homekit:
       - fan
       - switch
       - sensor
+      - climate
+      - media_player
     exclude_entities:
       - switch.ciwo_room_light_an
       - switch.ciwo_room_light_changyedeng
@@ -96,6 +98,10 @@ homekit:
       - switch.zhuwo_room_light_quanliang
       - switch.zhuwo_room_light_riguangse
       #- switch.air_conditioner
+  entity_config:
+    media_player.lg_tv:
+      feature_list:
+        - feature: on_off
 # Enables configuration UI
 config:
 
@@ -143,6 +149,8 @@ tts:
     pitch: 5
     volume: 13
     person: 0
+
+smartir:
 
 mqtt:
   broker: 192.168.88.141
@@ -219,6 +227,7 @@ sensor: !include_dir_merge_list sensor
 automation: !include_dir_merge_list automation
 scene: !include_dir_merge_list scene
 switch: !include_dir_merge_list switch
+climate: !include_dir_merge_list climate
 light: !include_dir_merge_list light
 cover: !include_dir_merge_list cover
 script: !include_dir_merge_named script

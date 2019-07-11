@@ -1,0 +1,7 @@
+- platform: smartir
+  name: keting_ac
+  unique_id: keting_ac
+  device_code: 1180
+  controller_data: 192.168.88.166
+  temperature_sensor: sensor.temperature
+  humidity_sensor: sensor.humidity

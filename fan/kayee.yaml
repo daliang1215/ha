@@ -1,25 +1,5 @@
-- platform: template
-  fans:
-    kayee_fan:
-      value_template: "{{ states('input_boolean.dinning_fan') }}"
-      speed_template: "{{ states('input_number.fan_speed') | int}}"        
-      turn_on:
-        service: script.kayee_fan_slow
-      turn_off:
-        service: script.kayee_fan_off
-      set_speed:
-        - service_template: >
-            {% if speed | int == 0 %}script.kayee_fan_off
-            {% elif speed | int == 1 %}script.kayee_fan_slow
-            {% elif speed | int == 2 %}script.kayee_fan_middle
-            {% else %}script.kayee_fan_fast
-            {% endif %}
-        - service: input_number.set_value
-          entity_id: input_number.fan_speed
-          data_template:
-            value: "{{ speed }}"
-      speeds:
-        - '0'
-        - '1'
-        - '2'
-        - '3'
+- platform: smartir
+  name: kayee_fan
+  unique_id: kayee_fan 
+  device_code: 1020
+  controller_data: 192.168.88.166
