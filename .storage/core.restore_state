@@ -1,7 +1,7 @@
 {
     "data": [
         {
-            "last_seen": "2019-07-11T07:07:47.918177+00:00",
+            "last_seen": "2019-07-11T07:22:48.034929+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "\u98ce\u901f",
@@ -23,13 +23,13 @@
             }
         },
         {
-            "last_seen": "2019-07-11T07:07:47.918177+00:00",
+            "last_seen": "2019-07-11T07:22:48.034929+00:00",
             "state": {
                 "attributes": {
                     "commands_encoding": "Base64",
                     "device_code": 1020,
                     "friendly_name": "\u9910\u5385\u98ce\u6247",
-                    "last_on_speed": null,
+                    "last_on_speed": "low",
                     "manufacturer": "Acorn",
                     "speed": "off",
                     "speed_list": [
@@ -46,18 +46,18 @@
                     "tmall_genie": true
                 },
                 "context": {
-                    "id": "be2c1e526e114220b861d5080b52e2f3",
+                    "id": "1422ac4be31b4b79a0e83f75fcec31cb",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "fan.kayee_fan",
-                "last_changed": "2019-07-11T07:07:28.654028+00:00",
-                "last_updated": "2019-07-11T07:07:28.654028+00:00",
+                "last_changed": "2019-07-11T07:10:44.537636+00:00",
+                "last_updated": "2019-07-11T07:10:44.537636+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2019-07-11T07:07:47.918177+00:00",
+            "last_seen": "2019-07-11T07:22:48.034929+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "test_light",
@@ -75,7 +75,7 @@
             }
         },
         {
-            "last_seen": "2019-07-11T07:07:47.918177+00:00",
+            "last_seen": "2019-07-11T07:22:48.034929+00:00",
             "state": {
                 "attributes": {},
                 "context": {
@@ -90,7 +90,7 @@
             }
         },
         {
-            "last_seen": "2019-07-11T07:07:47.918177+00:00",
+            "last_seen": "2019-07-11T07:22:48.034929+00:00",
             "state": {
                 "attributes": {
                     "commands_encoding": "Base64",
@@ -115,7 +115,7 @@
             }
         },
         {
-            "last_seen": "2019-07-11T07:07:47.918177+00:00",
+            "last_seen": "2019-07-11T07:22:48.034929+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Cuckoo Clock",
@@ -125,18 +125,18 @@
                     "last_triggered": null
                 },
                 "context": {
-                    "id": "76718d35add44458a17732e0b20a07d4",
+                    "id": "5d24378ac13b433c8247ae5388a11e36",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.cuckoo_clock",
-                "last_changed": "2019-07-11T07:07:28.726393+00:00",
-                "last_updated": "2019-07-11T07:07:28.726393+00:00",
-                "state": "off"
+                "last_changed": "2019-07-11T07:07:48.030264+00:00",
+                "last_updated": "2019-07-11T07:07:48.030264+00:00",
+                "state": "on"
             }
         },
         {
-            "last_seen": "2019-07-11T07:07:47.918177+00:00",
+            "last_seen": "2019-07-11T07:22:48.034929+00:00",
             "state": {
                 "attributes": {
                     "commands_encoding": "Base64",
@@ -181,7 +181,7 @@
             }
         },
         {
-            "last_seen": "2019-07-11T07:07:47.918177+00:00",
+            "last_seen": "2019-07-11T07:22:48.034929+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "qmi_goto_bed",
@@ -191,18 +191,18 @@
                     "last_triggered": null
                 },
                 "context": {
-                    "id": "863034d09b1442e998e2b6c659394576",
+                    "id": "66a5f9c58a7b4cfea2d11aa3e4c87c89",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.qmi_goto_bed",
-                "last_changed": "2019-07-11T07:07:28.759650+00:00",
-                "last_updated": "2019-07-11T07:07:28.759650+00:00",
-                "state": "off"
+                "last_changed": "2019-07-11T07:07:48.060881+00:00",
+                "last_updated": "2019-07-11T07:07:48.060881+00:00",
+                "state": "on"
             }
         },
         {
-            "last_seen": "2019-07-11T07:07:47.918177+00:00",
+            "last_seen": "2019-07-11T07:22:48.034929+00:00",
             "state": {
                 "attributes": {
                     "current_position": 29.96999999999999,
