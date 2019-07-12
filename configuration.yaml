@@ -151,15 +151,6 @@ panel_iframe:
     icon: mdi:home-automation
     url: https://www.efeichn.top:1880
 notify:
-  - platform: Qiyeweichat
-    name: weichat_jimmychen
-    corpid: ww3a50d49255a8ac28
-    agentId: 1000002
-    secret: J2Cz2ewWneCUtdx3-EU5WqdSxt38xeWbBqsXv1D-fTM
-    touser: '@all'
-    #  - platform: twilio_sms
-    #    name: twilio_sms
-    #    from_number: "+18038280909"
 
 lovelace:
   mode: yaml
