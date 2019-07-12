@@ -20,27 +20,6 @@ homeassistant:
       homebridge_hidden: true
       initial_state: on
 
-  #customize_glob:
-  #  "switch.*":
-  #    hidden: true
-  #    homebridge_hidden: true
-
-  #  "sensor.*":
-  #    homebridge_hidden: true
-
-  #  "fan.*":
-  #    homebridge_hidden: true
-
-  #  "group.*":
-  #    homebridge_hidden: true
-
-  #  "automation.*":
-  #    homebridge_hidden: true
-
-  #  "script.*":
-  #    hidden: true
-  #    homebridge_hidden: true
-# Show links to resources in log and frontend
 #introduction:
 
 # Enables the frontend
@@ -184,18 +163,7 @@ notify:
 
 lovelace:
   mode: yaml
-# Cloud
-#cloud:
-# log
-#logger:
-#  default: warning
-#  logs:
-#    homeassistant.components.homekit: debug
-#    pyhap.accessory_driver: debug
-#    #pyhap: debug
 system_health:
-#aligenie:
-#  expire_hours: 720
 logger:
   # 可能的日志严重程度是: notset, debug, info, warn, warning, error, fatal, critical
   default: info
@@ -238,6 +206,3 @@ shell_command: !include_dir_merge_named shell_command
 conversation: !include_dir_merge_named conversation
 intent_script: !include_dir_merge_named intent_script
 media_player: !include_dir_merge_list media_player
-
-molohub:
-  dismissable: true

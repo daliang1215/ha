@@ -15,7 +15,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "media_player.lg_tv",
-                "name": null,
+                "name": "\u5ba2\u5385\u7535\u89c6",
                 "platform": "smartir",
                 "unique_id": "lg_tv"
             },

@@ -14,7 +14,7 @@ views:
         entities:
           - cover.banghe
           - fan.kayee_fan
-          - switch.lg_tv
+          - media_player.lg_tv
   - icon: mdi:ceiling-light
     cards:
       - type: light

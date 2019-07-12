@@ -1,29 +1,43 @@
 {
     "data": [
         {
-            "last_seen": "2019-07-11T07:22:48.034929+00:00",
+            "last_seen": "2019-07-12T09:38:44.018922+00:00",
             "state": {
                 "attributes": {
-                    "friendly_name": "\u98ce\u901f",
-                    "initial": 0.0,
-                    "max": 3.0,
-                    "min": 0.0,
-                    "mode": "slider",
-                    "step": 1.0
+                    "current_position": 29.96999999999999,
+                    "device_class": "window",
+                    "friendly_name": "\u667e\u8863\u67b6",
+                    "supported_features": 15,
+                    "tmall_genie": true
                 },
                 "context": {
-                    "id": "a6cd25b7a40145feb42c61a7ac5ddd84",
+                    "id": "cb85ca51209140c78f8c5c44e1386fa3",
                     "parent_id": null,
                     "user_id": null
                 },
-                "entity_id": "input_number.fan_speed",
-                "last_changed": "2019-07-11T07:07:28.521137+00:00",
-                "last_updated": "2019-07-11T07:07:28.521137+00:00",
-                "state": "0.0"
+                "entity_id": "cover.banghe",
+                "last_changed": "2019-07-12T09:38:26.158341+00:00",
+                "last_updated": "2019-07-12T09:38:26.158341+00:00",
+                "state": "open"
             }
         },
         {
-            "last_seen": "2019-07-11T07:22:48.034929+00:00",
+            "last_seen": "2019-07-12T09:38:44.018922+00:00",
+            "state": {
+                "attributes": {},
+                "context": {
+                    "id": "0c126e72b4a44e77a6a50d78b45a2f3a",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.dinning_fan",
+                "last_changed": "2019-07-12T09:38:25.504323+00:00",
+                "last_updated": "2019-07-12T09:38:25.504323+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-07-12T09:38:44.018922+00:00",
             "state": {
                 "attributes": {
                     "commands_encoding": "Base64",
@@ -35,8 +49,8 @@
                     "speed_list": [
                         "off",
                         "low",
-                        "medium",
-                        "high"
+                        "high",
+                        "medium"
                     ],
                     "supported_controller": "Broadlink",
                     "supported_features": 1,
@@ -46,56 +60,84 @@
                     "tmall_genie": true
                 },
                 "context": {
-                    "id": "1422ac4be31b4b79a0e83f75fcec31cb",
+                    "id": "57dba12b08794e258e16d597295a1d16",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "fan.kayee_fan",
-                "last_changed": "2019-07-11T07:10:44.537636+00:00",
-                "last_updated": "2019-07-11T07:10:44.537636+00:00",
+                "last_changed": "2019-07-12T09:38:25.736178+00:00",
+                "last_updated": "2019-07-12T09:38:25.736178+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2019-07-11T07:22:48.034929+00:00",
+            "last_seen": "2019-07-12T09:38:44.018922+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "\u98ce\u901f",
+                    "initial": 0.0,
+                    "max": 3.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "9acbb94d6eed46e0af07f7dcb677e105",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.fan_speed",
+                "last_changed": "2019-07-12T09:38:25.475606+00:00",
+                "last_updated": "2019-07-12T09:38:25.475606+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2019-07-12T09:38:44.018922+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "qmi_goto_bed",
+                    "hidden": true,
+                    "homebridge_hidden": true,
+                    "initial_state": true,
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "68a7050dd4804e1ba5cbbf22300e02ff",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.qmi_goto_bed",
+                "last_changed": "2019-07-12T09:38:25.861365+00:00",
+                "last_updated": "2019-07-12T09:38:25.861365+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-07-12T09:38:44.018922+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "test_light",
                     "supported_features": 17
                 },
                 "context": {
-                    "id": "aa7c4953b2f04f16834aadf766db1f51",
+                    "id": "47a090b32a634f4d8e7b232c66b0aa03",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "light.test_light",
-                "last_changed": "2019-07-11T07:07:46.446030+00:00",
-                "last_updated": "2019-07-11T07:07:46.446030+00:00",
+                "last_changed": "2019-07-12T09:38:42.992221+00:00",
+                "last_updated": "2019-07-12T09:38:42.992221+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2019-07-11T07:22:48.034929+00:00",
-            "state": {
-                "attributes": {},
-                "context": {
-                    "id": "6717e86b8d9e49828ffc87026724af3e",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "input_boolean.dinning_fan",
-                "last_changed": "2019-07-11T07:07:28.551730+00:00",
-                "last_updated": "2019-07-11T07:07:28.551730+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2019-07-11T07:22:48.034929+00:00",
+            "last_seen": "2019-07-12T09:38:44.018922+00:00",
             "state": {
                 "attributes": {
                     "commands_encoding": "Base64",
                     "device_code": 1040,
-                    "friendly_name": "lg_tv",
+                    "friendly_name": "\u5ba2\u5385\u7535\u89c6",
                     "manufacturer": "LG",
                     "supported_controller": "Broadlink",
                     "supported_features": 3516,
@@ -104,57 +146,35 @@
                     ]
                 },
                 "context": {
-                    "id": "1079d7112d3f4acc9de768d32d5f779e",
+                    "id": "69a435a37cd44cbba23274841ff6f219",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "media_player.lg_tv",
-                "last_changed": "2019-07-11T07:07:45.421001+00:00",
-                "last_updated": "2019-07-11T07:07:45.421001+00:00",
+                "last_changed": "2019-07-12T09:38:41.757389+00:00",
+                "last_updated": "2019-07-12T09:38:41.757389+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2019-07-11T07:22:48.034929+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Cuckoo Clock",
-                    "hidden": true,
-                    "homebridge_hidden": true,
-                    "initial_state": true,
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "5d24378ac13b433c8247ae5388a11e36",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.cuckoo_clock",
-                "last_changed": "2019-07-11T07:07:48.030264+00:00",
-                "last_updated": "2019-07-11T07:07:48.030264+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-07-11T07:22:48.034929+00:00",
+            "last_seen": "2019-07-12T09:38:44.018922+00:00",
             "state": {
                 "attributes": {
                     "commands_encoding": "Base64",
-                    "current_humidity": 32.0,
-                    "current_temperature": 27.0,
-                    "device_code": 1180,
+                    "current_humidity": 30.0,
+                    "current_temperature": 29.0,
+                    "device_code": 1181,
                     "fan_list": [
-                        "low",
-                        "mid",
-                        "high",
-                        "auto"
+                        "auto",
+                        "sleep",
+                        "powerful"
                     ],
-                    "fan_mode": "low",
+                    "fan_mode": "sleep",
                     "friendly_name": "keting_ac",
-                    "last_on_operation": null,
+                    "last_on_operation": "cool",
                     "manufacturer": "Gree",
                     "max_temp": 30.0,
-                    "min_temp": 16.0,
+                    "min_temp": 18.0,
                     "operation_list": [
                         "off",
                         "cool",
@@ -167,59 +187,38 @@
                         "Unknown"
                     ],
                     "target_temp_step": 1.0,
-                    "temperature": 16.0
+                    "temperature": 26
                 },
                 "context": {
-                    "id": "311d036b071c495baa37b25f5d3d6427",
+                    "id": "d8318921044d47ac9088c7cf16c875dc",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "climate.keting_ac",
-                "last_changed": "2019-07-11T07:07:28.590159+00:00",
-                "last_updated": "2019-07-11T07:07:29.426251+00:00",
+                "last_changed": "2019-07-12T09:38:25.540737+00:00",
+                "last_updated": "2019-07-12T09:38:26.201600+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2019-07-11T07:22:48.034929+00:00",
+            "last_seen": "2019-07-12T09:38:44.018922+00:00",
             "state": {
                 "attributes": {
-                    "friendly_name": "qmi_goto_bed",
+                    "friendly_name": "Cuckoo Clock",
                     "hidden": true,
                     "homebridge_hidden": true,
                     "initial_state": true,
                     "last_triggered": null
                 },
                 "context": {
-                    "id": "66a5f9c58a7b4cfea2d11aa3e4c87c89",
+                    "id": "50a9edc011684a19a0354027048be5b8",
                     "parent_id": null,
                     "user_id": null
                 },
-                "entity_id": "automation.qmi_goto_bed",
-                "last_changed": "2019-07-11T07:07:48.060881+00:00",
-                "last_updated": "2019-07-11T07:07:48.060881+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-07-11T07:22:48.034929+00:00",
-            "state": {
-                "attributes": {
-                    "current_position": 29.96999999999999,
-                    "device_class": "window",
-                    "friendly_name": "\u667e\u8863\u67b6",
-                    "supported_features": 15,
-                    "tmall_genie": true
-                },
-                "context": {
-                    "id": "5249b2107fbf4a9387051d6be4132641",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "cover.banghe",
-                "last_changed": "2019-07-11T07:07:29.251533+00:00",
-                "last_updated": "2019-07-11T07:07:29.251533+00:00",
-                "state": "open"
+                "entity_id": "automation.cuckoo_clock",
+                "last_changed": "2019-07-12T09:38:25.796719+00:00",
+                "last_updated": "2019-07-12T09:38:25.796719+00:00",
+                "state": "off"
             }
         }
     ],
