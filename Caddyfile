@@ -2,7 +2,7 @@ https://www.efeichn.top:8125 {
     tls /home/pi/.homeassistant/ssl/efeichn.top.crt /home/pi/.homeassistant/ssl/efeichn.top.key {                            
         alpn http/1.1                                                    
     }                                                                    
-    proxy / 192.168.88.140:8124 {                                            
+    proxy / 192.168.88.2:8124 {                                            
         transparent                                                      
         websocket                                                        
     }                                                                    
@@ -14,7 +14,7 @@ https://www.efeichn.top:1881 {
     tls /home/pi/.homeassistant/ssl/efeichn.top.crt /home/pi/.homeassistant/ssl/efeichn.top.key {                            
         alpn http/1.1                                                    
     }                                                                    
-    proxy / 192.168.88.140:1880 {                                            
+    proxy / 192.168.88.2:1880 {                                            
         transparent                                                      
         websocket                                                        
     }                                                                    
@@ -26,7 +26,7 @@ https://www.efeichn.top:3001 {
     tls /home/pi/.homeassistant/ssl/efeichn.top.crt /home/pi/.homeassistant/ssl/efeichn.top.key {                            
         alpn http/1.1                                                    
     }                                                                    
-    proxy / 192.168.88.140:3002 {                                            
+    proxy / 192.168.88.2:3002 {                                            
         transparent                                                      
         websocket                                                        
     }                                                                    

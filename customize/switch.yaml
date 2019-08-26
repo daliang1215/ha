@@ -68,5 +68,5 @@
 #  friendly_name: 班得瑞
 #switch.my_love_album:
 #  friendly_name: 好专辑
-switch.lg_tv:
-   tmall_genie: true
+#switch.lg_tv:
+#   tmall_genie: true

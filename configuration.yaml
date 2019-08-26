@@ -76,6 +76,8 @@ homekit:
       - switch.zhuwo_room_light_on_off
       - switch.zhuwo_room_light_quanliang
       - switch.zhuwo_room_light_riguangse
+      - sensor.keting_xiaomi_filter_used
+      - sensor.keting_xiaomi_filter_remaining
       #- switch.air_conditioner
   entity_config:
     media_player.lg_tv:
@@ -132,7 +134,7 @@ tts:
 smartir:
 
 mqtt:
-  broker: 192.168.88.141
+  broker: 192.168.88.1
 panel_iframe:
     #  homebridge:
     #    title: HomeBridge

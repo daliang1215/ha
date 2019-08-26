@@ -1,0 +1,5 @@
+- platform: xiaomi_miio
+  name: keting
+  host: 192.168.88.31
+  token: c37a49585c60973872ca34a2499f2148
+  model: zhimi.airpurifier.m1

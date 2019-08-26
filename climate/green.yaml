@@ -3,5 +3,7 @@
   unique_id: keting_ac
   device_code: 1181
   controller_data: 192.168.88.166
-  temperature_sensor: sensor.temperature
-  humidity_sensor: sensor.humidity
+  #temperature_sensor: sensor.temperature
+  temperature_sensor: sensor.keting_xiaomi_ap_temp
+  #humidity_sensor: sensor.humidity
+  humidity_sensor: sensor.keting_xiaomi_ap_humid

@@ -1,20 +1,25 @@
-sensor.to_company_time:
-  homebridge_name: 去公司时间
-sensor.keting_xiaomi_ap_aqi:
+sensor.keting_xiaomi_ap_temp:
   icon: mdi:blur
+  friendly_name: 温度
+  tmall_genie: 
+    enabled: true
+    attach_sensor:
+      - entity_id: sensor.keting_xiaomi_ap_humid
 sensor.keting_xiaomi_ap_humid:
   icon: mdi:water-percent
+  device_class: humidity
+  friendly_name: 湿度
 sensor.dark_sky_temperature:
   friendly_name: 室外温度
 sensor.dark_sky_humidity:
   device_class: humidity
   friendly_name: 室外湿度
-sensor.temperature:
-  friendly_name: 温度
-  tmall_genie: 
-    enabled: true
-    attach_sensor:
-      - entity_id: sensor.humidity
-sensor.humidity:
-  device_class: humidity
-  friendly_name: 湿度
+#sensor.temperature:
+#  friendly_name: 温度
+#  tmall_genie: 
+#    enabled: true
+#    attach_sensor:
+#      - entity_id: sensor.humidity
+#sensor.humidity:
+#  device_class: humidity
+#  friendly_name: 湿度
