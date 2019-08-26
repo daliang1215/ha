@@ -1,5 +1,5 @@
 - platform: broadlink_cover
-  host: 192.168.88.166
+  host: 192.168.88.6
   mac: '78:0F:77:5A:6C:C2'
   covers:
     banghe:
