@@ -1,46 +1,22 @@
 {
     "data": [
         {
-            "last_seen": "2019-08-27T01:01:25.534670+00:00",
+            "last_seen": "2019-08-27T05:37:05.900080+00:00",
             "state": {
-                "attributes": {
-                    "friendly_name": "test_light",
-                    "supported_features": 17
-                },
+                "attributes": {},
                 "context": {
-                    "id": "7c9808b3a2c44b07a59c3284388c9cfe",
+                    "id": "420432e9f346412aac53315ea0547233",
                     "parent_id": null,
                     "user_id": null
                 },
-                "entity_id": "light.test_light",
-                "last_changed": "2019-08-27T01:01:23.557708+00:00",
-                "last_updated": "2019-08-27T01:01:23.557708+00:00",
+                "entity_id": "input_boolean.dinning_fan",
+                "last_changed": "2019-08-27T05:30:14.902331+00:00",
+                "last_updated": "2019-08-27T05:30:14.902331+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2019-08-27T01:01:25.534670+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Cuckoo Clock",
-                    "hidden": true,
-                    "homebridge_hidden": true,
-                    "initial_state": true,
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "72964e027be74de4bd0136f78e598741",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.cuckoo_clock",
-                "last_changed": "2019-08-27T01:01:02.602912+00:00",
-                "last_updated": "2019-08-27T01:01:02.602912+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2019-08-27T01:01:25.534670+00:00",
+            "last_seen": "2019-08-27T05:37:05.900080+00:00",
             "state": {
                 "attributes": {
                     "commands_encoding": "Base64",
@@ -55,61 +31,18 @@
                     ]
                 },
                 "context": {
-                    "id": "41cf4c7ec2d94b2ea10a76080dea867c",
+                    "id": "796c485727ee4ec7a56e31d5fcd3c3a1",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "media_player.lg_tv",
-                "last_changed": "2019-08-27T01:01:22.254734+00:00",
-                "last_updated": "2019-08-27T01:01:22.254734+00:00",
+                "last_changed": "2019-08-27T05:33:35.726333+00:00",
+                "last_updated": "2019-08-27T05:33:35.726333+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2019-08-27T01:01:25.534670+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "\u98ce\u901f",
-                    "initial": 0.0,
-                    "max": 3.0,
-                    "min": 0.0,
-                    "mode": "slider",
-                    "step": 1.0
-                },
-                "context": {
-                    "id": "7f671fccbf4440729991863bdfa8bd0e",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "input_number.fan_speed",
-                "last_changed": "2019-08-27T01:01:02.624369+00:00",
-                "last_updated": "2019-08-27T01:01:02.624369+00:00",
-                "state": "0.0"
-            }
-        },
-        {
-            "last_seen": "2019-08-27T01:01:25.534670+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "qmi_goto_bed",
-                    "hidden": true,
-                    "homebridge_hidden": true,
-                    "initial_state": true,
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "f16716e4c7d24471aff609a377720cf9",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.qmi_goto_bed",
-                "last_changed": "2019-08-27T01:01:02.613680+00:00",
-                "last_updated": "2019-08-27T01:01:02.613680+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2019-08-27T01:01:25.534670+00:00",
+            "last_seen": "2019-08-27T05:37:05.900080+00:00",
             "state": {
                 "attributes": {
                     "current_position": 0,
@@ -119,33 +52,36 @@
                     "tmall_genie": true
                 },
                 "context": {
-                    "id": "e2e26d526e2942b582365d73185b6e01",
+                    "id": "1a239627ec5f4a4c8fcbf421d01c5e8e",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "cover.banghe",
-                "last_changed": "2019-08-27T01:01:21.849493+00:00",
-                "last_updated": "2019-08-27T01:01:21.849493+00:00",
+                "last_changed": "2019-08-27T05:35:14.553774+00:00",
+                "last_updated": "2019-08-27T05:35:14.553774+00:00",
                 "state": "closed"
             }
         },
         {
-            "last_seen": "2019-08-27T01:01:25.534670+00:00",
+            "last_seen": "2019-08-27T05:37:05.900080+00:00",
             "state": {
-                "attributes": {},
+                "attributes": {
+                    "friendly_name": "test_light",
+                    "supported_features": 17
+                },
                 "context": {
-                    "id": "d5cabf0ede324799ba8af2e918699984",
+                    "id": "9eed49ad11ee41cca3cab38ae447e96d",
                     "parent_id": null,
                     "user_id": null
                 },
-                "entity_id": "input_boolean.dinning_fan",
-                "last_changed": "2019-08-27T01:01:02.632877+00:00",
-                "last_updated": "2019-08-27T01:01:02.632877+00:00",
+                "entity_id": "light.test_light",
+                "last_changed": "2019-08-27T05:31:47.650030+00:00",
+                "last_updated": "2019-08-27T05:31:47.650030+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2019-08-27T01:01:25.534670+00:00",
+            "last_seen": "2019-08-27T05:37:05.900080+00:00",
             "state": {
                 "attributes": {
                     "commands_encoding": "Base64",
@@ -168,43 +104,84 @@
                     "tmall_genie": true
                 },
                 "context": {
-                    "id": "62a0c0ffa66741b0bef57d748423f2bc",
+                    "id": "249d850d3e93425684ab468125a0ac84",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "fan.kayee_fan",
-                "last_changed": "2019-08-27T01:01:22.220918+00:00",
-                "last_updated": "2019-08-27T01:01:22.220918+00:00",
+                "last_changed": "2019-08-27T05:31:47.273019+00:00",
+                "last_updated": "2019-08-27T05:31:47.273019+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2019-08-27T00:59:06.015953+00:00",
+            "last_seen": "2019-08-27T05:37:05.900080+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "\u98ce\u901f",
+                    "initial": 0.0,
+                    "max": 3.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0
+                },
+                "context": {
+                    "id": "9d41fde42966479fa75e799c23fe9538",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_number.fan_speed",
+                "last_changed": "2019-08-27T05:30:14.893053+00:00",
+                "last_updated": "2019-08-27T05:30:14.893053+00:00",
+                "state": "0.0"
+            }
+        },
+        {
+            "last_seen": "2019-08-27T05:37:05.900080+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "qmi_goto_bed",
+                    "hidden": true,
+                    "homebridge_hidden": true,
+                    "initial_state": true,
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "80400b9f8ad6455e823f2bcfc4909f43",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.qmi_goto_bed",
+                "last_changed": "2019-08-27T05:30:15.007562+00:00",
+                "last_updated": "2019-08-27T05:30:15.007562+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-08-27T05:37:05.900080+00:00",
             "state": {
                 "attributes": {
                     "commands_encoding": "Base64",
-                    "current_humidity": 66.0,
-                    "current_temperature": 28.8,
+                    "current_temperature": null,
                     "device_code": 1181,
-                    "fan_list": [
+                    "fan_mode": "sleep",
+                    "fan_modes": [
                         "auto",
                         "sleep",
                         "powerful"
                     ],
-                    "fan_mode": "sleep",
                     "friendly_name": "keting_ac",
-                    "last_on_operation": "cool",
-                    "manufacturer": "Gree",
-                    "max_temp": 30.0,
-                    "min_temp": 18.0,
-                    "operation_list": [
+                    "hvac_modes": [
                         "off",
                         "cool",
                         "heat"
                     ],
-                    "operation_mode": "off",
+                    "last_on_operation": "cool",
+                    "manufacturer": "Gree",
+                    "max_temp": 30.0,
+                    "min_temp": 18.0,
                     "supported_controller": "Broadlink",
-                    "supported_features": 4289,
+                    "supported_features": 9,
                     "supported_models": [
                         "Unknown"
                     ],
@@ -212,14 +189,35 @@
                     "temperature": 26
                 },
                 "context": {
-                    "id": "28c174342b124e418f221c1461fc07b9",
+                    "id": "187385b0628e4c6997279827cd8155d0",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "climate.keting_ac",
-                "last_changed": "2019-08-27T00:21:36.719507+00:00",
-                "last_updated": "2019-08-27T00:57:08.689658+00:00",
+                "last_changed": "2019-08-27T05:30:14.934391+00:00",
+                "last_updated": "2019-08-27T05:30:14.934391+00:00",
                 "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-08-27T05:37:05.900080+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Cuckoo Clock",
+                    "hidden": true,
+                    "homebridge_hidden": true,
+                    "initial_state": true,
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "17ca7bd64b434382848fbd2bac8bba37",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.cuckoo_clock",
+                "last_changed": "2019-08-27T05:30:14.971524+00:00",
+                "last_updated": "2019-08-27T05:30:14.971524+00:00",
+                "state": "on"
             }
         }
     ],
