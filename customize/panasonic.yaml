@@ -19,5 +19,5 @@ script.panasonic_powersave: # 节能
 script.panasonic_jiuqiin: # 就寝
   friendly_name: 松下客厅就寝
 light.keting_panasonic:
-  friendly_name: 客厅顶灯
+  friendly_name: 顶灯
   #tmall_genie: true

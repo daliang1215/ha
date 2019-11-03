@@ -1,5 +1,5 @@
 - platform: smartir
-  name: keting_ac
+  name: 空调
   unique_id: keting_ac
   device_code: 1181
   controller_data: 192.168.88.6

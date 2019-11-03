@@ -1,5 +1,7 @@
 fan.keting:
   friendly_name: 客厅空气净化器
   tmall_genie: true
+  tmall_genie_zone: 客厅
+  tmall_genie_name: 空气净化器
 #fan.woshi:
 #friendly_name: 主卧空气净化器

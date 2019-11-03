@@ -36,6 +36,7 @@ http:
       #    - homekit
 homekit:
   #auto_start: false
+  name: Home Assistant
   filter:
     #include_entities:
     include_domains:
@@ -178,9 +179,10 @@ logger:
     homeassistant.components.shell_command: debug
     homeassistant.helpers.script: warn
     homeassistant.helpers.entity: warn
-    custom_components.device_tracker.hiwifi: warn
-    custom_components.smartir: debug
-    requests.packages.urllib3.http.client: error
+    #homeassistant.components.homekit: debug
+    #homeassistant.components.homekit.type_media_players: debug
+    #custom_components.smartir: debug
+    #requests.packages.urllib3.http.client: error
 group: !include_dir_merge_named group
 device_tracker: !include_dir_merge_list device_tracker
 sensor: !include_dir_merge_list sensor

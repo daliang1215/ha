@@ -5,6 +5,7 @@ sensor.keting_xiaomi_ap_temp:
     enabled: true
     attach_sensor:
       - entity_id: sensor.keting_xiaomi_ap_humid
+  tmall_genie_zone: 客厅
 sensor.keting_xiaomi_ap_humid:
   icon: mdi:water-percent
   device_class: humidity
