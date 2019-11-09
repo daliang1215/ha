@@ -27,6 +27,15 @@
                 "name": null,
                 "platform": "smartir",
                 "unique_id": "kayee_fan"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.updater",
+                "name": null,
+                "platform": "updater",
+                "unique_id": "updater"
             }
         ]
     },

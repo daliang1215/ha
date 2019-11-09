@@ -26,9 +26,9 @@ homeassistant:
 frontend:
 
 http:
-  base_url: https://www.efeichn.top:8123
-  ssl_certificate: /home/pi/.homeassistant/ssl/efeichn.top.crt
-  ssl_key: /home/pi/.homeassistant/ssl/efeichn.top.key
+  base_url: https://www.efeichn.wang:8123
+  ssl_certificate: /home/pi/.homeassistant/ssl/efeichn.wang.crt
+  ssl_key: /home/pi/.homeassistant/ssl/efeichn.wang.key
   cors_allowed_origins:
     - http://reformedreality.com
       #Discovery:
