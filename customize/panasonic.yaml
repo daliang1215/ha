@@ -20,4 +20,6 @@ script.panasonic_jiuqiin: # 就寝
   friendly_name: 松下客厅就寝
 light.keting_panasonic:
   friendly_name: 顶灯
-  #tmall_genie: true
+  tmall_genie: true
+  tmall_genie_zone: 客厅
+  tmall_genie_name: 灯

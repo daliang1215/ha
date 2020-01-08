@@ -79,6 +79,8 @@ homekit:
       - switch.zhuwo_room_light_riguangse
       - sensor.keting_xiaomi_filter_used
       - sensor.keting_xiaomi_filter_remaining
+      - switch.keting_light
+      - switch.lg_tv
       #- switch.air_conditioner
   entity_config:
     media_player.lg_tv:
@@ -152,7 +154,7 @@ panel_iframe:
   weblink:
     title: NODE-RED
     icon: mdi:home-automation
-    url: https://www.efeichn.top:1880
+    url: https://www.efeichn.wang:1881
 notify:
 
 lovelace:

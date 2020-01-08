@@ -1,0 +1,5 @@
+switch.lg_tv:
+  friendly_name: 客厅电视
+  tmall_genie: true
+  tmall_genie_zone: 客厅
+  tmall_genie_name: 电视盒子
