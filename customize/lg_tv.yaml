@@ -3,3 +3,8 @@ switch.lg_tv:
   tmall_genie: true
   tmall_genie_zone: 客厅
   tmall_genie_name: 电视盒子
+switch.keting_display_on_off:
+  friendly_name: 投影仪
+  tmall_genie: true
+  tmall_genie_zone: 客厅
+  tmall_genie_name: 投影仪

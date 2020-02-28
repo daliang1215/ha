@@ -1,0 +1,33 @@
+on_hdmi: # 显示器hdmi通道,对应display开关ON
+  sequence:
+    - service: broadlink.send
+      data:
+        host: 192.168.88.6
+        packet: #HDMI码
+          - "HDMI码"
+off_av: # 显示器hdmi通道,对应display开关OFF
+  sequence:
+    - delay: '00:00:01'
+    - service: broadlink.send
+      data:
+        host: 192.168.88.6
+        packet: #HDMI码
+          - "sQY0ACUMJQsOIw4jJQwNIw4jDiMNIw4jDiMlCyUMJQsOIw0jDSMlCyUMDSMlCw0jDiMOIw0AAW0AAAAA"
+    - delay: '00:00:01'
+    - service: broadlink.send
+      data:
+        host: 192.168.88.6
+        packet: #通道码
+          - "通道码"
+    - delay: '00:00:01'
+    - service: broadlink.send
+      data:
+        host: 192.168.88.6
+        packet: #上或者下红外码，需要确认一下
+          - "上或者下红外码"
+    - delay: '00:00:01'
+    - service: broadlink.send
+      data:
+        host: 192.168.88.6
+        packet: #确定码
+          - "确定码"

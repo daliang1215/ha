@@ -10,7 +10,7 @@
     seconds: 01
   condition:
     condition: time
-    after: '06:59:00'
+    after: '07:59:00'
     before: '21:01:00'
   action:
     service: shell_command.play_clock
