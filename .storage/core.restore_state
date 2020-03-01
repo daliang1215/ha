@@ -1,7 +1,7 @@
 {
     "data": [
         {
-            "last_seen": "2020-03-01T10:03:23.026583+00:00",
+            "last_seen": "2020-03-01T10:18:23.232431+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "\u98ce\u901f",
@@ -23,7 +23,7 @@
             }
         },
         {
-            "last_seen": "2020-03-01T10:03:23.026583+00:00",
+            "last_seen": "2020-03-01T10:18:23.232431+00:00",
             "state": {
                 "attributes": {},
                 "context": {
@@ -38,12 +38,12 @@
             }
         },
         {
-            "last_seen": "2020-03-01T10:03:23.026583+00:00",
+            "last_seen": "2020-03-01T10:18:23.232431+00:00",
             "state": {
                 "attributes": {
                     "commands_encoding": "Base64",
-                    "current_humidity": 36.0,
-                    "current_temperature": 23.8,
+                    "current_humidity": 39.0,
+                    "current_temperature": 24.1,
                     "device_code": 1181,
                     "fan_mode": "sleep",
                     "fan_modes": [
@@ -70,18 +70,18 @@
                     "temperature": 27
                 },
                 "context": {
-                    "id": "4319ead09e66437ca25535e2a057d605",
+                    "id": "fdc6e6e87d8640139683185e040aac2e",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "climate.keting_ac",
                 "last_changed": "2020-02-29T11:16:51.767084+00:00",
-                "last_updated": "2020-03-01T10:00:45.663373+00:00",
+                "last_updated": "2020-03-01T10:17:16.585598+00:00",
                 "state": "off"
             }
         },
         {
-            "last_seen": "2020-03-01T10:03:23.026583+00:00",
+            "last_seen": "2020-03-01T10:18:23.232431+00:00",
             "state": {
                 "attributes": {
                     "current_position": 0,
@@ -104,7 +104,7 @@
             }
         },
         {
-            "last_seen": "2020-03-01T10:03:23.026583+00:00",
+            "last_seen": "2020-03-01T10:18:23.232431+00:00",
             "state": {
                 "attributes": {
                     "commands_encoding": "Base64",
@@ -140,7 +140,7 @@
             }
         },
         {
-            "last_seen": "2020-03-01T10:03:23.026583+00:00",
+            "last_seen": "2020-03-01T10:18:23.232431+00:00",
             "state": {
                 "attributes": {
                     "commands_encoding": "Base64",
@@ -166,7 +166,7 @@
             }
         },
         {
-            "last_seen": "2020-03-01T10:03:23.026583+00:00",
+            "last_seen": "2020-03-01T10:18:23.232431+00:00",
             "state": {
                 "attributes": {
                     "assumed_state": true,
@@ -187,7 +187,7 @@
             }
         },
         {
-            "last_seen": "2020-03-01T10:03:23.026583+00:00",
+            "last_seen": "2020-03-01T10:18:23.232431+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "test_light",
