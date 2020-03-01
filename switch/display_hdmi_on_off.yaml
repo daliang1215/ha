@@ -1,8 +1,0 @@
-- platform: template
-  switches: #on = hdmi mode , off = av mode      
-    keting_display_on_off: 
-      value_template: '{{ value == "on" }}'
-      turn_on:
-        service: script.on_hdmi    
-      turn_off:
-        service: script.off_av
