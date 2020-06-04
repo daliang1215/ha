@@ -26,7 +26,7 @@ homeassistant:
 frontend:
 
 http:
-  base_url: https://www.efeichn.wang:8123
+  #base_url: https://www.efeichn.wang:8123
   ssl_certificate: /home/pi/.homeassistant/ssl/efeichn.wang.crt
   ssl_key: /home/pi/.homeassistant/ssl/efeichn.wang.key
   cors_allowed_origins:
@@ -46,7 +46,7 @@ homekit:
       - switch
       - sensor
       - climate
-      - media_player
+#      - media_player
     exclude_entities:
       - switch.ciwo_room_light_an
       - switch.ciwo_room_light_changyedeng
@@ -77,15 +77,15 @@ homekit:
       - switch.zhuwo_room_light_on_off
       - switch.zhuwo_room_light_quanliang
       - switch.zhuwo_room_light_riguangse
-      - sensor.keting_xiaomi_filter_used
-      - sensor.keting_xiaomi_filter_remaining
+      #- sensor.keting_xiaomi_filter_used
+      #- sensor.keting_xiaomi_filter_remaining
       - switch.keting_light
       - switch.lg_tv
       #- switch.air_conditioner
-  entity_config:
-    media_player.lg_tv:
-      feature_list:
-        - feature: on_off
+#  entity_config:
+#    media_player.lg_tv:
+#      feature_list:
+#        - feature: on_off
 # Enables configuration UI
 config:
 
@@ -135,6 +135,7 @@ tts:
     person: 0
 
 smartir:
+  check_updates: false
 
 mqtt:
   broker: 192.168.88.1

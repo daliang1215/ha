@@ -1,31 +1,3 @@
-"""////////////////////////////////////////////////////////////////////////////////////////////////
-Home Assistant Custom Component for Broadlink Cover platform.
-Build by Zoranke
-
-installation notes:
-place this file in the following folder and restart home assistant:
-/config/custom_components/broadlink_cover
-#############################################################################
-cover:
-  - platform: broadlink_cover
-    host: 192.168.10.XXX
-    mac: '34:EA:34:E3:XX:XX'
-    covers:
-        bedroom_cover:               #///////无传感器设置
-          name: "窗帘"                 
-          travel_time: 8
-          command_open: '############'
-          command_close: '############'
-          command_stop: '############'
- 
-        livingroom_cover:
-          travel_time: 8
-          position_sensor: binary_sensor.door_window_sensor #//////有传感器设置
-          name: "窗户"
-          command_open: '############'
-          command_close: '############'
-          command_stop: '############'
-////////////////////////////////////////////////////////////////////////////////////////////////"""
 import asyncio
 import logging
 import binascii
@@ -34,8 +6,7 @@ import os.path
 
 import voluptuous as vol
 
-from homeassistant.components.cover import (CoverDevice, PLATFORM_SCHEMA, SUPPORT_OPEN, SUPPORT_CLOSE)
-#from homeassistant.components.cover import CoverDevice, PLATFORM_SCHEMA
+from homeassistant.components.cover import (CoverEntity, PLATFORM_SCHEMA, SUPPORT_OPEN, SUPPORT_CLOSE)
 from homeassistant.const import (CONF_NAME, CONF_HOST, CONF_MAC, CONF_TIMEOUT, STATE_OPEN, STATE_CLOSED)
 from homeassistant.core import callback
 from homeassistant.helpers.event import async_track_state_change
@@ -47,7 +18,7 @@ from homeassistant.helpers.restore_state import RestoreEntity
 from configparser import ConfigParser
 from base64 import b64encode, b64decode
 
-REQUIREMENTS = ['broadlink==0.12.0']
+REQUIREMENTS = ['broadlink']
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -117,7 +88,7 @@ def async_setup_platform(hass, config, async_add_devices, discovery_info=None):
     return True
 
 
-class RMCover(CoverDevice,RestoreEntity):
+class RMCover(CoverEntity,RestoreEntity):
     """Representation of a cover."""
 
     # pylint: disable=no-self-use
@@ -184,14 +155,6 @@ class RMCover(CoverDevice,RestoreEntity):
         self._async_update_pos(new_state)
         yield from self.async_update_ha_state()
 
-
-#    @property
-#    def device_state_attributes(self):
-#        if self._device_class == 'window':
-#            return {'homebridge_cover_type': 'rollershutter'}
-#        else:
-#            return {'homebridge_cover_type': 'garage_door'}
-
     @property
     def name(self):
         """Return the name of the cover."""
@@ -250,7 +213,6 @@ class RMCover(CoverDevice,RestoreEntity):
             if self._sendpacket(self._cmd_close):
                 self._closed = True
                 self.schedule_update_ha_state()
-#                await self.async_update_ha_state()
             return
 
         if self._sendpacket(self._cmd_close):
@@ -259,7 +221,6 @@ class RMCover(CoverDevice,RestoreEntity):
             self._listen_cover()
             self._requested_closing = True
             self.schedule_update_ha_state()
-#            await self.async_update_ha_state()
 
     def open_cover(self, **kwargs):
         """Open the cover."""
@@ -269,7 +230,6 @@ class RMCover(CoverDevice,RestoreEntity):
             if self._sendpacket(self._cmd_open):
                 self._closed = False
                 self.schedule_update_ha_state()
-#                await self.async_update_ha_state()
             return
 
         if self._sendpacket(self._cmd_open):
@@ -278,7 +238,6 @@ class RMCover(CoverDevice,RestoreEntity):
             self._listen_cover()
             self._requested_closing = False
             self.schedule_update_ha_state()
-#            await self.async_update_ha_state()
 
     def set_cover_position(self, position, **kwargs):
         """Move the cover to a specific position."""
@@ -350,7 +309,6 @@ class RMCover(CoverDevice,RestoreEntity):
                self.stop_cover()
             
             self.schedule_update_ha_state()
-#            await self.async_update_ha_state()
 
 
     def _sendpacket(self, packet, retry=2):
@@ -378,9 +336,11 @@ class RMCover(CoverDevice,RestoreEntity):
             return self._auth(retry-1)
         return auth
 
-    async def async_added_to_hass(self):
-        await super().async_added_to_hass()
-        last_state = await self.async_get_last_state()
-        
-        if last_state:
-            self._position = last_state.attributes['current_position']
+#    async def async_added_to_hass(self):
+#        await super().async_added_to_hass()
+#        last_state = await self.async_get_last_state()
+#        
+#        if last_state:
+#           self._position = last_state.attributes['current_position']
+#        else:
+#           self._position = None

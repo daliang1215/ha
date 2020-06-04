@@ -1,0 +1,18 @@
+{
+    "data": {
+        "allocations": {
+            "cover.banghe": 516097203,
+            "light.kayee_fan_light": 1531054177,
+            "light.keting_panasonic": 1698826468,
+            "light.test_light": 915867262,
+            "media_player.vlc_player": 1858668876,
+            "sensor.dark_sky_humidity": 2055932397,
+            "sensor.dark_sky_temperature": 2598374190,
+            "smartir.climate.keting_ac": 1016202931,
+            "smartir.fan.kayee_fan": 580650247,
+            "smartir.media_player.lg_tv": 1148520247
+        }
+    },
+    "key": "homekit.bbbf5634d42f49309de91258aaa4f582.aids",
+    "version": 1
+}

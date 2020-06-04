@@ -2,40 +2,135 @@
     "data": {
         "entities": [
             {
+                "capabilities": {
+                    "fan_modes": [
+                        "auto",
+                        "sleep",
+                        "powerful"
+                    ],
+                    "hvac_modes": [
+                        "off",
+                        "cool",
+                        "heat"
+                    ],
+                    "max_temp": 30.0,
+                    "min_temp": 18.0,
+                    "target_temp_step": 1.0
+                },
                 "config_entry_id": null,
+                "device_class": null,
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "climate.keting_ac",
+                "icon": null,
                 "name": null,
+                "original_icon": null,
+                "original_name": "\u7a7a\u8c03",
                 "platform": "smartir",
-                "unique_id": "keting_ac"
+                "supported_features": 9,
+                "unique_id": "keting_ac",
+                "unit_of_measurement": null
             },
             {
+                "capabilities": {
+                    "source_list": [
+                        "Channel 0",
+                        "Channel 1",
+                        "Channel 2",
+                        "Channel 3",
+                        "Channel 4",
+                        "Channel 5",
+                        "Channel 6",
+                        "Channel 7",
+                        "Channel 8",
+                        "Channel 9",
+                        "Input"
+                    ]
+                },
                 "config_entry_id": null,
+                "device_class": "tv",
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "media_player.lg_tv",
+                "icon": null,
                 "name": "\u5ba2\u5385\u7535\u89c6",
+                "original_icon": null,
+                "original_name": "lg_tv",
                 "platform": "smartir",
-                "unique_id": "lg_tv"
+                "supported_features": 3512,
+                "unique_id": "lg_tv",
+                "unit_of_measurement": null
             },
             {
+                "capabilities": {
+                    "speed_list": [
+                        "off",
+                        "low",
+                        "high",
+                        "medium"
+                    ]
+                },
                 "config_entry_id": null,
+                "device_class": null,
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "fan.kayee_fan",
+                "icon": null,
                 "name": null,
+                "original_icon": null,
+                "original_name": "kayee_fan",
                 "platform": "smartir",
-                "unique_id": "kayee_fan"
+                "supported_features": 1,
+                "unique_id": "kayee_fan",
+                "unit_of_measurement": null
             },
             {
+                "capabilities": {},
                 "config_entry_id": null,
+                "device_class": null,
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "binary_sensor.updater",
+                "icon": null,
                 "name": null,
+                "original_icon": null,
+                "original_name": "Updater",
                 "platform": "updater",
-                "unique_id": "updater"
+                "supported_features": 0,
+                "unique_id": "updater",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "input_number.fan_speed",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "\u98ce\u901f",
+                "platform": "input_number",
+                "supported_features": 0,
+                "unique_id": "fan_speed",
+                "unit_of_measurement": null
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "input_boolean.dinning_fan",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": null,
+                "platform": "input_boolean",
+                "supported_features": 0,
+                "unique_id": "dinning_fan",
+                "unit_of_measurement": null
             }
         ]
     },

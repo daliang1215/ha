@@ -1,0 +1,35 @@
+{
+    "data": {
+        "devices": [
+            {
+                "area_id": null,
+                "config_entries": [
+                    "bbbf5634d42f49309de91258aaa4f582"
+                ],
+                "connections": [
+                    [
+                        "mac",
+                        "f5:98:26:a7:1e:ba"
+                    ]
+                ],
+                "entry_type": null,
+                "id": "810fc08c8d60496c86af5d581981ab9b",
+                "identifiers": [
+                    [
+                        "homekit",
+                        "bbbf5634d42f49309de91258aaa4f582",
+                        "homekit.bridge"
+                    ]
+                ],
+                "manufacturer": "Home Assistant",
+                "model": "Home Assistant HomeKit Bridge",
+                "name": "Home Assistant",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            }
+        ]
+    },
+    "key": "core.device_registry",
+    "version": 1
+}

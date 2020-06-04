@@ -1,12 +1,19 @@
 {
     "domain": "broadlink_cover",
     "name": "Broadlink cover",
-    "documentation": "https://github.com/zoranke/hassio-addons/blob/master/broadlink",
-    "requirements": [
-        "broadlink==0.12.0"
-    ],
+    "documentation": "https://github.com/zoranke/Hassio-broadlink_cover",
     "dependencies": [],
     "codeowners": [
-        "@danielhiversen"
+        "@zoranke"
+    ],
+    "requirements": [],
+    "homeassistant": "1.07.0",
+    "updater": {
+       "files": [
+        "__init__.py",
+        "cover.py",
+        "manifest.json",
+        "services.yaml"
     ]
+  }
 }

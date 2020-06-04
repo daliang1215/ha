@@ -8,7 +8,78 @@
                 "entry_id": "0c913b525ab847148783e8a010ff67fc",
                 "options": {},
                 "source": "import",
+                "system_options": {
+                    "disable_new_entities": false
+                },
                 "title": "configuration.yaml",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "name": "Home Assistant",
+                    "port": 51827
+                },
+                "domain": "homekit",
+                "entry_id": "bbbf5634d42f49309de91258aaa4f582",
+                "options": {
+                    "auto_start": true,
+                    "entity_config": {},
+                    "filter": {
+                        "exclude_domains": [],
+                        "exclude_entities": [
+                            "switch.ciwo_room_light_an",
+                            "switch.ciwo_room_light_changyedeng",
+                            "switch.ciwo_room_light_light_sleep",
+                            "switch.ciwo_room_light_ming",
+                            "switch.ciwo_room_light_nuanbaise",
+                            "switch.ciwo_room_light_on_off",
+                            "switch.ciwo_room_light_quanliang",
+                            "switch.ciwo_room_light_riguangse",
+                            "switch.cool",
+                            "switch.heat",
+                            "switch.heat_slave",
+                            "switch.left_right",
+                            "switch.light_mode",
+                            "switch.mode",
+                            "switch.sleep_mode",
+                            "switch.smart_enjoy",
+                            "switch.speed",
+                            "switch.temp_down",
+                            "switch.temp_up",
+                            "switch.temp_visiable",
+                            "switch.up_down",
+                            "switch.zhuwo_room_light_an",
+                            "switch.zhuwo_room_light_changyedeng",
+                            "switch.zhuwo_room_light_light_sleep",
+                            "switch.zhuwo_room_light_ming",
+                            "switch.zhuwo_room_light_nuanbaise",
+                            "switch.zhuwo_room_light_on_off",
+                            "switch.zhuwo_room_light_quanliang",
+                            "switch.zhuwo_room_light_riguangse",
+                            "switch.keting_light",
+                            "switch.lg_tv"
+                        ],
+                        "include_domains": [
+                            "cover",
+                            "light",
+                            "fan",
+                            "switch",
+                            "sensor",
+                            "climate"
+                        ],
+                        "include_entities": []
+                    },
+                    "safe_mode": false,
+                    "zeroconf_default_interface": false
+                },
+                "source": "import",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Home Assistant:51827",
+                "unique_id": null,
                 "version": 1
             }
         ]

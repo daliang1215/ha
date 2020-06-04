@@ -1,0 +1,4 @@
+check_updates:
+  description: Check for RMcover updates.
+update_component:
+  description: Update RMcover component.
