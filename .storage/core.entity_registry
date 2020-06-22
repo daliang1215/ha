@@ -4,16 +4,13 @@
             {
                 "capabilities": {
                     "fan_modes": [
-                        "auto",
-                        "sleep",
-                        "powerful"
+                        "sleep"
                     ],
                     "hvac_modes": [
                         "off",
-                        "cool",
-                        "heat"
+                        "cool"
                     ],
-                    "max_temp": 30.0,
+                    "max_temp": 28.0,
                     "min_temp": 18.0,
                     "target_temp_step": 1.0
                 },
@@ -101,7 +98,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,
@@ -117,7 +114,7 @@
                 "unit_of_measurement": null
             },
             {
-                "capabilities": null,
+                "capabilities": {},
                 "config_entry_id": null,
                 "device_class": null,
                 "device_id": null,

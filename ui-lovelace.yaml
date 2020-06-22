@@ -15,6 +15,7 @@ views:
           - cover.banghe
           - fan.kayee_fan
           - media_player.lg_tv
+          - climate.keting_ac
   - icon: mdi:ceiling-light
     cards:
       - type: light
