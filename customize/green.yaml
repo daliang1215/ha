@@ -1,6 +1,6 @@
 climate.keting_ac: 
   friendly_name: 空调
   tmall_genie: true
-  tmall_type: aircondition
+  #  tmall_genie_type: aircondition
   tmall_genie_zone: 客厅
   tmall_genie_name: 空调

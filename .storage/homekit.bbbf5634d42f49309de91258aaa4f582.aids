@@ -12,7 +12,9 @@
             "sensor.dark_sky_temperature": 2598374190,
             "smartir.climate.keting_ac": 1016202931,
             "smartir.fan.kayee_fan": 580650247,
-            "smartir.media_player.lg_tv": 1148520247
+            "smartir.media_player.lg_tv": 1148520247,
+            "switch.kayee_fan_onoff": 1711671515,
+            "switch.lg_tv": 535954653
         }
     },
     "key": "homekit.bbbf5634d42f49309de91258aaa4f582.aids",

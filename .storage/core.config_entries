@@ -58,8 +58,8 @@
                             "switch.zhuwo_room_light_on_off",
                             "switch.zhuwo_room_light_quanliang",
                             "switch.zhuwo_room_light_riguangse",
-                            "switch.keting_light",
-                            "switch.lg_tv"
+                            "switch.kayee_fan_onoff",
+                            "switch.keting_light"
                         ],
                         "include_domains": [
                             "cover",

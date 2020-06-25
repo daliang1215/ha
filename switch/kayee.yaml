@@ -1,0 +1,8 @@
+- platform: template
+  switches:
+    kayee_fan_onoff:
+      value_template: '{{ value == "off" }}'
+      turn_on:
+        service: script.kayee_fan_off
+      turn_off:
+        service: script.kayee_fan_off

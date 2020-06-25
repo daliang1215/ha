@@ -77,10 +77,11 @@ homekit:
       - switch.zhuwo_room_light_on_off
       - switch.zhuwo_room_light_quanliang
       - switch.zhuwo_room_light_riguangse
+      - switch.kayee_fan_onoff
       #- sensor.keting_xiaomi_filter_used
       #- sensor.keting_xiaomi_filter_remaining
       - switch.keting_light
-      - switch.lg_tv
+      #- switch.lg_tv
       #- switch.air_conditioner
 #  entity_config:
 #    media_player.lg_tv:

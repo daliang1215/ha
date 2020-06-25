@@ -10,9 +10,11 @@ script.kayee_time_onehour: # 1小时
   friendly_name: 嘉业1小时
 script.kayee_light_onoff: # 灯开关
   friendly_name: 嘉业灯开关
-fan.kayee_fan:
-  friendly_name: "餐厅风扇"
+# fan.kayee_fan:
+switch.kayee_fan_onoff:
+  friendly_name: "风扇"
   tmall_genie: true
+  tmall_genie_type: fan
   tmall_genie_zone: 餐厅
   tmall_genie_name: 风扇
 light.kayee_fan_light:
