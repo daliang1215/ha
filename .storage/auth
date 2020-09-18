@@ -580,7 +580,7 @@
                 "created_at": "2020-09-18T13:13:28.170738+00:00",
                 "id": "6a8597a8cab247b5b42cbcdb2c91b270",
                 "jwt_key": "02776f5abff0fe6ea546c4399a168357b0bb821c8489490fc6635d3d2f68fe2f0a68875d571e5d48ab75b2e9873e648c9a8413cedd764e67a6fd4c2952745b8b",
-                "last_used_at": "2020-09-18T13:13:28.172623+00:00",
+                "last_used_at": "2020-09-18T13:44:18.905132+00:00",
                 "last_used_ip": "192.168.88.254",
                 "token": "18d02c32cab444dd1f7305810d127c78bf4b45591147569c0226c25e148f23805435a58c9c73a770dde47217cb2bc7251619e4d5ebae9c41b109297b00182ff8",
                 "token_type": "normal",

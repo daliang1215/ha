@@ -7,4 +7,6 @@
         data:
           entity_id: fan.kayee_fan
       turn_off:
-        service: script.kayee_fan_off
+        service: fan.turn_off
+        data:
+          entity_id: fan.kayee_fan
