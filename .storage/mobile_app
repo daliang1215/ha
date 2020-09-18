@@ -1,0 +1,355 @@
+{
+    "data": {
+        "binary_sensor": {},
+        "deleted_ids": [
+            "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7"
+        ],
+        "sensor": {
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_activity": {
+                "added": true,
+                "attributes": {
+                    "Confidence": "High",
+                    "Types": [
+                        "Unknown"
+                    ]
+                },
+                "icon": "mdi:help-circle",
+                "name": "Activity",
+                "state": "Unknown",
+                "type": "sensor",
+                "unique_id": "activity",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_battery_level": {
+                "added": true,
+                "attributes": {
+                    "Battery State": "Not Charging",
+                    "Low Power Mode": false
+                },
+                "device_class": "battery",
+                "icon": "mdi:battery-60",
+                "name": "Battery Level",
+                "state": 67,
+                "type": "sensor",
+                "unique_id": "battery_level",
+                "unit_of_measurement": "%",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_battery_state": {
+                "added": true,
+                "attributes": {
+                    "Battery Level": 67,
+                    "Low Power Mode": false
+                },
+                "device_class": "battery",
+                "icon": "mdi:battery-60",
+                "name": "Battery State",
+                "state": "Not Charging",
+                "type": "sensor",
+                "unique_id": "battery_state",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_connectivity_bssid": {
+                "added": true,
+                "attributes": {},
+                "icon": "mdi:wifi-off",
+                "name": "BSSID",
+                "state": "Not Connected",
+                "type": "sensor",
+                "unique_id": "connectivity_bssid",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_connectivity_connection_type": {
+                "added": true,
+                "attributes": {
+                    "Cellular Technology": "4G"
+                },
+                "icon": "mdi:signal",
+                "name": "Connection Type",
+                "state": "Cellular",
+                "type": "sensor",
+                "unique_id": "connectivity_connection_type",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_connectivity_sim_1": {
+                "added": true,
+                "attributes": {
+                    "Allows VoIP": true,
+                    "Carrier ID": "0000000100000001",
+                    "Carrier Name": "\u4e2d\u56fd\u8054\u901a",
+                    "Current Radio Technology": "Long-Term Evolution (LTE)",
+                    "ISO Country Code": "cn",
+                    "Mobile Country Code": "460",
+                    "Mobile Network Code": "01"
+                },
+                "icon": "mdi:sim",
+                "name": "SIM 1",
+                "state": "\u4e2d\u56fd\u8054\u901a",
+                "type": "sensor",
+                "unique_id": "connectivity_sim_1",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_connectivity_sim_2": {
+                "added": true,
+                "attributes": {
+                    "Allows VoIP": true,
+                    "Carrier ID": "0000000100000002",
+                    "Carrier Name": "\u4e2d\u56fd\u7535\u4fe1",
+                    "Current Radio Technology": "Long-Term Evolution (LTE)",
+                    "ISO Country Code": "cn",
+                    "Mobile Country Code": "460",
+                    "Mobile Network Code": "11"
+                },
+                "icon": "mdi:sim",
+                "name": "SIM 2",
+                "state": "\u4e2d\u56fd\u7535\u4fe1",
+                "type": "sensor",
+                "unique_id": "connectivity_sim_2",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_connectivity_ssid": {
+                "added": true,
+                "attributes": {},
+                "icon": "mdi:wifi-off",
+                "name": "SSID",
+                "state": "Not Connected",
+                "type": "sensor",
+                "unique_id": "connectivity_ssid",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_geocoded_location": {
+                "added": true,
+                "attributes": {
+                    "Administrative Area": "\u6cb3\u5357\u7701",
+                    "Areas Of Interest": "N/A",
+                    "Country": "\u4e2d\u56fd",
+                    "ISO Country Code": "CN",
+                    "Inland Water": "N/A",
+                    "Locality": "\u90d1\u5dde\u5e02",
+                    "Location": [
+                        34.78265546853322,
+                        113.59621773090132
+                    ],
+                    "Name": "\u897f\u4e09\u73af251\u53f7",
+                    "Ocean": "N/A",
+                    "Postal Code": "N/A",
+                    "Sub Administrative Area": "N/A",
+                    "Sub Locality": "\u4e2d\u539f\u533a",
+                    "Sub Thoroughfare": "251\u53f7",
+                    "Thoroughfare": "\u897f\u4e09\u73af",
+                    "Time Zone": "Asia/Shanghai"
+                },
+                "icon": "mdi:map",
+                "name": "Geocoded Location",
+                "state": "\u4e2d\u56fd\n\u6cb3\u5357\u7701\n\u90d1\u5dde\u5e02 \u4e2d\u539f\u533a\n\u897f\u4e09\u73af251\u53f7",
+                "type": "sensor",
+                "unique_id": "geocoded_location",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_last_update_trigger": {
+                "added": true,
+                "attributes": {},
+                "icon": "mdi:cellphone-wireless",
+                "name": "Last Update Trigger",
+                "state": "Launch",
+                "type": "sensor",
+                "unique_id": "last_update_trigger",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_pedometer_avg_active_pace": {
+                "added": true,
+                "attributes": {},
+                "icon": "mdi:speedometer",
+                "name": "Average Active Pace",
+                "state": 1,
+                "type": "sensor",
+                "unique_id": "pedometer_avg_active_pace",
+                "unit_of_measurement": "m/s",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_pedometer_distance": {
+                "added": true,
+                "attributes": {},
+                "icon": "mdi:hiking",
+                "name": "Distance",
+                "state": 867,
+                "type": "sensor",
+                "unique_id": "pedometer_distance",
+                "unit_of_measurement": "m",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_pedometer_floors_ascended": {
+                "added": true,
+                "attributes": {},
+                "icon": "mdi:stairs-up",
+                "name": "Floors Ascended",
+                "state": 3,
+                "type": "sensor",
+                "unique_id": "pedometer_floors_ascended",
+                "unit_of_measurement": "floors",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_pedometer_floors_descended": {
+                "added": true,
+                "attributes": {},
+                "icon": "mdi:stairs-down",
+                "name": "Floors Descended",
+                "state": 3,
+                "type": "sensor",
+                "unique_id": "pedometer_floors_descended",
+                "unit_of_measurement": "floors",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_pedometer_steps": {
+                "added": true,
+                "attributes": {},
+                "icon": "mdi:walk",
+                "name": "Steps",
+                "state": 1142,
+                "type": "sensor",
+                "unique_id": "pedometer_steps",
+                "unit_of_measurement": "steps",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_storage": {
+                "added": true,
+                "attributes": {
+                    "Available": "63.03 GB",
+                    "Available (Important)": "67.35 GB",
+                    "Available (Opportunistic)": "66.06 GB",
+                    "Total": "127.99 GB"
+                },
+                "icon": "mdi:database",
+                "name": "Storage",
+                "state": "49.25",
+                "type": "sensor",
+                "unique_id": "storage",
+                "unit_of_measurement": "% available",
+                "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+            },
+            "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7_battery_level": {
+                "added": true,
+                "attributes": {
+                    "Battery State": "Charging",
+                    "Low Power Mode": false
+                },
+                "device_class": "battery",
+                "icon": "mdi:battery-charging-80",
+                "name": "Battery Level",
+                "state": 91,
+                "type": "sensor",
+                "unique_id": "battery_level",
+                "unit_of_measurement": "%",
+                "webhook_id": "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7"
+            },
+            "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7_battery_state": {
+                "added": true,
+                "attributes": {
+                    "Battery Level": 91,
+                    "Low Power Mode": false
+                },
+                "device_class": "battery",
+                "icon": "mdi:battery-charging-80",
+                "name": "Battery State",
+                "state": "Charging",
+                "type": "sensor",
+                "unique_id": "battery_state",
+                "webhook_id": "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7"
+            },
+            "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7_connectivity_bssid": {
+                "added": true,
+                "attributes": {},
+                "icon": "mdi:wifi-off",
+                "name": "BSSID",
+                "state": "Not Connected",
+                "type": "sensor",
+                "unique_id": "connectivity_bssid",
+                "webhook_id": "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7"
+            },
+            "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7_connectivity_connection_type": {
+                "added": true,
+                "attributes": {},
+                "icon": "mdi:wifi",
+                "name": "Connection Type",
+                "state": "Wi-Fi",
+                "type": "sensor",
+                "unique_id": "connectivity_connection_type",
+                "webhook_id": "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7"
+            },
+            "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7_connectivity_sim_1": {
+                "added": true,
+                "attributes": {
+                    "Allows VoIP": true,
+                    "Carrier ID": "0000000100000001",
+                    "Carrier Name": "\u4e2d\u56fd\u8054\u901a",
+                    "Current Radio Technology": "Long-Term Evolution (LTE)",
+                    "ISO Country Code": "cn",
+                    "Mobile Country Code": "460",
+                    "Mobile Network Code": "01"
+                },
+                "icon": "mdi:sim",
+                "name": "SIM 1",
+                "state": "\u4e2d\u56fd\u8054\u901a",
+                "type": "sensor",
+                "unique_id": "connectivity_sim_1",
+                "webhook_id": "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7"
+            },
+            "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7_connectivity_sim_2": {
+                "added": true,
+                "attributes": {
+                    "Allows VoIP": true,
+                    "Carrier ID": "0000000100000002",
+                    "Carrier Name": "\u4e2d\u56fd\u7535\u4fe1",
+                    "Current Radio Technology": "Long-Term Evolution (LTE)",
+                    "ISO Country Code": "cn",
+                    "Mobile Country Code": "460",
+                    "Mobile Network Code": "11"
+                },
+                "icon": "mdi:sim",
+                "name": "SIM 2",
+                "state": "\u4e2d\u56fd\u7535\u4fe1",
+                "type": "sensor",
+                "unique_id": "connectivity_sim_2",
+                "webhook_id": "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7"
+            },
+            "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7_connectivity_ssid": {
+                "added": true,
+                "attributes": {},
+                "icon": "mdi:wifi-off",
+                "name": "SSID",
+                "state": "Not Connected",
+                "type": "sensor",
+                "unique_id": "connectivity_ssid",
+                "webhook_id": "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7"
+            },
+            "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7_last_update_trigger": {
+                "added": true,
+                "attributes": {},
+                "icon": "mdi:cellphone-wireless",
+                "name": "Last Update Trigger",
+                "state": "Launch",
+                "type": "sensor",
+                "unique_id": "last_update_trigger",
+                "webhook_id": "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7"
+            },
+            "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7_storage": {
+                "added": true,
+                "attributes": {
+                    "Available": "66.88 GB",
+                    "Available (Important)": "70.83 GB",
+                    "Available (Opportunistic)": "69.55 GB",
+                    "Total": "127.99 GB"
+                },
+                "icon": "mdi:database",
+                "name": "Storage",
+                "state": "52.25",
+                "type": "sensor",
+                "unique_id": "storage",
+                "unit_of_measurement": "% available",
+                "webhook_id": "e442581460d82bc57671dee51decfb7d98a72e9bb2eb1f8432c176b01b0e14a7"
+            }
+        }
+    },
+    "key": "mobile_app",
+    "version": 1
+}

@@ -90,6 +90,10 @@ homekit:
 # Enables configuration UI
 config:
 
+mobile_app:
+
+discovery:
+
 # Checks for available updates
 # Note: This component will send some information about your system to
 # the developers to assist with development of Home Assistant.

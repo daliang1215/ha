@@ -81,6 +81,38 @@
                 "title": "Home Assistant:51827",
                 "unique_id": null,
                 "version": 1
+            },
+            {
+                "connection_class": "cloud_push",
+                "data": {
+                    "app_data": {
+                        "push_token": "fEAyl-s7jUR8tSWQTdOt60:APA91bHtGA3MXqjKV72159Ud0hKBjepRolhjLof2CEEe9TOXIy5tqp7KkQynHRFAiqBBmZoOcsnVcDAdG92astbu8mheFzXAW6oz1ARdmrBrmYVHsOeU6AekX1-GGcWvb7t7_05MpuIU",
+                        "push_url": "https://mobile-apps.home-assistant.io/api/sendPushNotification"
+                    },
+                    "app_id": "io.robbie.HomeAssistant",
+                    "app_name": "Home Assistant",
+                    "app_version": "2020.3.1 (1)",
+                    "device_id": "BC254774-FEFA-4F2A-ADED-CD7064DDA46F",
+                    "device_name": "iPhone",
+                    "manufacturer": "Apple",
+                    "model": "iPhone X\u0280",
+                    "os_name": "iOS",
+                    "os_version": "13.5",
+                    "secret": "48e13071894bc379a0ef80b0633125a83edb503873e7ee28a67969dec4077d50",
+                    "supports_encryption": true,
+                    "user_id": "d54492152a4f4b2d9e124122e498474a",
+                    "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
+                },
+                "domain": "mobile_app",
+                "entry_id": "f212e95af941407782b56303aa0eccb3",
+                "options": {},
+                "source": "registration",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "Jimmy iPhone",
+                "unique_id": "io.robbie.HomeAssistant-BC254774-FEFA-4F2A-ADED-CD7064DDA46F",
+                "version": 1
             }
         ]
     },

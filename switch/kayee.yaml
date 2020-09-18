@@ -3,6 +3,8 @@
     kayee_fan_onoff:
       value_template: '{{ value == "off" }}'
       turn_on:
-        service: script.kayee_fan_off
+        service: fan.turn_on
+        data:
+          entity_id: fan.kayee_fan
       turn_off:
         service: script.kayee_fan_off

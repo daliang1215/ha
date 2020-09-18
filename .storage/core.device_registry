@@ -27,6 +27,27 @@
                 "name_by_user": null,
                 "sw_version": null,
                 "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "f212e95af941407782b56303aa0eccb3"
+                ],
+                "connections": [],
+                "entry_type": null,
+                "id": "f1b50bf72cf84b7d824b0c2940280cc2",
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "BC254774-FEFA-4F2A-ADED-CD7064DDA46F"
+                    ]
+                ],
+                "manufacturer": "Apple",
+                "model": "iPhone X\u0280",
+                "name": "iPhone",
+                "name_by_user": null,
+                "sw_version": "13.5",
+                "via_device_id": null
             }
         ]
     },
