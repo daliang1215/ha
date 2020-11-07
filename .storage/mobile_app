@@ -10,12 +10,12 @@
                 "attributes": {
                     "Confidence": "High",
                     "Types": [
-                        "Unknown"
+                        "Walking"
                     ]
                 },
-                "icon": "mdi:help-circle",
+                "icon": "mdi:walk",
                 "name": "Activity",
-                "state": "Unknown",
+                "state": "Walking",
                 "type": "sensor",
                 "unique_id": "activity",
                 "webhook_id": "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769"
@@ -27,9 +27,9 @@
                     "Low Power Mode": false
                 },
                 "device_class": "battery",
-                "icon": "mdi:battery-60",
+                "icon": "mdi:battery-90",
                 "name": "Battery Level",
-                "state": 67,
+                "state": 90,
                 "type": "sensor",
                 "unique_id": "battery_level",
                 "unit_of_measurement": "%",
@@ -38,11 +38,11 @@
             "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_battery_state": {
                 "added": true,
                 "attributes": {
-                    "Battery Level": 67,
+                    "Battery Level": 90,
                     "Low Power Mode": false
                 },
                 "device_class": "battery",
-                "icon": "mdi:battery-60",
+                "icon": "mdi:battery-90",
                 "name": "Battery State",
                 "state": "Not Charging",
                 "type": "sensor",
@@ -172,7 +172,7 @@
                 "attributes": {},
                 "icon": "mdi:hiking",
                 "name": "Distance",
-                "state": 867,
+                "state": 690,
                 "type": "sensor",
                 "unique_id": "pedometer_distance",
                 "unit_of_measurement": "m",
@@ -183,7 +183,7 @@
                 "attributes": {},
                 "icon": "mdi:stairs-up",
                 "name": "Floors Ascended",
-                "state": 3,
+                "state": 1,
                 "type": "sensor",
                 "unique_id": "pedometer_floors_ascended",
                 "unit_of_measurement": "floors",
@@ -194,7 +194,7 @@
                 "attributes": {},
                 "icon": "mdi:stairs-down",
                 "name": "Floors Descended",
-                "state": 3,
+                "state": 0,
                 "type": "sensor",
                 "unique_id": "pedometer_floors_descended",
                 "unit_of_measurement": "floors",
@@ -205,7 +205,7 @@
                 "attributes": {},
                 "icon": "mdi:walk",
                 "name": "Steps",
-                "state": 1142,
+                "state": 988,
                 "type": "sensor",
                 "unique_id": "pedometer_steps",
                 "unit_of_measurement": "steps",
@@ -214,14 +214,14 @@
             "6b6bbe4dd8087c88f24bbcc9596e06a6c24ee3c3310dff7aa0d1448abc2f0769_storage": {
                 "added": true,
                 "attributes": {
-                    "Available": "63.03 GB",
-                    "Available (Important)": "67.35 GB",
-                    "Available (Opportunistic)": "66.06 GB",
+                    "Available": "54.79 GB",
+                    "Available (Important)": "61.64 GB",
+                    "Available (Opportunistic)": "60.36 GB",
                     "Total": "127.99 GB"
                 },
                 "icon": "mdi:database",
                 "name": "Storage",
-                "state": "49.25",
+                "state": "42.80",
                 "type": "sensor",
                 "unique_id": "storage",
                 "unit_of_measurement": "% available",

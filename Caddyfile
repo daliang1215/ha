@@ -1,5 +1,5 @@
 https://www.efeichn.wang:8125 {      
-    tls /home/pi/.homeassistant/ssl/efeichn.wang.crt /home/pi/.homeassistant/ssl/efeichn.wang.key {                            
+    tls /home/pi/.homeassistant/ssl/efeichn.top.cer /home/pi/.homeassistant/ssl/efeichn.wang.key {                            
         alpn http/1.1                                                    
     }                                                                    
     proxy / 192.168.88.2:8124 {                                            
@@ -11,7 +11,7 @@ https://www.efeichn.wang:8125 {
 }
  
 https://www.efeichn.wang:1881 {      
-    tls /home/pi/.homeassistant/ssl/efeichn.wang.crt /home/pi/.homeassistant/ssl/efeichn.wang.key {                            
+    tls /home/pi/.homeassistant/ssl/efeichn.top.cer /home/pi/.homeassistant/ssl/efeichn.wang.key {                            
         alpn http/1.1                                                    
     }                                                                    
     proxy / 192.168.88.2:1880 {                                            
@@ -23,7 +23,7 @@ https://www.efeichn.wang:1881 {
 }
 
 https://www.efeichn.wang:3001 {      
-    tls /home/pi/.homeassistant/ssl/efeichn.wang.crt /home/pi/.homeassistant/ssl/efeichn.wang.key {                            
+    tls /home/pi/.homeassistant/ssl/efeichn.top.cer /home/pi/.homeassistant/ssl/efeichn.wang.key {                            
         alpn http/1.1                                                    
     }                                                                    
     proxy / 192.168.88.2:3002 {                                            
@@ -35,7 +35,7 @@ https://www.efeichn.wang:3001 {
 }
 
 https://www.efeichn.wang:8890 {      
-    tls /home/pi/.homeassistant/ssl/efeichn.wang.crt /home/pi/.homeassistant/ssl/efeichn.wang.key {                            
+    tls /home/pi/.homeassistant/ssl/efeichn.top.cer /home/pi/.homeassistant/ssl/efeichn.wang.key {                            
         alpn http/1.1                                                    
     }                                                                    
     proxy / 192.168.88.8:8889 {                                            
