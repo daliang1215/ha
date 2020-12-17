@@ -148,7 +148,7 @@
                 "system_options": {
                     "disable_new_entities": false
                 },
-                "title": "\u63a5\u5165\u5e73\u53f0[aligenie-\u5929\u732b\u7cbe\u7075]\uff0c\u63a5\u5165\u65b9\u5f0f['skill']",
+                "title": "\u63a5\u5165\u5e73\u53f0[aligenie-\u5929\u732b\u7cbe\u7075]\uff0c\u63a5\u5165\u65b9\u5f0f['http', 'skill']",
                 "unique_id": null,
                 "version": 1
             }

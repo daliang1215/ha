@@ -160,13 +160,16 @@ panel_iframe:
   weblink:
     title: NODE-RED
     icon: mdi:home-automation
-    url: https://www.efeichn.wang:1881
+    url: https://www.efeichn.top:1881
 notify:
 
 havcs:
   platform:                               # 音箱平台服务网关，至少启用一个
     - aligenie                            # 天猫精灵
   http:
+    clients:
+      aligeniedemo: 123456      
+      aligenie_ignore: ignore
     ha_url: https://www.efeichn.top:8123
   skill:
     bind_device: True                     # 是否启动时更新设备绑定信息。不设置默认True（叮咚音箱才有效）>>*新版本加入<<
