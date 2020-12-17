@@ -27,7 +27,7 @@ frontend:
 
 http:
   #base_url: https://www.efeichn.wang:8123
-  ssl_certificate: /home/pi/.homeassistant/ssl/efeichn.top.cer
+  ssl_certificate: /home/pi/.homeassistant/ssl/efeichn.top.crt
   ssl_key: /home/pi/.homeassistant/ssl/efeichn.top.key
   cors_allowed_origins:
     - http://reformedreality.com
@@ -163,6 +163,21 @@ panel_iframe:
     url: https://www.efeichn.wang:1881
 notify:
 
+havcs:
+  platform:                               # 音箱平台服务网关，至少启用一个
+    - aligenie                            # 天猫精灵
+  http:
+    ha_url: https://www.efeichn.top:8123
+  skill:
+    bind_device: True                     # 是否启动时更新设备绑定信息。不设置默认True（叮咚音箱才有效）>>*新版本加入<<
+    sync_device: False                    # 是否主动上报设备状态。不设置默认False（小度音箱才有效）
+  # mqtt相关设置，启用http代理服务及APP技能服务才生效
+  setting:
+    app_key: RosF0J0W8ofPu82t                 # 注册账号获取的AppKey
+    app_secret: GoKGsYuxtSPz.=Vn           # 注册账号获取的AppSecret
+    entity_key: 1qaz2wsx1qaz2wsx           # 加密entity_id的key，自定义16个字符。不设置则不加密
+  device_config: ui 
+
 lovelace:
   mode: yaml
 system_health:
@@ -190,6 +205,7 @@ logger:
     #homeassistant.components.homekit: debug
     #homeassistant.components.homekit.type_media_players: debug
     custom_components.smartir: debug
+    custom_components.havcs: debug
     #requests.packages.urllib3.http.client: error
 group: !include_dir_merge_named group
 device_tracker: !include_dir_merge_list device_tracker

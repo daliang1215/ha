@@ -5,9 +5,8 @@
         ],
         "ip_ban_enabled": true,
         "login_attempts_threshold": -1,
-        "server_host": "0.0.0.0",
         "server_port": 8123,
-        "ssl_certificate": "/home/pi/.homeassistant/ssl/efeichn.top.cer",
+        "ssl_certificate": "/home/pi/.homeassistant/ssl/efeichn.top.crt",
         "ssl_key": "/home/pi/.homeassistant/ssl/efeichn.top.key",
         "ssl_profile": "modern"
     },

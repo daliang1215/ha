@@ -61,6 +61,7 @@
                             "switch.kayee_fan_onoff",
                             "switch.keting_light"
                         ],
+                        "exclude_entity_globs": [],
                         "include_domains": [
                             "cover",
                             "light",
@@ -69,10 +70,10 @@
                             "sensor",
                             "climate"
                         ],
-                        "include_entities": []
+                        "include_entities": [],
+                        "include_entity_globs": []
                     },
-                    "safe_mode": false,
-                    "zeroconf_default_interface": false
+                    "safe_mode": false
                 },
                 "source": "import",
                 "system_options": {
@@ -112,6 +113,43 @@
                 },
                 "title": "Jimmy iPhone",
                 "unique_id": "io.robbie.HomeAssistant-BC254774-FEFA-4F2A-ADED-CD7064DDA46F",
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "platform": [
+                        "aligenie"
+                    ]
+                },
+                "domain": "havcs",
+                "entry_id": "c99588d9f21c4d82ad25cd488bad4eb0",
+                "options": {},
+                "source": "import",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "\u4e3b\u914d\u7f6e[configuration.yml]",
+                "unique_id": null,
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "mode": [
+                        "skill"
+                    ],
+                    "platform": "aligenie"
+                },
+                "domain": "havcs",
+                "entry_id": "bd50bcba43704da5827a96c405409b2b",
+                "options": {},
+                "source": "platform",
+                "system_options": {
+                    "disable_new_entities": false
+                },
+                "title": "\u63a5\u5165\u5e73\u53f0[aligenie-\u5929\u732b\u7cbe\u7075]\uff0c\u63a5\u5165\u65b9\u5f0f['skill']",
+                "unique_id": null,
                 "version": 1
             }
         ]

@@ -1,0 +1,15 @@
+havcs.keting_panasonic:
+  actions: {}
+  attributes:
+  - power_state
+  entity_id:
+  - light.keting_panasonic
+  icon: mdi-lightbulb
+  name: 灯
+  type: light
+  visable:
+  - aligenie
+  - dueros
+  - jdwhale
+  - weixin
+  zone: 客厅

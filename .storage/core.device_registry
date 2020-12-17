@@ -1,5 +1,6 @@
 {
     "data": {
+        "deleted_devices": [],
         "devices": [
             {
                 "area_id": null,
@@ -47,6 +48,32 @@
                 "name": "iPhone",
                 "name_by_user": null,
                 "sw_version": "13.5",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "bd50bcba43704da5827a96c405409b2b"
+                ],
+                "connections": [
+                    [
+                        "CONNECTION_NETWORK_MAC",
+                        "havcs.keting_panasonic"
+                    ]
+                ],
+                "entry_type": null,
+                "id": "1fa6a7c31be049379e7b27d28c977a3a",
+                "identifiers": [
+                    [
+                        "havcs",
+                        "havcs.keting_panasonic"
+                    ]
+                ],
+                "manufacturer": "HAVCS",
+                "model": "havcs.keting_panasonic <-> ['light.keting_panasonic']",
+                "name": "\u706f",
+                "name_by_user": null,
+                "sw_version": "v3",
                 "via_device_id": null
             }
         ]
