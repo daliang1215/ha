@@ -62,7 +62,7 @@
                     ]
                 ],
                 "entry_type": null,
-                "id": "baf4a10fc9474536a806dccce9e316d0",
+                "id": "e0850b64a9084854bd785c7d51706a32",
                 "identifiers": [
                     [
                         "havcs",
@@ -72,6 +72,162 @@
                 "manufacturer": "HAVCS",
                 "model": "havcs.keting_panasonic <-> ['light.keting_panasonic']",
                 "name": "\u706f",
+                "name_by_user": null,
+                "sw_version": "v3",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "bd50bcba43704da5827a96c405409b2b"
+                ],
+                "connections": [
+                    [
+                        "CONNECTION_NETWORK_MAC",
+                        "havcs.bedroomairclean"
+                    ]
+                ],
+                "entry_type": null,
+                "id": "70b787caf4cb46c49dc2698e20b7920d",
+                "identifiers": [
+                    [
+                        "havcs",
+                        "havcs.bedroomairclean"
+                    ]
+                ],
+                "manufacturer": "HAVCS",
+                "model": "havcs.bedroomairclean <-> ['fan.bedroom']",
+                "name": "\u7a7a\u6c14\u51c0\u5316\u5668",
+                "name_by_user": null,
+                "sw_version": "v3",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "bd50bcba43704da5827a96c405409b2b"
+                ],
+                "connections": [
+                    [
+                        "CONNECTION_NETWORK_MAC",
+                        "havcs.ketingairclean"
+                    ]
+                ],
+                "entry_type": null,
+                "id": "35cee1e3b4ae42509246e4ef5ef89740",
+                "identifiers": [
+                    [
+                        "havcs",
+                        "havcs.ketingairclean"
+                    ]
+                ],
+                "manufacturer": "HAVCS",
+                "model": "havcs.ketingairclean <-> ['fan.keting']",
+                "name": "\u7a7a\u6c14\u51c0\u5316\u5668",
+                "name_by_user": null,
+                "sw_version": "v3",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "bd50bcba43704da5827a96c405409b2b"
+                ],
+                "connections": [
+                    [
+                        "CONNECTION_NETWORK_MAC",
+                        "havcs.dinnerfan"
+                    ]
+                ],
+                "entry_type": null,
+                "id": "4bfce822a4c74a27a1a7366222e9f38e",
+                "identifiers": [
+                    [
+                        "havcs",
+                        "havcs.dinnerfan"
+                    ]
+                ],
+                "manufacturer": "HAVCS",
+                "model": "havcs.dinnerfan <-> ['fan.kayee_fan']",
+                "name": "\u98ce\u6247",
+                "name_by_user": null,
+                "sw_version": "v3",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "bd50bcba43704da5827a96c405409b2b"
+                ],
+                "connections": [
+                    [
+                        "CONNECTION_NETWORK_MAC",
+                        "havcs.dinnerlight"
+                    ]
+                ],
+                "entry_type": null,
+                "id": "4f7164703bfa41f29585aa809f0c4407",
+                "identifiers": [
+                    [
+                        "havcs",
+                        "havcs.dinnerlight"
+                    ]
+                ],
+                "manufacturer": "HAVCS",
+                "model": "havcs.dinnerlight <-> ['light.kayee_fan_light']",
+                "name": "\u706f",
+                "name_by_user": null,
+                "sw_version": "v3",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "bd50bcba43704da5827a96c405409b2b"
+                ],
+                "connections": [
+                    [
+                        "CONNECTION_NETWORK_MAC",
+                        "havcs.humidity"
+                    ]
+                ],
+                "entry_type": null,
+                "id": "c3f56c568af34f1ba504e56b2bba20be",
+                "identifiers": [
+                    [
+                        "havcs",
+                        "havcs.humidity"
+                    ]
+                ],
+                "manufacturer": "HAVCS",
+                "model": "havcs.humidity <-> ['sensor.keting_xiaomi_ap_humid']",
+                "name": "\u6e7f\u5ea6",
+                "name_by_user": null,
+                "sw_version": "v3",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "bd50bcba43704da5827a96c405409b2b"
+                ],
+                "connections": [
+                    [
+                        "CONNECTION_NETWORK_MAC",
+                        "havcs.temperature"
+                    ]
+                ],
+                "entry_type": null,
+                "id": "a71516dfd731450d9234930d318614a9",
+                "identifiers": [
+                    [
+                        "havcs",
+                        "havcs.temperature"
+                    ]
+                ],
+                "manufacturer": "HAVCS",
+                "model": "havcs.temperature <-> ['sensor.keting_xiaomi_ap_temp']",
+                "name": "\u6e29\u5ea6",
                 "name_by_user": null,
                 "sw_version": "v3",
                 "via_device_id": null
